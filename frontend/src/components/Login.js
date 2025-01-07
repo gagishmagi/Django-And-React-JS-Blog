@@ -53,10 +53,10 @@ function Login() {
 
 
     const loginStyle={
-        backgroundImage:`url(${process.env.PUBLIC_URL+ "img/18.jpg"})`,
+        backgroundImage:`url(${process.env.PUBLIC_URL+ "/img/18.jpg"})`,
                 backgroundRepeat: 'no-repeat',
                 backgroundSize: 'cover',
-                'min-height': '100%',
+                minHeight: '100%',
                 height:'77vh',
                 backgroundPosition:' center',
                 margin:0,

@@ -2,6 +2,7 @@ import './App.css';
 import ArticleList from './components/ArticleList';
 import {useState,useEffect} from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/js/bootstrap.bundle';
 import NavBar from './components/NavBar';
 import Form from './components/Form';
 import {useNavigate} from 'react-router-dom'
