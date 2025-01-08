@@ -1,0 +1,18 @@
+# Python project gitignore
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Django project gitignore
+*.log
+*.pot
+*.pyc
+*.pyo
+*.swp
+*.sql
+*.sqlite3
+db.sqlite3
+media
+static
+.env
