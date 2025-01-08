@@ -60,7 +60,9 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: code
-          path: .
+          path: |
+            .
+            .venv
       - name: Run tests
         run: |
           source .venv/bin/activate
