@@ -15,44 +15,50 @@ concurrency:
 jobs:
   get-code:
     runs-on: ubuntu-latest
-    concurrency: source-job
     steps:
-    - name: Checkout Code
-      uses: actions/checkout@v2
+      - name: Checkout Code
+        uses: actions/checkout@v2
 
   build:
     needs: get-code
     runs-on: ubuntu-latest
-    concurrency: build-job
     steps:
-    - name: Set up Python
-      uses: actions/setup-python@v2
-      with:
-        python-version: '3.10.4'
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.10.4'
 
-    - name: Install dependencies
-      run: |
-        python -m venv .venv
-        source .venv/bin/activate
-        pip install --upgrade pip
-        pip install -r ./backend/requirements.txt
+      - name: Install dependencies
+        run: |
+          python -m venv .venv
+          source .venv/bin/activate
+          if [ -f "./backend/requirements.txt" ]; then
+            pip install --upgrade pip
+            pip install -r ./backend/requirements.txt
+          else
+            echo "Error: requirements.txt not found in ./backend"
+            exit 1
 
-    - name: Run npm install + build
-      run: |
-        cd frontend
-        npm install
-        npm run build
+      - name: Run npm install + build
+        run: |
+          cd frontend
+          npm install
+          npm run build
 
   test:
     needs: build
     runs-on: ubuntu-latest
-    concurrency: test-job
     steps:
-    - name: Run Tests
-      run: |
-        source .venv/bin/activate
-        cd backend
-        pytest
+      - name: Activate virtual environment and run tests
+        run: |
+          source .venv/bin/activate
+          if [ -d "backend" ]; then
+            cd backend
+            pytest
+          else
+            echo "Error: Backend directory not found"
+            exit 1
+
 
   # deploy:
   #   needs: test
@@ -62,4 +68,5 @@ jobs:
   #   - name: Build Docker Image
   #     run: |
   #       docker build -t myapp:latest .
+
 
