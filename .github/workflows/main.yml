@@ -9,14 +9,16 @@ on:
       - main
 
 jobs:
-  build-and-deploy:
+  get-code:
     runs-on: ubuntu-latest
-    # Get Source code step
     steps:
     - name: Checkout Code
       uses: actions/checkout@v2
 
-    # Build step
+  build:
+    needs: get-code
+    runs-on: ubuntu-latest
+    steps:
     - name: Set up Python
       uses: actions/setup-python@v2
       with:
@@ -31,15 +33,39 @@ jobs:
     - name: Run npm install + build
       run: |
         cd frontend
-        npm install
+        npm ci
         npm run build
 
-    # Run tests
+  test:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.10.4'
+
+    - name: Install dependencies
+      run: |
+        python -m venv .venv
+        source .venv/bin/activate
+        pip install -r backend/requirements.txt
+
     - name: Run Tests
       run: |
         source .venv/bin/activate
         cd backend
         pytest
+
+  # deploy:
+  #   needs: test
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #   - name: Checkout Code
+  #     uses: actions/checkout@v2
 
     # - name: Build Docker Image
     #   run: |
