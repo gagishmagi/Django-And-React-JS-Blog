@@ -48,7 +48,9 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: code
-          path: .
+          path: |
+            .
+            .venv
 
   test:
     needs: build
@@ -58,7 +60,9 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: code
-          path: .
+          path: |
+            .
+            .venv
       - name: Run tests
         run: |
           source .venv/bin/activate
