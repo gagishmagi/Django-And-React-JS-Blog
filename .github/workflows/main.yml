@@ -15,7 +15,7 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v2
       - name: Upload code
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: code
           path: .
@@ -25,7 +25,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Download code
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: code
           path: .
@@ -45,7 +45,7 @@ jobs:
             exit 1
           fi
       - name: Upload environment and code
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: code-and-env
           path: |
@@ -57,7 +57,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Download code and environment
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: code-and-env
           path: .
@@ -71,7 +71,7 @@ jobs:
   #   runs-on: ubuntu-latest
   #   steps:
   #     - name: Download code and environment
-  #       uses: actions/download-artifact@v2
+  #       uses: actions/download-artifact@v3
   #       with:
   #         name: code-and-env
   #         path: .
