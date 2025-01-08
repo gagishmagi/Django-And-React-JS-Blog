@@ -105,6 +105,7 @@ jobs:
   
   deploy:
     if: ${{ needs.test.result == 'success' }}
+    needs: test
     runs-on: ubuntu-latest
     steps:
       - name: Download code and environment
@@ -137,6 +138,7 @@ jobs:
 
   notify:
     if: ${{ needs.test.result != 'success' }}
+    needs: test
     runs-on: ubuntu-latest
     steps:
       - name: Send notification
