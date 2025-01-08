@@ -69,7 +69,7 @@ function Login() {
         <div className="App">
             <div className="container-fluid">
                 <div className="row">
-                    <h1 className="alert alert-danger">Learn Python Blog <img style={{ width: '50px', height: '50px' }} src={process.env.PUBLIC_URL + "/img/2.jpg"} alt="logo image" /></h1>
+                    <h1 className="alert alert-danger">Learn Python Blog <img style={{ width: '50px', height: '50px' }} src={process.env.PUBLIC_URL + "/img/2.jpg"} alt="logo" /></h1>
                     <br />
                     <br />
 

@@ -12,7 +12,7 @@ import {useCookies} from 'react-cookie'
 function App() {
   const [articles, setArticles] = useState([])
   const [editArticle, setEditArticle] = useState('')
-  const [token, removeToken] = useCookies(['mytoken'])
+  const [token] = useCookies(['mytoken'])
   let navigate = useNavigate()
 
 
@@ -74,7 +74,7 @@ function App() {
     }else{
       navigate('/articles')
     }
-}, [token])
+}, [token, navigate])
 
 
 // const logoutBtn = () => {
