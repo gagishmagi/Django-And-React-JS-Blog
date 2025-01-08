@@ -15,6 +15,7 @@ concurrency:
 jobs:
   get-code:
     runs-on: ubuntu-latest
+    concurrency: source-job
     steps:
     - name: Checkout Code
       uses: actions/checkout@v2
