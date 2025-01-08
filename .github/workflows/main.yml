@@ -59,7 +59,7 @@ jobs:
       - name: Download code and dependencies
         uses: actions/download-artifact@v3
         with:
-          name: code-and-dependencies
+          name: code
           path: .
       - name: Run tests
         run: |
