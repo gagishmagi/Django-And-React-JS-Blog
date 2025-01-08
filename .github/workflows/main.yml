@@ -122,6 +122,7 @@ jobs:
 
       - name: Build Docker Image
         run: |
+          cd ./backend
           docker build -t blog-and-react-js-blog:latest .
 
       - name: Push Docker Image
@@ -184,3 +185,5 @@ jobs:
       #         title: 'CI/CD Pipeline Failed',
       #         body: 'The CI/CD pipeline has failed. Please check the logs for more details.'
       #       })
+
+
