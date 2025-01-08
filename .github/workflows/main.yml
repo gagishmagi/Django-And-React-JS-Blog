@@ -59,10 +59,8 @@ jobs:
       - name: Download code and dependencies
         uses: actions/download-artifact@v3
         with:
-          name: code
-          path: |
-            .
-            .venv
+          name: code-and-dependencies
+          path: .
       - name: Run tests
         run: |
           source .venv/bin/activate
