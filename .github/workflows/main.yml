@@ -19,6 +19,8 @@ jobs:
     needs: get-code
     runs-on: ubuntu-latest
     steps:
+    - name: Checkout Code
+      uses: actions/checkout@v2
     - name: Set up Python
       uses: actions/setup-python@v2
       with:
@@ -72,4 +74,6 @@ jobs:
     # - name: Build Docker Image
     #   run: |
     #     docker build -t myapp:latest .
+
+
 
