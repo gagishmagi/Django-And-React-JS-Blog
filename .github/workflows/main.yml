@@ -8,6 +8,10 @@ on:
     branches:
       - main
 
+concurrency:
+  group: ${{ github.ref_name }}
+  cancel-in-progress: true
+
 jobs:
   get-code:
     runs-on: ubuntu-latest
@@ -18,9 +22,8 @@ jobs:
   build:
     needs: get-code
     runs-on: ubuntu-latest
+    concurrency: build-job
     steps:
-    - name: Checkout Code
-      uses: actions/checkout@v2
     - name: Set up Python
       uses: actions/setup-python@v2
       with:
@@ -42,22 +45,8 @@ jobs:
   test:
     needs: build
     runs-on: ubuntu-latest
+    concurrency: test-job
     steps:
-    # - name: Checkout Code
-    #   uses: actions/checkout@v2
-
-    # - name: Set up Python
-    #   uses: actions/setup-python@v2
-    #   with:
-    #     python-version: '3.10.4'
-
-    # - name: Install dependencies
-    #   run: |
-    #     python -m venv .venv
-    #     source .venv/bin/activate
-    #     pip install --upgrade pip
-    #     pip install -r ./backend/requirements.txt
-
     - name: Run Tests
       run: |
         source .venv/bin/activate
@@ -67,13 +56,9 @@ jobs:
   # deploy:
   #   needs: test
   #   runs-on: ubuntu-latest
+  #   concurrency: test-job
   #   steps:
-  #   - name: Checkout Code
-  #     uses: actions/checkout@v2
-
-    # - name: Build Docker Image
-    #   run: |
-    #     docker build -t myapp:latest .
-
-
+  #   - name: Build Docker Image
+  #     run: |
+  #       docker build -t myapp:latest .
 
