@@ -124,7 +124,6 @@ jobs:
 
       - name: Push Docker Image
         run: |
-          docker login -u ${{ secrets.DOCKER_USERNAME }} 
           docker push blog-and-react-js-blog:latest
           
       # - name: Deploy to render.com
