@@ -70,6 +70,11 @@ jobs:
           name: code
           path: .
           retention-days: 1
+          paths-ignore: |
+            frontend/node_modules
+            frontend/.env
+            backend/.env
+            backend/.venv
 
   test:
     needs: build
@@ -108,11 +113,6 @@ jobs:
           name: code
           path: .
           retention-days: 1
-          paths-ignore: |
-            frontend/node_modules
-            frontend/.env
-            backend/.env
-            backend/.venv
   
   deploy:
     if: ${{ needs.test.result == 'success' }}
