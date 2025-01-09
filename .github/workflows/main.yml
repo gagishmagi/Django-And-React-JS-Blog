@@ -124,12 +124,12 @@ jobs:
           echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
           docker push ${{ secrets.DOCKER_USERNAME }}/blog-and-react-js-blog:latest
           
-      - name: Deploy to render.com
-        uses: renderinc/render-action@v1
-        with:
-          render-token: ${{ secrets.RENDER_TOKEN }}
-          service-name: blog-and-react-js-blog
-          docker-image: '${{ secrets.DOCKER_USERNAME }}/blog-and-react-js-blog:latest'
+      # - name: Deploy to render.com
+      #   uses: renderinc/render-action@v1
+      #   with:
+      #     render-token: ${{ secrets.RENDER_TOKEN }}
+      #     service-name: blog-and-react-js-blog
+      #     docker-image: '${{ secrets.DOCKER_USERNAME }}/blog-and-react-js-blog:latest'
       
       # - name: Deploy to render.com
       #   uses: renderinc/render-action@v1
