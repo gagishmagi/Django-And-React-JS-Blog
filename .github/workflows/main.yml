@@ -132,11 +132,18 @@ jobs:
           docker push ${{ secrets.DOCKER_USERNAME }}/blog-and-react-js-blog:latest
           
       - name: Deploy to render.com
-        uses: renderinc/render-action@v1
+        uses: gh-actions-workflows/deploy-docker-render@v1.1
         with:
-          render-token: ${{ secrets.RENDER_TOKEN }}
-          service-name: blog-and-react-js-blog
-          docker-image: '${{ secrets.DOCKER_USERNAME }}/blog-and-react-js-blog:latest'
+          deploy-hook: ${{ secrets.RENDER_DEPLOY_HOOK }}
+          image-url: ${{ secrets.DOCKER_USERNAME }}/blog-and-react-js-blog:latest
+          render-api-key: ${{ secrets.RENDER_TOKEN }}
+          wait-for-deployment: true
+
+      # uses: renderinc/render-action@v1
+      # with:
+      #   render-token: ${{ secrets.RENDER_TOKEN }}
+      #   service-name: blog-and-react-js-blog
+      #   docker-image: ${{ secrets.DOCKER_USERNAME }}/blog-and-react-js-blog:latest
       
       # - name: Deploy to render.com
       #   uses: renderinc/render-action@v1
