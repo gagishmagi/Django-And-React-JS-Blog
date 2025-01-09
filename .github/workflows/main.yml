@@ -49,6 +49,12 @@ jobs:
             exit 1
           fi
 
+      - name: Install npm packages and rub build command
+        run: |
+          cd ./frontend
+          npm install
+          npm run build
+
       # Cache the virtual environment instead of uploading it as an artifact
       - name: Cache virtual environment
         uses: actions/cache@v3
