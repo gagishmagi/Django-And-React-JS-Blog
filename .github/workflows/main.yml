@@ -19,7 +19,7 @@ jobs:
         with:
           name: code
           path: .
-          # retention-days: 1
+          retention-days: 1
 
   build:
     needs: source
@@ -70,7 +70,7 @@ jobs:
         with:
           name: code
           path: .
-          # retention-days: 1
+          retention-days: 1
           paths-ignore: |
             frontend/node_modules
             frontend/.env
@@ -113,7 +113,7 @@ jobs:
         with:
           name: code
           path: .
-          # retention-days: 1
+          retention-days: 1
   
   deploy:
     if: ${{ needs.test.result == 'success' }}
