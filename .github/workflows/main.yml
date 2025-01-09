@@ -123,7 +123,6 @@ jobs:
 
       - name: Build Docker Image
         run: |
-          cd ./backend
           docker build -t ${{ secrets.DOCKER_USERNAME }}/blog-and-react-js-blog:latest .
 
       - name: Login and Push Docker Image
