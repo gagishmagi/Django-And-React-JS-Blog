@@ -6,3 +6,6 @@ pytest==8.3.4
 pytest-django==4.9.0
 pytest-html-reporter==0.2.9
 selenium==4.27.1
+
+# docker/production stuff
+gunicorn==20.1.0
