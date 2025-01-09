@@ -114,10 +114,8 @@ jobs:
           name: code
           path: .
 
-      - name: Configure Docker Credential Helper
-        run: |
-          mkdir -p ~/.docker
-          echo '{"credsStore": "${{ secrets.DOCKER_PASSWORD }}"}' > ~/.docker/config.json
+      - name: Log in to Docker Hub
+        run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
 
       - name: Build Docker Image
         run: |
