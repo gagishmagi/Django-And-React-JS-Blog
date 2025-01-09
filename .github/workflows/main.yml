@@ -54,6 +54,7 @@ jobs:
           cd ./frontend
           npm install
           npm run build
+          rm -rf node_modules
 
       # Cache the virtual environment instead of uploading it as an artifact
       - name: Cache virtual environment
@@ -190,5 +191,6 @@ jobs:
       #         title: 'CI/CD Pipeline Failed',
       #         body: 'The CI/CD pipeline has failed. Please check the logs for more details.'
       #       })
+
 
 
