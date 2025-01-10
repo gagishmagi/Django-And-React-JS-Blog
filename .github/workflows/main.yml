@@ -109,7 +109,7 @@ jobs:
           pytest
 
   deploy:
-    if: ${{ needs.test.result == 'success' }}
+    if: success()
     needs: test
     runs-on: ubuntu-latest
     steps:
@@ -137,7 +137,7 @@ jobs:
           wait-for-deployment: true
 
   notify:
-    if: ${{ needs.test.result == 'failure' }}
+    if: failure()
     needs: test
     runs-on: ubuntu-latest
     steps:
