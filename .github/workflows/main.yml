@@ -214,12 +214,12 @@ jobs:
         uses: bryannice/gitactions-jira-issue-creation@master
         env:
           JIRA_ACCOUNT_URL: ${{ secrets.JIRA_ACCOUNT_URL }}
-          JIRA_API_TOKEN: ${{ secrets.JIRA_API_TOKEN }}
-          JIRA_ISSUE_ATTACHMENT: log_file.log
+          JIRA_API_TOKEN: ${{ secrets.JIRA_PASSWORD }}
+          # JIRA_ISSUE_ATTACHMENT: log_file.log
           JIRA_ISSUE_DESCRIPTION: 'The CI/CD pipeline has failed. Please check the logs for more details. [Test Report](${{ needs.test.outputs.artifact-url }})'
           JIRA_ISSUE_SUMMARY: 'CI/CD Pipeline Automatic Tests Failed'
           JIRA_ISSUE_TYPE: 'Bug'
-          JIRA_PROJECT: ${{ secrets.JIRA_PROJECT }}
+          JIRA_PROJECT: ${{ secrets.JIRA_PROJECT_KEY }}
           JIRA_USERNAME: ${{ secrets.JIRA_USERNAME }}
           
       # - name: Open GitHub issue
