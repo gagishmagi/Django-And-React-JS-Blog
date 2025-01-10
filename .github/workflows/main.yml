@@ -158,9 +158,9 @@ jobs:
   notify:
     needs: test
     runs-on: ubuntu-latest
+    if: needs.test.result == 'failure'
     steps:
       - name: Send notification
-        if: needs.test.result == 'failure'
         run: |
           echo "Tests failed, sending notification to developers."
           # Add your notification logic here
