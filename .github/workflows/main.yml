@@ -12,10 +12,6 @@ jobs:
   source:
     runs-on: ubuntu-latest
     steps:
-      - name: Delete old artifacts
-        uses: geekyeggo/delete-artifact@v2
-        with:
-          name: code
       - name: Checkout Code
         uses: actions/checkout@v3
       - name: Upload code
@@ -29,6 +25,11 @@ jobs:
     needs: source
     runs-on: ubuntu-latest
     steps:
+      - name: Delete old artifacts
+        uses: geekyeggo/delete-artifact@v2
+        with:
+          name: code
+      
       - name: Download code
         uses: actions/download-artifact@v4
         with:
