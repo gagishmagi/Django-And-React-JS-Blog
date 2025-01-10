@@ -197,7 +197,7 @@ jobs:
                 video_url: '',
                 mrkdwn_in: [],
                 file_name: 'report.html',
-                file_url: ${{ github.actions.artifacts.test-report.artifact_url }}"
+                file_url: '${{ github.workspace }}/backend/report/pytest_html_report.html'
               }]
             }        
         env:
