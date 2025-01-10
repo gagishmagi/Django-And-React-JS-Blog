@@ -158,11 +158,11 @@ jobs:
         run: |
           echo "Tests failed, sending notification to developers."
       
-      - name: Download test report
-        uses: actions/download-artifact@v3
-        with:
-          name: test-report
-          path: ./backend/report
+      # - name: Download test report
+      #   uses: actions/download-artifact@v3
+      #   with:
+      #     name: test-report
+      #     path: ./backend/report
 
       - name: Send Slack notification
         uses: 8398a7/action-slack@v3
@@ -197,7 +197,7 @@ jobs:
                 video_url: '',
                 mrkdwn_in: [],
                 file_name: 'report.html',
-                file_url: "${{ steps.download-test-report.outputs.download_url }}"
+                file_url: ${{ github.actions.artifacts.test-report.artifact_url }}"
               }]
             }        
         env:
