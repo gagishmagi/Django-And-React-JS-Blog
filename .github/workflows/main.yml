@@ -106,7 +106,8 @@ jobs:
         run: |
           source .venv/bin/activate
           cd ./backend 
-          pytest tests/ --html-report=./report --title='PYTEST REPORT'
+          pytest --html-report=./report --title='PYTEST REPORT'
+      
       - name: Upload test report
         uses: actions/upload-artifact@v3
         with:
@@ -155,6 +156,12 @@ jobs:
       - name: Send notification
         run: |
           echo "Tests failed, sending notification to developers."
+      
+      - name: Download test report
+        uses: actions/download-artifact@v3
+        with:
+          name: test-report
+          path: ./backend/report
 
       - name: Send Slack notification
         uses: 8398a7/action-slack@v3
@@ -177,7 +184,7 @@ jobs:
                 text: 'The test report is attached as a file.',
                 fields: [],
                 actions: [],
-                title_link: 'https://github.com/8398a7/blog-and-react-js-blog/actions/runs/${{ github.run_id }}',
+                title_link: 'https://github.com/gagishmagi/Django-And-React-JS-Blog/actions/runs/${{ github.run_id }}/jobs/${{ github.job }}',
                 footer: '',
                 footer_icon: '',
                 image_url: '',
@@ -189,7 +196,7 @@ jobs:
                 video_url: '',
                 mrkdwn_in: [],
                 file_name: 'report.html',
-                file_url: "${{ needs.test.outputs.test-report-url }}"
+                file_url: "${{ steps.download-test-report.outputs.download_url }}"
               }]
             }        
         env:
