@@ -185,7 +185,7 @@ jobs:
                 text: 'The test report is attached as a file.',
                 fields: [],
                 actions: [],
-                title_link: 'https://github.com/gagishmagi/Django-And-React-JS-Blog/actions/runs/${{ github.run_id }}/jobs/${{ github.job }}',
+                title_link: '${{ github.workspace }}/backend/report/pytest_html_report.html',
                 footer: '',
                 footer_icon: '',
                 image_url: '',
@@ -195,9 +195,6 @@ jobs:
                 author_icon: '',
                 video_html: '',
                 video_url: '',
-                mrkdwn_in: [],
-                file_name: 'report.html',
-                file_url: '${{ github.workspace }}/backend/report/pytest_html_report.html'
               }]
             }        
         env:
