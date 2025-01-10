@@ -3,12 +3,10 @@ import {useCookies} from 'react-cookie';
 
 
 function NavBar() {
-
-  const [removeToken] = useCookies(['mytoken'])
+  const [, , removeToken] = useCookies(['mytoken']);
 
   const logoutBtn = () => {
-    removeToken(['mytoken'])
-
+    removeToken('mytoken');
   }
 
     return (
