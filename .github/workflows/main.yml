@@ -70,17 +70,12 @@ jobs:
           restore-keys: |
             venv-${{ runner.os }}-
 
-      - name: Upload code
-        uses: actions/upload-artifact@v4
-        with:
-          name: code
-          path: .
-          retention-days: 1
-
-      - name: Print out articat id and url
-        run: |
-          echo "Artifact ID: ${{ steps.upload-code.outputs.artifact-id }}"
-          echo "Artifact URL: ${{ steps.upload-code.outputs.artifact-url }}"
+      # - name: Upload code
+      #   uses: actions/upload-artifact@v4
+      #   with:
+      #     name: code
+      #     path: .
+      #     retention-days: 1
 
   test:
     needs: build
@@ -126,6 +121,12 @@ jobs:
         with:
           name: test-report
           path: ./backend/report
+      
+      - name: Print out articat id and url
+        run: |
+          echo "Artifact ID: ${{ steps.upload-code.outputs.artifact-id }}"
+          echo "Artifact URL: ${{ steps.upload-code.outputs.artifact-url }}"
+  
 
   deploy:
     if: success()
