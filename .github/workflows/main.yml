@@ -185,7 +185,7 @@ jobs:
                 text: 'The test report is attached as a file.',
                 fields: [],
                 actions: [],
-                title_link: '${{ github.actions.artifacts.test-report.artifact_url }}',
+                title_link: '${{ github.actions.artifacts.test-report.browserDownloadUrl }}',
                 footer: '',
                 footer_icon: '',
                 image_url: '',
