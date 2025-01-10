@@ -19,7 +19,7 @@ jobs:
         with:
           name: code
           path: .
-          retentionDays: 1
+          retention-days: 1
 
   build:
     needs: source
@@ -70,7 +70,7 @@ jobs:
         with:
           name: code
           path: .
-          retentionDays: 1
+          retention-days: 1
 
   test:
     needs: build
@@ -219,4 +219,5 @@ jobs:
       #         title: 'CI/CD Pipeline Failed',
       #         body: 'The CI/CD pipeline has failed. Please check the logs for more details.'
       #       })
+
 
