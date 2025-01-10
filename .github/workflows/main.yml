@@ -12,6 +12,12 @@ jobs:
   source:
     runs-on: ubuntu-latest
     steps:
+      - name: Delete existing artifact
+        run: |
+          curl -X DELETE \
+          https://api.github.com/repos/${{ github.repository }}/actions/artifacts/code \
+          -H 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' \
+          -H 'content-type: application/json' || true
       - name: Checkout Code
         uses: actions/checkout@v3
       - name: Upload code
@@ -76,12 +82,6 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
-      - name: Delete existing artifact
-        run: |
-          curl -X DELETE \
-          https://api.github.com/repos/${{ github.repository }}/actions/artifacts/code \
-          -H 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' \
-          -H 'content-type: application/json' || true
       - name: Download code
         uses: actions/download-artifact@v4
         with:
