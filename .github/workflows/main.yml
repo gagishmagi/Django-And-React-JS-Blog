@@ -211,7 +211,7 @@ jobs:
       #       The CI/CD pipeline has failed. Please check the logs for more details.
 
       - name: Open Jira issue
-        uses: atlassian/github-actions/jira-create-issue@v1
+        uses: jira/official-jira-create-issue-action@v1
         with:
           jira-instance: '${{ secrets.JIRA_INSTANCE }}.atlassian.net'
           jira-project-key: '${{ secrets.JIRA_PROJECT_KEY }}'
