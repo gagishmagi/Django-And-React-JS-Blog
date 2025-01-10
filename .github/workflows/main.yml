@@ -108,6 +108,12 @@ jobs:
           cd ./backend 
           pytest --html=report.html --self-contained-html
 
+      - name: Upload test report
+        uses: actions/upload-artifact@v3
+        with:
+          name: test-report
+          path: ./backend/report.html
+
   deploy:
     if: success()
     needs: test
