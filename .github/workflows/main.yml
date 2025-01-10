@@ -106,7 +106,7 @@ jobs:
         run: |
           source .venv/bin/activate
           cd ./backend 
-          pytest --html-report=./report --title='PYTEST REPORT'
+          pytest --html-report=./report/report.html --title='PYTEST REPORT'
       
       - name: Upload test report
         if: failure()
