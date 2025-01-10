@@ -17,7 +17,7 @@ function App() {
 
 
   useEffect(() =>{
-    fetch('http://localhost:8000/api/articles/', {
+    fetch(`${process.env.PUBLIC_URL}api/articles/`, {
       method:'GET',
       headers:{
         'Content-Type': 'application/json',

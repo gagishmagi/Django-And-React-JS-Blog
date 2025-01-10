@@ -1,6 +1,6 @@
 export default class APISerive {
     static UpdateArticle(article_id,body,token){
-        return fetch(`http://127.0.0.1:8000/api/articles/${article_id}/`,{
+        return fetch(`${process.env.PUBLIC_URL}/api/articles/${article_id}/`,{
             method:'PUT',
             headers: {
                 'Content-Type': 'application/json',
@@ -11,7 +11,7 @@ export default class APISerive {
     }
 
     static InsertArticle(body,token){
-        return fetch(`http://127.0.0.1:8000/api/articles/`,{
+        return fetch(`${process.env.PUBLIC_URL}/api/articles/`,{
             method:'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -22,7 +22,7 @@ export default class APISerive {
     }
 
     static DeleteArticle(article_id,token){
-        return fetch(`http://127.0.0.1:8000/api/articles/${article_id}/`,{
+        return fetch(`${process.env.PUBLIC_URL}/api/articles/${article_id}/`,{
             method:'PUT',
             headers: {
                 'Content-Type': 'application/json',
@@ -33,7 +33,7 @@ export default class APISerive {
 
 
     static LoginUser(body){
-        return fetch(`http://127.0.0.1:8000/auth/`,{
+        return fetch(`${process.env.PUBLIC_URL}/auth/`,{
             method:'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -45,7 +45,7 @@ export default class APISerive {
 
 
     static RegisterUser(body){
-        return fetch(`http://127.0.0.1:8000/api/users/`, {
+        return fetch(`${process.env.PUBLIC_URL}/api/users/`, {
             method:'POST',
             headers: {
                 'Content-Type': 'application/json',
