@@ -149,8 +149,39 @@ jobs:
       - name: Send Slack notification
         uses: 8398a7/action-slack@v3
         with:
-          status: ${{ job.status }}
-          fields: repo,message,commit,author,action,event_name,ref,workflow
+          status: custom
+          custom_payload: |
+            {
+              text: "Tests failed",
+              attachments: [{
+                "author_name": "8398a7@action-slack", // json
+                fallback: 'fallback',
+                color: 'danger',
+                title: 'CI Result',
+                text: 'The test job failed. Please check the logs on the GitHub Actions page for more details.',
+                fields: [],
+                actions: []
+              },
+              {
+                title: 'Test Report',
+                text: 'The test report is attached as a file.',
+                fields: [],
+                actions: [],
+                title_link: '',
+                footer: '',
+                footer_icon: '',
+                image_url: '',
+                thumb_url: '',
+                author_name: '',
+                author_link: '',
+                author_icon: '',
+                video_html: '',
+                video_url: '',
+                mrkdwn_in: [],
+                file_name: 'report.html',
+                file_url: 'https://github.com/8398a7/blog-and-react-js-blog/actions/artifacts/123456789/report.html'
+              }]
+            }        
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
       
