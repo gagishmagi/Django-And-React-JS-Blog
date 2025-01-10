@@ -15,7 +15,7 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v3
       - name: Upload code
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v3
         with:
           name: code
           path: .
@@ -26,7 +26,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Download code
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v3
         with:
           name: code
           path: .
@@ -66,29 +66,18 @@ jobs:
             venv-${{ runner.os }}-
 
       - name: Upload code
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v3
         with:
           name: code
           path: .
           retention-days: 1
-          if-no-files-found: warn
-          compression-level: 6
-          overwrite: false
-          include-hidden-files: false
-        env:
-          pythonLocation: /opt/hostedtoolcache/Python/3.10.4/x64
-          PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.10.4/x64/lib/pkgconfig
-          Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.4/x64
-          Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.4/x64
-          Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.4/x64
-          LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.10.4/x64/lib
 
   test:
     needs: build
     runs-on: ubuntu-latest
     steps:
       - name: Download code
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v3
         with:
           name: code
           path: .
@@ -120,7 +109,7 @@ jobs:
           pytest --html=report.html --self-contained-html
 
       - name: Upload test report
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v3
         with:
           name: test-report
           path: ./backend/report.html
@@ -131,7 +120,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Download code
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v3
         with:
           name: code
           path: .
@@ -159,7 +148,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       # - name: Download code
-      #   uses: actions/download-artifact@v4
+      #   uses: actions/download-artifact@v3
       #   with:
       #     name: code
       #     path: .
@@ -201,7 +190,7 @@ jobs:
                 video_url: '',
                 mrkdwn_in: [],
                 file_name: 'report.html',
-                file_url: ${{ steps.upload_test_report.outputs.browser_download_url }}
+                file_url: 'https://github.com/8398a7/blog-and-react-js-blog/actions/artifacts/123456789/backend/report.html'
               }]
             }        
         env:
@@ -230,6 +219,3 @@ jobs:
       #         title: 'CI/CD Pipeline Failed',
       #         body: 'The CI/CD pipeline has failed. Please check the logs for more details.'
       #       })
-
-
-
