@@ -185,7 +185,7 @@ jobs:
                 text: 'The test report is attached as a file.',
                 fields: [],
                 actions: [],
-                title_link: 'https://github.com/gagishmagi/Django-And-React-JS-Blog/actions/runs/${{ github.run_id }}/artifacts/2414831374',
+                title_link: "${{ needs.test.outputs.artifact-url }}",
                 footer: '',
                 footer_icon: '',
                 image_url: '',
