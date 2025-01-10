@@ -210,27 +210,48 @@ jobs:
       #     body: |
       #       The CI/CD pipeline has failed. Please check the logs for more details.
 
-      - name: Open Jira issue
-        uses: mheap/github-action-issue-to-jira@v1
+      - name: Login to Jira
+        uses: atlassian/gajira-login@v3
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          JIRA_BASE_URL: ${{ secrets.JIRA_ACCOUNT_URL }}
+          JIRA_USER_EMAIL: ${{ secrets.JIRA_USERNAME }}
+          JIRA_API_TOKEN: ${{ secrets.JIRA_PASSWORD }}
+      
+      - name: Create Issue in Jira
+        id: create-issue-jira
+        uses: atlassian/gajira-create@v3
         with:
-          jiraHost: ${{ secrets.JIRA_ACCOUNT_URL }}
-          jiraUsername: ${{ secrets.JIRA_USERNAME }}
-          jiraPassword: ${{ secrets.JIRA_PASSWORD }} # See https://id.atlassian.com/manage/api-tokens
           project: ${{ secrets.JIRA_PROJECT_KEY }}
-          assignee: default_assignee
+          issuetype: Build
+          summary: Build completed for ${{ github.repository }}
+          description: Compare branch
+          fields: '{"customfield_10171": "test"}'
+      
+      - name: Log created issue
+        run: echo "Issue ${{ steps.create.outputs.issue }} was created"
+
+      # - name: Open Jira issue
+      #   uses: bryannice/gitactions-jira-issue-creation@master
+      #   env:
+      #     JIRA_ACCOUNT_URL: ${{ secrets.JIRA_ACCOUNT_URL }}
+      #     JIRA_API_TOKEN: ${{ secrets.JIRA_PASSWORD }}
+      #     # JIRA_ISSUE_ATTACHMENT: log_file.log
+      #     JIRA_ISSUE_DESCRIPTION: 'The CI/CD pipeline has failed. Please check the logs for more details. [Test Report](${{ needs.test.outputs.artifact-url }})'
+      #     JIRA_ISSUE_SUMMARY: 'CI/CD Pipeline Automatic Tests Failed'
+      #     JIRA_ISSUE_TYPE: 'Bug'
+      #     JIRA_PROJECT: ${{ secrets.JIRA_PROJECT_KEY }}
+      #     JIRA_USERNAME: ${{ secrets.JIRA_USERNAME }}
           
-      # - name: Open GitHub issue
-      #   uses: actions/github-script@v6
-      #   with:
-      #     script: |
-      #       github.rest.issues.create({
-      #         owner: context.repo.owner,
-      #         repo: context.repo.repo,
-      #         title: 'CI/CD Pipeline Failed',
-      #         body: 'The CI/CD pipeline has failed. Please check the logs for more details.'
-      #       })  
+      - name: Open GitHub issue
+        uses: actions/github-script@v6
+        with:
+          script: |
+            github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: 'CI/CD Pipeline Failed',
+              body: 'The CI/CD pipeline has failed. Please check the logs for more details. [Test Report](${{ needs.test.outputs.artifact-url }})'
+            })  
 
 
 
