@@ -106,13 +106,12 @@ jobs:
         run: |
           source .venv/bin/activate
           cd ./backend 
-          pytest --html-report=report.html --title="Test Report" --self-contained-html
-
+          pytest tests/ --html-report=./report --title='PYTEST REPORT'
       - name: Upload test report
         uses: actions/upload-artifact@v3
         with:
           name: test-report
-          path: ./backend/report.html
+          path: ./backend/report
 
   deploy:
     if: success()
@@ -190,8 +189,7 @@ jobs:
                 video_url: '',
                 mrkdwn_in: [],
                 file_name: 'report.html',
-                file_url: 'https://github.com/8398a7/blog-and-react-js-blog/actions/artifacts/123456789/backend/report.html'
-              }]
+                file_url: "${{ needs.test.outputs.test-report-url }}"
             }        
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
