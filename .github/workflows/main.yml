@@ -76,6 +76,12 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
+      - name: Delete existing artifact
+        run: |
+          curl -X DELETE \
+          https://api.github.com/repos/${{ github.repository }}/actions/artifacts/code \
+          -H 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' \
+          -H 'content-type: application/json' || true
       - name: Download code
         uses: actions/download-artifact@v4
         with:
@@ -219,5 +225,6 @@ jobs:
       #         title: 'CI/CD Pipeline Failed',
       #         body: 'The CI/CD pipeline has failed. Please check the logs for more details.'
       #       })
+
 
 
