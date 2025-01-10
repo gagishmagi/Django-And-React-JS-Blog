@@ -12,6 +12,10 @@ jobs:
   source:
     runs-on: ubuntu-latest
     steps:
+      - name: Delete old artifacts
+        uses: geekyeggo/delete-artifact@v2
+        with:
+          name: code
       - name: Checkout Code
         uses: actions/checkout@v3
       - name: Upload code
@@ -218,3 +222,6 @@ jobs:
       #         title: 'CI/CD Pipeline Failed',
       #         body: 'The CI/CD pipeline has failed. Please check the logs for more details.'
       #       })
+
+
+
