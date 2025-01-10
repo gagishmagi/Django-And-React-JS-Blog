@@ -96,6 +96,11 @@ jobs:
           key: venv-${{ runner.os }}-${{ hashFiles('**/requirements.txt') }}
           restore-keys: |
             venv-${{ runner.os }}-
+      
+      - name: Build and Run Docker Image for E2E
+        run: |
+          docker build -t ${{ secrets.DOCKER_USERNAME }}/blog-and-react-js-blog-e2e:latest .
+          docker run --name blog-and-react-js-blog-e2e --rm -d -p 8000:8000 ${{ secrets.DOCKER_USERNAME }}/blog-and-react-js-blog-e2e:latest
 
       - name: Run tests
         run: |
@@ -150,13 +155,12 @@ jobs:
       #     render-token: ${{ secrets.RENDER_TOKEN }}
       #     service-name: blog-and-react-js-blog
 
-
   notify:
-    if: ${{ needs.test.result != 'success' }}
     needs: test
     runs-on: ubuntu-latest
     steps:
       - name: Send notification
+        if: needs.test.result == 'failure'
         run: |
           echo "Tests failed, sending notification to developers."
           # Add your notification logic here
