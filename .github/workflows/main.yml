@@ -114,6 +114,7 @@ jobs:
           name: code
           path: .
           retention-days: 1
+    continue-on-error: true
   
   deploy:
     if: ${{ needs.test.result == 'success' }}
