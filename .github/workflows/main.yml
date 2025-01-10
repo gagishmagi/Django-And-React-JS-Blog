@@ -185,7 +185,7 @@ jobs:
                 text: 'The test report is attached as a file.',
                 fields: [],
                 actions: [],
-                title_link: '${{ github.workspace }}/backend/report/pytest_html_report.html',
+                title_link: '${{ github.actions.artifacts.test-report.artifact_url }}',
                 footer: '',
                 footer_icon: '',
                 image_url: '',
