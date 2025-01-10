@@ -82,6 +82,7 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       artifact-id: ${{ steps.upload-test-report.outputs.artifact-id }}
+      artifact-url: ${{ steps.upload-test-report.outputs.artifact-url }}
     steps:
       - name: Download code
         uses: actions/download-artifact@v4
@@ -122,14 +123,7 @@ jobs:
         with:
           name: test-report
           path: ./backend/report
-      
-      - name: Print out articat id and url
-        if: failure()
-        run: |
-          echo "Artifact ID: ${{ steps.upload-test-report.outputs.artifact-id }}"
-          echo "Artifact URL: ${{ steps.upload-test-report.outputs.artifact-url }}"
-  
-
+          retention-days: 1
   deploy:
     if: success()
     needs: test
