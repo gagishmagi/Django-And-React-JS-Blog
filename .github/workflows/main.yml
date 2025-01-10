@@ -12,12 +12,6 @@ jobs:
   source:
     runs-on: ubuntu-latest
     steps:
-      - name: Delete existing artifact
-        run: |
-          curl -X DELETE \
-          https://api.github.com/repos/${{ github.repository }}/actions/artifacts/code \
-          -H 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' \
-          -H 'content-type: application/json' || true
       - name: Checkout Code
         uses: actions/checkout@v3
       - name: Upload code
@@ -77,6 +71,17 @@ jobs:
           name: code
           path: .
           retention-days: 1
+          if-no-files-found: warn
+          compression-level: 6
+          overwrite: false
+          include-hidden-files: false
+        env:
+          pythonLocation: /opt/hostedtoolcache/Python/3.10.4/x64
+          PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.10.4/x64/lib/pkgconfig
+          Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.4/x64
+          Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.4/x64
+          Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.10.4/x64
+          LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.10.4/x64/lib
 
   test:
     needs: build
