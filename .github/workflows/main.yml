@@ -123,7 +123,7 @@ jobs:
         with:
           name: test-report
           path: ./backend/report
-          retention-days: 1
+
   deploy:
     if: success()
     needs: test
@@ -210,7 +210,20 @@ jobs:
       #     body: |
       #       The CI/CD pipeline has failed. Please check the logs for more details.
 
-      # - name: Open Jira issue
+      - name: Open Jira issue
+        uses: atlassian/github-actions/jira-create-issue@v1
+        with:
+          jira-instance: '${{ secrets.JIRA_INSTANCE }}.atlassian.net'
+          jira-project-key: '${{ secrets.JIRA_PROJECT_KEY }}'
+          jira-issue-type: 'Bug'
+          jira-summary: 'CI/CD Pipeline Automatic Tests Failed'
+          jira-description: |
+            The CI/CD pipeline has failed. Please check the logs for more details.
+            [Test Report](${{ needs.test.outputs.artifact-url }})
+          jira-username: ${{ secrets.JIRA_USERNAME }}
+          jira-password: ${{ secrets.JIRA_PASSWORD }}
+          
+      # - name: Open GitHub issue
       #   uses: actions/github-script@v6
       #   with:
       #     script: |
@@ -219,7 +232,7 @@ jobs:
       #         repo: context.repo.repo,
       #         title: 'CI/CD Pipeline Failed',
       #         body: 'The CI/CD pipeline has failed. Please check the logs for more details.'
-      #       })
+      #       })  
 
 
 
