@@ -125,8 +125,8 @@ jobs:
       - name: Print out articat id and url
         if: failure()
         run: |
-          echo "Artifact ID: ${{ steps.upload-code.outputs.artifact-id }}"
-          echo "Artifact URL: ${{ steps.upload-code.outputs.artifact-url }}"
+          echo "Artifact ID: ${{ steps.upload-test-report.outputs.artifact-id }}"
+          echo "Artifact URL: ${{ steps.upload-test-report.outputs.artifact-url }}"
   
 
   deploy:
