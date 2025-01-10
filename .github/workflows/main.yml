@@ -116,6 +116,7 @@ jobs:
           pytest --html-report=./report/report.html --title='PYTEST REPORT'
       
       - name: Upload test report
+        id: upload-test-report
         if: failure()
         uses: actions/upload-artifact@v4
         with:
