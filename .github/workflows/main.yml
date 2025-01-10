@@ -161,41 +161,41 @@ jobs:
         run: |
           echo "Tests failed, sending notification to developers."
 
-      - name: Send Slack notification
-        uses: 8398a7/action-slack@v3
-        with:
-          status: custom
-          custom_payload: |
-            {
-              text: "Tests failed",
-              attachments: [{
-                "author_name": "github actions", // json
-                fallback: 'fallback',
-                color: 'danger',
-                title: 'CI Result',
-                text: 'The test job failed. Please check the logs on the GitHub Actions page for more details.',
-                fields: [],
-                actions: []
-              },
-              {
-                title: 'Test Report',
-                text: 'The test report is attached as a file.',
-                fields: [],
-                actions: [],
-                title_link: '${{ needs.test.outputs.artifact-url }}',
-                footer: '',
-                footer_icon: '',
-                image_url: '',
-                thumb_url: '',
-                author_name: '',
-                author_link: '',
-                author_icon: '',
-                video_html: '',
-                video_url: '',
-              }]
-            }        
-        env:
-          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+      # - name: Send Slack notification
+      #   uses: 8398a7/action-slack@v3
+      #   with:
+      #     status: custom
+      #     custom_payload: |
+      #       {
+      #         text: "Tests failed",
+      #         attachments: [{
+      #           "author_name": "github actions", // json
+      #           fallback: 'fallback',
+      #           color: 'danger',
+      #           title: 'CI Result',
+      #           text: 'The test job failed. Please check the logs on the GitHub Actions page for more details.',
+      #           fields: [],
+      #           actions: []
+      #         },
+      #         {
+      #           title: 'Test Report',
+      #           text: 'The test report is attached as a file.',
+      #           fields: [],
+      #           actions: [],
+      #           title_link: '${{ needs.test.outputs.artifact-url }}',
+      #           footer: '',
+      #           footer_icon: '',
+      #           image_url: '',
+      #           thumb_url: '',
+      #           author_name: '',
+      #           author_link: '',
+      #           author_icon: '',
+      #           video_html: '',
+      #           video_url: '',
+      #         }]
+      #       }        
+      #   env:
+      #     SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
       
       # - name: Send email notification
       #   uses: dawidd6/action-send-mail@master
@@ -217,15 +217,14 @@ jobs:
           JIRA_USER_EMAIL: ${{ secrets.JIRA_USERNAME }}
           JIRA_API_TOKEN: ${{ secrets.JIRA_PASSWORD }}
       
-      - name: Create Issue in Jira
-        id: create-issue-jira
+      - name: Create Jira issue
+        id: create
         uses: atlassian/gajira-create@v3
         with:
-          project: ${{ secrets.JIRA_PROJECT_KEY }}
-          issuetype: Build
-          summary: Build completed for ${{ github.repository }}
-          description: Compare branch
-          fields: '{"customfield_10171": "test"}'
+          project: '${{ secrets.JIRA_PROJECT_KEY }}'
+          issuetype: 'Bug'
+          summary: 'CI/CD Pipeline Failed'
+          description: 'The CI/CD pipeline has failed. Please check the logs for more details.'
       
       - name: Log created issue
         run: echo "Issue ${{ steps.create.outputs.issue }} was created"
@@ -242,16 +241,16 @@ jobs:
       #     JIRA_PROJECT: ${{ secrets.JIRA_PROJECT_KEY }}
       #     JIRA_USERNAME: ${{ secrets.JIRA_USERNAME }}
           
-      - name: Open GitHub issue
-        uses: actions/github-script@v6
-        with:
-          script: |
-            github.rest.issues.create({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              title: 'CI/CD Pipeline Failed',
-              body: 'The CI/CD pipeline has failed. Please check the logs for more details. [Test Report](${{ needs.test.outputs.artifact-url }})'
-            })  
+      # - name: Open GitHub issue
+      #   uses: actions/github-script@v6
+      #   with:
+      #     script: |
+      #       github.rest.issues.create({
+      #         owner: context.repo.owner,
+      #         repo: context.repo.repo,
+      #         title: 'CI/CD Pipeline Failed',
+      #         body: 'The CI/CD pipeline has failed. Please check the logs for more details. [Test Report](${{ needs.test.outputs.artifact-url }})'
+      #       })  
 
 
 
