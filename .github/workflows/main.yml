@@ -211,17 +211,16 @@ jobs:
       #       The CI/CD pipeline has failed. Please check the logs for more details.
 
       - name: Open Jira issue
-        uses: jira/official-jira-create-issue-action@v1
-        with:
-          jira-instance: '${{ secrets.JIRA_INSTANCE }}.atlassian.net'
-          jira-project-key: '${{ secrets.JIRA_PROJECT_KEY }}'
-          jira-issue-type: 'Bug'
-          jira-summary: 'CI/CD Pipeline Automatic Tests Failed'
-          jira-description: |
-            The CI/CD pipeline has failed. Please check the logs for more details.
-            [Test Report](${{ needs.test.outputs.artifact-url }})
-          jira-username: ${{ secrets.JIRA_USERNAME }}
-          jira-password: ${{ secrets.JIRA_PASSWORD }}
+        uses: bryannice/gitactions-jira-issue-creation@master
+        env:
+          JIRA_ACCOUNT_URL: ${{ secrets.JIRA_ACCOUNT_URL }}
+          JIRA_API_TOKEN: ${{ secrets.JIRA_API_TOKEN }}
+          JIRA_ISSUE_ATTACHMENT: log_file.log
+          JIRA_ISSUE_DESCRIPTION: 'The CI/CD pipeline has failed. Please check the logs for more details. [Test Report](${{ needs.test.outputs.artifact-url }})'
+          JIRA_ISSUE_SUMMARY: 'CI/CD Pipeline Automatic Tests Failed'
+          JIRA_ISSUE_TYPE: 'Bug'
+          JIRA_PROJECT: ${{ secrets.JIRA_PROJECT }}
+          JIRA_USERNAME: ${{ secrets.JIRA_USERNAME }}
           
       # - name: Open GitHub issue
       #   uses: actions/github-script@v6
