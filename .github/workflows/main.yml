@@ -158,11 +158,11 @@ jobs:
         run: |
           echo "Tests failed, sending notification to developers."
       
-      # - name: Download test report
-      #   uses: actions/download-artifact@v3
-      #   with:
-      #     name: test-report
-      #     path: ./backend/report
+      - name: Download test report
+        uses: actions/download-artifact@v3
+        with:
+          name: test-report
+          path: ./backend/report
 
       - name: Send Slack notification
         uses: 8398a7/action-slack@v3
