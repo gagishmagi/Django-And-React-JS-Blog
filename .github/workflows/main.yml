@@ -106,7 +106,7 @@ jobs:
         run: |
           source .venv/bin/activate
           cd ./backend 
-          pytest
+          pytest --html=report.html --self-contained-html
 
   deploy:
     if: success()
@@ -141,10 +141,15 @@ jobs:
     needs: test
     runs-on: ubuntu-latest
     steps:
+      # - name: Download code
+      #   uses: actions/download-artifact@v3
+      #   with:
+      #     name: code
+      #     path: .
+
       - name: Send notification
         run: |
           echo "Tests failed, sending notification to developers."
-          # Add your notification logic here
 
       - name: Send Slack notification
         uses: 8398a7/action-slack@v3
@@ -179,7 +184,7 @@ jobs:
                 video_url: '',
                 mrkdwn_in: [],
                 file_name: 'report.html',
-                file_url: 'https://github.com/8398a7/blog-and-react-js-blog/actions/artifacts/123456789/report.html'
+                file_url: 'https://github.com/8398a7/blog-and-react-js-blog/actions/artifacts/123456789/backend/report.html'
               }]
             }        
         env:
