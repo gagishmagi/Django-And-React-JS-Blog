@@ -15,18 +15,18 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v3
       - name: Upload code
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: code
           path: .
-          retention-days: 1
+          retentionDays: 1
 
   build:
     needs: source
     runs-on: ubuntu-latest
     steps:
       - name: Download code
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: code
           path: .
@@ -66,18 +66,18 @@ jobs:
             venv-${{ runner.os }}-
 
       - name: Upload code
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: code
           path: .
-          retention-days: 1
+          retentionDays: 1
 
   test:
     needs: build
     runs-on: ubuntu-latest
     steps:
       - name: Download code
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: code
           path: .
@@ -109,7 +109,7 @@ jobs:
           pytest --html=report.html --self-contained-html
 
       - name: Upload test report
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: test-report
           path: ./backend/report.html
@@ -120,7 +120,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Download code
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: code
           path: .
@@ -148,7 +148,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       # - name: Download code
-      #   uses: actions/download-artifact@v3
+      #   uses: actions/download-artifact@v4
       #   with:
       #     name: code
       #     path: .
@@ -190,7 +190,7 @@ jobs:
                 video_url: '',
                 mrkdwn_in: [],
                 file_name: 'report.html',
-                file_url: 'https://github.com/8398a7/blog-and-react-js-blog/actions/artifacts/123456789/backend/report.html'
+                file_url: ${{ steps.upload_test_report.outputs.browser_download_url }}
               }]
             }        
         env:
@@ -219,3 +219,4 @@ jobs:
       #         title: 'CI/CD Pipeline Failed',
       #         body: 'The CI/CD pipeline has failed. Please check the logs for more details.'
       #       })
+
