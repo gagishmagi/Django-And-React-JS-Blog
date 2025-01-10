@@ -76,7 +76,7 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     outputs:
-      artifact-url: ${{ steps.upload-test-report.outputs.artifact-url}}
+      artifact-id: ${{ steps.upload-test-report.outputs.artifact-id }}
     steps:
       - name: Download code
         uses: actions/download-artifact@v3
@@ -175,7 +175,7 @@ jobs:
                 text: 'The test report is attached as a file.',
                 fields: [],
                 actions: [],
-                title_link: '${{ needs.test.outputs.artifact-url }}',
+                title_link: 'https://github.com/${{ github.repository }}/${{ github.actor }}/actions/runs/${{ github.run_id }}/artifacts/${{ needs.test.outputs.artifact-id }}',
                 footer: '',
                 footer_icon: '',
                 image_url: '',
