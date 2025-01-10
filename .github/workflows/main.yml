@@ -106,7 +106,7 @@ jobs:
         run: |
           source .venv/bin/activate
           cd ./backend 
-          pytest --html=report.html --self-contained-html
+          pytest --html-report=report.html --title="Test Report" --self-contained-html
 
       - name: Upload test report
         uses: actions/upload-artifact@v3
