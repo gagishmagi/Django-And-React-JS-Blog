@@ -108,14 +108,6 @@ jobs:
           cd ./backend 
           pytest
 
-      - name: Upload code
-        uses: actions/upload-artifact@v3
-        with:
-          name: code
-          path: .
-          retention-days: 1
-    continue-on-error: true
-  
   deploy:
     if: ${{ needs.test.result == 'success' }}
     needs: test
@@ -144,22 +136,10 @@ jobs:
           render-api-key: ${{ secrets.RENDER_TOKEN }}
           wait-for-deployment: true
 
-      # uses: renderinc/render-action@v1
-      # with:
-      #   render-token: ${{ secrets.RENDER_TOKEN }}
-      #   service-name: blog-and-react-js-blog
-      #   docker-image: ${{ secrets.DOCKER_USERNAME }}/blog-and-react-js-blog:latest
-      
-      # - name: Deploy to render.com
-      #   uses: renderinc/render-action@v1
-      #   with:
-      #     render-token: ${{ secrets.RENDER_TOKEN }}
-      #     service-name: blog-and-react-js-blog
-
   notify:
+    if: ${{ needs.test.result == 'failure' }}
     needs: test
     runs-on: ubuntu-latest
-    if: needs.test.result == 'failure'
     steps:
       - name: Send notification
         run: |
@@ -197,6 +177,3 @@ jobs:
       #         title: 'CI/CD Pipeline Failed',
       #         body: 'The CI/CD pipeline has failed. Please check the logs for more details.'
       #       })
-
-
-
