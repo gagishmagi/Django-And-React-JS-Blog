@@ -224,8 +224,10 @@ jobs:
           project: '${{ secrets.JIRA_PROJECT_KEY }}'
           issuetype: 'Bug'
           summary: 'CI/CD Pipeline Failed'
-          description: 'The CI/CD pipeline has failed. Please check the logs for more details.'
-      
+          description: |
+            The CI/CD pipeline has failed. Please check the logs for more details.
+            [Test Report](${{ needs.test.outputs.artifact-url }})
+          
       - name: Log created issue
         run: echo "Issue ${{ steps.create.outputs.issue }} was created"
 
