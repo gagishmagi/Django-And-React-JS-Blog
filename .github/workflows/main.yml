@@ -72,6 +72,11 @@ jobs:
           path: .
           retention-days: 1
 
+      - name: Print out articat id and url
+        run: |
+          echo "Artifact ID: ${{ steps.upload-code.outputs.artifact-id }}"
+          echo "Artifact URL: ${{ steps.upload-code.outputs.artifact-url }}"
+
   test:
     needs: build
     runs-on: ubuntu-latest
