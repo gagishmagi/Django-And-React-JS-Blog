@@ -182,7 +182,7 @@ jobs:
                 text: 'The test report is attached as a file.',
                 fields: [],
                 actions: [],
-                title_link: 'https://github.com/${{ github.repository }}/${{ github.actor }}/actions/runs/${{ github.run_id }}/artifacts/${{ needs.test.outputs.artifact-id }}',
+                title_link: '${{ needs.test.outputs.artifact-url }}',
                 footer: '',
                 footer_icon: '',
                 image_url: '',
