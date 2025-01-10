@@ -164,7 +164,7 @@ jobs:
             {
               text: "Tests failed",
               attachments: [{
-                "author_name": "8398a7@action-slack", // json
+                "author_name": "github actions", // json
                 fallback: 'fallback',
                 color: 'danger',
                 title: 'CI Result',
@@ -177,7 +177,7 @@ jobs:
                 text: 'The test report is attached as a file.',
                 fields: [],
                 actions: [],
-                title_link: '',
+                title_link: 'https://github.com/8398a7/blog-and-react-js-blog/actions/runs/${{ github.run_id }}',
                 footer: '',
                 footer_icon: '',
                 image_url: '',
@@ -190,6 +190,7 @@ jobs:
                 mrkdwn_in: [],
                 file_name: 'report.html',
                 file_url: "${{ needs.test.outputs.test-report-url }}"
+              }]
             }        
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
