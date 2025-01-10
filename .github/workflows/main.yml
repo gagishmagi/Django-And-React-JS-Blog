@@ -123,6 +123,7 @@ jobs:
           path: ./backend/report
       
       - name: Print out articat id and url
+        if: failure()
         run: |
           echo "Artifact ID: ${{ steps.upload-code.outputs.artifact-id }}"
           echo "Artifact URL: ${{ steps.upload-code.outputs.artifact-url }}"
