@@ -105,25 +105,15 @@ jobs:
           restore-keys: |
             venv-${{ runner.os }}-
       
-      - name: Build and Run Docker Image for E2E locally
+      - name: Install test dependencies
         run: |
-          docker build -t ${{ secrets.DOCKER_USERNAME }}/blog-and-react-js-blog-e2e:latest .
-          docker run --name blog-and-react-js-blog-e2e --rm -d -p 8000:8000 -e PUBLIC_URL=http://localhost:8000 ${{ secrets.DOCKER_USERNAME }}/blog-and-react-js-blog-e2e:latest
-
-      - name: Run Selenium
-        run: |
-          docker run --rm -d --network=host --name selenium selenium/standalone-chromium:latest
-
-      - name: Install wait-for-it.sh
-        run: |
-          curl -sSfL https://github.com/vishnubob/wait-for-it/archive/refs/heads/master.tar.gz | tar xz -C /tmp
-          sudo cp /tmp/wait-for-it-master/wait-for-it.sh /usr/local/bin/
-          sudo chmod +x /usr/local/bin/wait-for-it.sh
-  
-      - name: Wait for Selenium WebDriver server to start
-        run: |
-          wait-for-it.sh localhost:4444 --timeout=30
-  
+          set -ex
+          wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+          sudo apt install ./google-chrome-stable_current_amd64.deb
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install msedge-selenium-tools
+      
       - name: Run tests
         run: |
           source .venv/bin/activate
