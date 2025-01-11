@@ -195,7 +195,7 @@ jobs:
                 text: 'The test report is attached as a file.',
                 fields: [],
                 actions: [],
-                title_link: 'https://${{ github.repository_owner }}.github.io/${{ github.repository_name }}/report.html',
+                title_link: 'https://${{ github.repository_owner }}.github.io/Django-And-React-JS-Blog/report.html',
                 footer: '',
                 footer_icon: '',
                 image_url: '',
