@@ -105,10 +105,10 @@ jobs:
           restore-keys: |
             venv-${{ runner.os }}-
       
-      # - name: Build and Run Docker Image for E2E locally
-      #   run: |
-      #     docker build -t ${{ secrets.DOCKER_USERNAME }}/blog-and-react-js-blog-e2e:latest .
-      #     docker run --name blog-and-react-js-blog-e2e --rm -d -p 8000:8000 ${{ secrets.DOCKER_USERNAME }}/blog-and-react-js-blog-e2e:latest
+      - name: Build and Run Docker Image for E2E locally
+        run: |
+          docker build -t ${{ secrets.DOCKER_USERNAME }}/blog-and-react-js-blog-e2e:latest .
+          docker run --name blog-and-react-js-blog-e2e --rm -d -p 8000:8000 -e PUBLIC_URL=http://localhost:8000 ${{ secrets.DOCKER_USERNAME }}/blog-and-react-js-blog-e2e:latest
 
       - name: Run tests
         run: |
