@@ -112,7 +112,7 @@ jobs:
 
       - name: Run Selenium
         run: |
-          docker run --rm -d --network host --name selenium selenium/standalone-chromium:latest
+          docker run --rm -d --network=host --name selenium selenium/standalone-chromium:latest
 
       - name: Install wait-for-it.sh
         run: |

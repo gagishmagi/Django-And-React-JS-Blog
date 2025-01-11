@@ -163,7 +163,7 @@ class TestCreateArticle:
         time.sleep(10)
 
     def _create_article(self, post_title, post_description):
-        submit_button = WebDriverWait(self.driver, 10).until(
+        submit_button = WebDriverWait(self.driver, 5).until(
             EC.element_to_be_clickable((By.XPATH, '//button[text()="Create Post"]'))
         )
         submit_button.click()
