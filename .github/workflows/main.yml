@@ -170,12 +170,17 @@ jobs:
       - name: Send Slack Notification
         uses: 8398a7/action-slack@v3
         with:
-          status: ${{ job.status }}
-          fields: |
+          status: custom
+          custom_payload: |
             {
-              "title": "Live Site",
-              "value": "https://blog-and-react-js-blog.onrender.com/",
-              "short": false
+              "text": "Build successfull, deployed to https://blog-and-react-js-blog.onrender.com/",
+              "fields": [
+                {
+                  "title": "Live Site",
+                  "value": "<https://blog-and-react-js-blog.onrender.com/>",
+                  "short": false
+                }
+              ]
             }
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
