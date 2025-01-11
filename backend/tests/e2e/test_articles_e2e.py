@@ -13,10 +13,11 @@ class TestCreateArticle:
         chrome_options.add_argument("--no-sandbox")
         chrome_options.add_argument("--disable-dev-shm-usage")
         chrome_options.add_argument("--start-maximized")
-        self.driver = webdriver.Remote(
-            command_executor='http://localhost:4444/wd/hub',
-            options=chrome_options
-        )
+        self.driver = webdriver.Chrome(options=chrome_options)
+        # self.driver = webdriver.Remote(
+        #     command_executor='http://localhost:4444/wd/hub',
+        #     options=chrome_options
+        # )
         self.driver.implicitly_wait(10)  # Set implicit wait to speed up tests
 
     def teardown_method(self):
@@ -40,6 +41,8 @@ class TestCreateArticle:
 
         assert post_title in post_header.text
         assert post_description in post_description_element.text
+
+        time.sleep(3)  # Make test slower
 
         self._logout()
 
@@ -65,6 +68,8 @@ class TestCreateArticle:
 
             assert article['title'] in post_header.text
             assert article['description'] in post_description_element.text
+
+            time.sleep(1)  # Make test slower
 
         self._logout()
 
@@ -117,6 +122,8 @@ class TestCreateArticle:
         assert 'Edited Test Post Title' in post_header.text
         assert 'This is the edited test post description' in post_description_element.text
 
+        time.sleep(3)  # Make test slower
+
         self._logout()
 
     def test_delete_added_article(self):
@@ -141,6 +148,8 @@ class TestCreateArticle:
         )
 
         assert 'Test Post Title' not in self.driver.page_source
+
+        time.sleep(3)  # Make test slower
 
         self._logout()
 
