@@ -299,18 +299,20 @@ jobs:
       #   env:
       #     SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
       
-      # - name: Send email notification
-      #   uses: dawidd6/action-send-mail@master
-      #   with:
-      #     server_address: smtp.gmail.com
-      #     server_port: 587
-      #     username: ${{ secrets.EMAIL_USERNAME }}
-      #     password: ${{ secrets.EMAIL_PASSWORD }}
-      #     subject: "CI/CD Pipeline Failed"
-      #     to: ${{ secrets.EMAIL_TO }}
-      #     from: ${{ secrets.EMAIL_FROM }}
-      #     body: |
-      #       The CI/CD pipeline has failed. Please check the logs for more details.
+      - name: Send email notification
+        uses: dawidd6/action-send-mail@master
+        with:
+          server_address: smtp.gmail.com
+          server_port: 587
+          username: ${{ secrets.EMAIL_USERNAME }}
+          password: ${{ secrets.EMAIL_PASSWORD }}
+          subject: "CI/CD Pipeline Failed"
+          to: ${{ secrets.EMAIL_TO }}
+          from: ${{ secrets.EMAIL_FROM }}
+          body: |
+            The CI/CD pipeline has failed. Please check the logs for more details.
+            <a href="https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/report.html">Test Report</a>
+            <a href="${{ needs.test.outputs.artifact-url }}">Test Report Zip</a>
 
       # - name: Login to Jira
       #   uses: atlassian/gajira-login@v3
