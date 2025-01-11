@@ -124,6 +124,7 @@ jobs:
         run: |
           source .venv/bin/activate
           cd ./frontend
+          npm install
           npm run build  
           cd ../backend
           python manage.py runserver &
