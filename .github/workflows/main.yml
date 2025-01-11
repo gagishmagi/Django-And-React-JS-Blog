@@ -166,6 +166,20 @@ jobs:
           render-api-key: ${{ secrets.RENDER_TOKEN }}
           wait-for-deployment: true
 
+          
+      - name: Send Slack Notification
+        uses: 8398a7/action-slack@v3
+        with:
+          status: ${{ job.status }}
+          fields: |
+            {
+              "title": "Live Site",
+              "value": "https://blog-and-react-js-blog.onrender.com/",
+              "short": false
+            }
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+
   notify:
     if: failure()
     needs: test
