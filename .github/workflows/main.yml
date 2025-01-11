@@ -173,11 +173,11 @@ jobs:
           status: custom
           custom_payload: |
             {
-              "text": "Build successfull, deployed to https://blog-and-react-js-blog.onrender.com/",
+              "text": "Build successfull, deployed to https://blog-and-react-js-blog-latest.onrender.com/",
               "fields": [
                 {
                   "title": "Live Site",
-                  "value": "<https://blog-and-react-js-blog.onrender.com/>",
+                  "value": "<https://blog-and-react-js-blog-latest.onrender.com/>",
                   "short": false
                 }
               ]
