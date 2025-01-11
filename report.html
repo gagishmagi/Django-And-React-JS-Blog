@@ -769,7 +769,7 @@
                           <div style="margin-bottom: -4%; margin-left: 30%;">
                             <span class="time__taken">
                                 <svg width="22px" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" style="margin: -1% 2% 0% 29%; -ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1536 1536"><path d="M896 416v448q0 14-9 23t-23 9H544q-14 0-23-9t-9-23v-64q0-14 9-23t23-9h224V416q0-14 9-23t23-9h64q14 0 23 9t9 23zm416 352q0-148-73-273t-198-198t-273-73t-273 73t-198 198t-73 273t73 273t198 198t273 73t273-73t198-198t73-273zm224 0q0 209-103 385.5T1153.5 1433T768 1536t-385.5-103T103 1153.5T0 768t103-385.5T382.5 103T768 0t385.5 103T1433 382.5T1536 768z" fill="#a9a9a9"/></svg>
-                                    Time taken 1.41 secs
+                                    Time taken 1.49 secs
                             </span>
                           </div>
                           <div>
@@ -969,7 +969,7 @@
                 <td style="word-wrap: break-word;max-width: 200px; white-space: normal; text-align:left">tests/integration/test_articles_api.py</td>
                 <td style="word-wrap: break-word;max-width: 200px; white-space: normal; text-align:left">test_create_article</td>
                 <td>PASS</td>
-                <td>0.25</td>
+                <td>0.24</td>
                 <td style="word-wrap: break-word;max-width: 200px; white-space: normal; text-align:left"">
                     
                     
@@ -1068,99 +1068,22 @@
                 <td style="word-wrap: break-word;max-width: 200px; white-space: normal; text-align:left">tests/e2e/test_articles_e2e.py</td>
                 <td style="word-wrap: break-word;max-width: 200px; white-space: normal; text-align:left">test_create_article</td>
                 <td>ERROR</td>
-                <td>0.24</td>
+                <td>0.28</td>
                 <td style="word-wrap: break-word;max-width: 200px; white-space: normal; text-align:left"">
-                    self = <urllib3.connection.HTTPConnection object a
+                    self = <urllib3.connectionpool.HTTPConnectionPool 
                     
-            <a data-toggle="modal" href="#myModal-17366160008156106" class="">(...)</a>
-            <div class="modal fade in" id="myModal-17366160008156106" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <a data-toggle="modal" href="#myModal-173661698978965" class="">(...)</a>
+            <div class="modal fade in" id="myModal-173661698978965" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-body">
                             <p>
                                 <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" width="1.12em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1856 1664"><path d="M1056 1375v-190q0-14-9.5-23.5t-22.5-9.5H832q-13 0-22.5 9.5T800 1185v190q0 14 9.5 23.5t22.5 9.5h192q13 0 22.5-9.5t9.5-23.5zm-2-374l18-459q0-12-10-19q-13-11-24-11H818q-11 0-24 11q-10 7-10 21l17 457q0 10 10 16.5t24 6.5h185q14 0 23.5-6.5t10.5-16.5zm-14-934l768 1408q35 63-2 126q-17 29-46.5 46t-63.5 17H160q-34 0-63.5-17T50 1601q-37-63-2-126L816 67q17-31 47-49t65-18t65 18t47 49z" fill="#DC143C"/></svg>
-                                self = <urllib3.connection.HTTPConnection object at 0x7fb43dd62980>
-
-    def _new_conn(self) -> socket.socket:
-        """Establish a socket connection and set nodelay settings on it.
-    
-        :return: New socket connection.
-        """
-        try:
->           sock = connection.create_connection(
-                (self._dns_host, self.port),
-                self.timeout,
-                source_address=self.source_address,
-                socket_options=self.socket_options,
-            )
-
-../.venv/lib/python3.10/site-packages/urllib3/connection.py:198: 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-../.venv/lib/python3.10/site-packages/urllib3/util/connection.py:85: in create_connection
-    raise err
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-
-address = ('localhost', 4444), timeout = None, source_address = None
-socket_options = [(6, 1, 1)]
-
-    def create_connection(
-        address: tuple[str, int],
-        timeout: _TYPE_TIMEOUT = _DEFAULT_TIMEOUT,
-        source_address: tuple[str, int] | None = None,
-        socket_options: _TYPE_SOCKET_OPTIONS | None = None,
-    ) -> socket.socket:
-        """Connect to *address* and return the socket object.
-    
-        Convenience function.  Connect to *address* (a 2-tuple ``(host,
-        port)``) and return the socket object.  Passing the optional
-        *timeout* parameter will set the timeout on the socket instance
-        before attempting to connect.  If no *timeout* is supplied, the
-        global default timeout setting returned by :func:`socket.getdefaulttimeout`
-        is used.  If *source_address* is set it must be a tuple of (host, port)
-        for the socket to bind as a source address before making the connection.
-        An host of '' or port 0 tells the OS to use the default.
-        """
-    
-        host, port = address
-        if host.startswith("["):
-            host = host.strip("[]")
-        err = None
-    
-        # Using the value from allowed_gai_family() in the context of getaddrinfo lets
-        # us select whether to work with IPv4 DNS records, IPv6 records, or both.
-        # The original create_connection function always returns all records.
-        family = allowed_gai_family()
-    
-        try:
-            host.encode("idna")
-        except UnicodeError:
-            raise LocationParseError(f"'{host}', label empty or too long") from None
-    
-        for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
-            af, socktype, proto, canonname, sa = res
-            sock = None
-            try:
-                sock = socket.socket(af, socktype, proto)
-    
-                # If provided, set socket level options before connecting.
-                _set_socket_options(sock, socket_options)
-    
-                if timeout is not _DEFAULT_TIMEOUT:
-                    sock.settimeout(timeout)
-                if source_address:
-                    sock.bind(source_address)
->               sock.connect(sa)
-E               ConnectionRefusedError: [Errno 111] Connection refused
-
-../.venv/lib/python3.10/site-packages/urllib3/util/connection.py:73: ConnectionRefusedError
-
-The above exception was the direct cause of the following exception:
-
-self = <urllib3.connectionpool.HTTPConnectionPool object at 0x7fb43dd7d480>
+                                self = <urllib3.connectionpool.HTTPConnectionPool object at 0x7f1704e26da0>
 method = 'POST', url = '/wd/hub/session'
 body = '{"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "chrome", "pageLoadStrategy": "normal", "goog:ch...ptions": {"extensions": [], "args": ["--headless", "--no-sandbox", "--disable-dev-shm-usage", "--start-maximized"]}}}}'
 headers = HTTPHeaderDict({'Accept': 'application/json', 'Content-Type': 'application/json;charset=UTF-8', 'User-Agent': 'selenium/4.27.1 (python linux)', 'Connection': 'keep-alive'})
-retries = Retry(total=0, connect=None, read=None, redirect=None, status=None)
+retries = Retry(total=3, connect=None, read=None, redirect=None, status=None)
 redirect = False, assert_same_host = False, timeout = None, pool_timeout = None
 release_conn = True, chunked = False, body_pos = None, preload_content = True
 decode_content = True, response_kw = {}
@@ -1380,53 +1303,43 @@ http_tunnel_required = False, err = None, clean_exit = False
 
 ../.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:787: 
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-../.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:493: in _make_request
-    conn.request(
-../.venv/lib/python3.10/site-packages/urllib3/connection.py:445: in request
-    self.endheaders()
-/opt/hostedtoolcache/Python/3.10.4/x64/lib/python3.10/http/client.py:1277: in endheaders
-    self._send_output(message_body, encode_chunked=encode_chunked)
-/opt/hostedtoolcache/Python/3.10.4/x64/lib/python3.10/http/client.py:1037: in _send_output
-    self.send(msg)
-/opt/hostedtoolcache/Python/3.10.4/x64/lib/python3.10/http/client.py:975: in send
-    self.connect()
-../.venv/lib/python3.10/site-packages/urllib3/connection.py:276: in connect
-    self.sock = self._new_conn()
+../.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:534: in _make_request
+    response = conn.getresponse()
+../.venv/lib/python3.10/site-packages/urllib3/connection.py:516: in getresponse
+    httplib_response = super().getresponse()
+/opt/hostedtoolcache/Python/3.10.4/x64/lib/python3.10/http/client.py:1374: in getresponse
+    response.begin()
+/opt/hostedtoolcache/Python/3.10.4/x64/lib/python3.10/http/client.py:318: in begin
+    version, status, reason = self._read_status()
+/opt/hostedtoolcache/Python/3.10.4/x64/lib/python3.10/http/client.py:279: in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <urllib3.connection.HTTPConnection object at 0x7fb43dd62980>
+self = <socket.SocketIO object at 0x7f1704e26f20>
+b = <memory at 0x7f1704c98ac0>
 
-    def _new_conn(self) -> socket.socket:
-        """Establish a socket connection and set nodelay settings on it.
+    def readinto(self, b):
+        """Read up to len(b) bytes into the writable buffer *b* and return
+        the number of bytes read.  If the socket is non-blocking and no bytes
+        are available, None is returned.
     
-        :return: New socket connection.
+        If *b* is non-empty, a 0 return value indicates that the connection
+        was shutdown at the other end.
         """
-        try:
-            sock = connection.create_connection(
-                (self._dns_host, self.port),
-                self.timeout,
-                source_address=self.source_address,
-                socket_options=self.socket_options,
-            )
-        except socket.gaierror as e:
-            raise NameResolutionError(self.host, self, e) from e
-        except SocketTimeout as e:
-            raise ConnectTimeoutError(
-                self,
-                f"Connection to {self.host} timed out. (connect timeout={self.timeout})",
-            ) from e
-    
-        except OSError as e:
->           raise NewConnectionError(
-                self, f"Failed to establish a new connection: {e}"
-            ) from e
-E           urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7fb43dd62980>: Failed to establish a new connection: [Errno 111] Connection refused
+        self._checkClosed()
+        self._checkReadable()
+        if self._timeout_occurred:
+            raise OSError("cannot read from timed out object")
+        while True:
+            try:
+>               return self._sock.recv_into(b)
+E               ConnectionResetError: [Errno 104] Connection reset by peer
 
-../.venv/lib/python3.10/site-packages/urllib3/connection.py:213: NewConnectionError
+/opt/hostedtoolcache/Python/3.10.4/x64/lib/python3.10/socket.py:705: ConnectionResetError
 
-The above exception was the direct cause of the following exception:
+During handling of the above exception, another exception occurred:
 
-self = <test_articles_e2e.TestCreateArticle object at 0x7fb43e34a860>
+self = <test_articles_e2e.TestCreateArticle object at 0x7f1705346860>
 
     def setup_method(self):
         chrome_options = Options()
@@ -1457,117 +1370,47 @@ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
     return self.urlopen(method, url, **extra_kw)
 ../.venv/lib/python3.10/site-packages/urllib3/poolmanager.py:443: in urlopen
     response = conn.urlopen(method, u.request_uri, **kw)
-../.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:871: in urlopen
-    return self.urlopen(
-../.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:871: in urlopen
-    return self.urlopen(
-../.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:871: in urlopen
-    return self.urlopen(
 ../.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:841: in urlopen
     retries = retries.increment(
+../.venv/lib/python3.10/site-packages/urllib3/util/retry.py:474: in increment
+    raise reraise(type(error), error, _stacktrace)
+../.venv/lib/python3.10/site-packages/urllib3/util/util.py:38: in reraise
+    raise value.with_traceback(tb)
+../.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:787: in urlopen
+    response = self._make_request(
+../.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:534: in _make_request
+    response = conn.getresponse()
+../.venv/lib/python3.10/site-packages/urllib3/connection.py:516: in getresponse
+    httplib_response = super().getresponse()
+/opt/hostedtoolcache/Python/3.10.4/x64/lib/python3.10/http/client.py:1374: in getresponse
+    response.begin()
+/opt/hostedtoolcache/Python/3.10.4/x64/lib/python3.10/http/client.py:318: in begin
+    version, status, reason = self._read_status()
+/opt/hostedtoolcache/Python/3.10.4/x64/lib/python3.10/http/client.py:279: in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = Retry(total=0, connect=None, read=None, redirect=None, status=None)
-method = 'POST', url = '/wd/hub/session', response = None
-error = NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fb43dd62980>: Failed to establish a new connection: [Errno 111] Connection refused')
-_pool = <urllib3.connectionpool.HTTPConnectionPool object at 0x7fb43dd7d480>
-_stacktrace = <traceback object at 0x7fb43dcda040>
+self = <socket.SocketIO object at 0x7f1704e26f20>
+b = <memory at 0x7f1704c98ac0>
 
-    def increment(
-        self,
-        method: str | None = None,
-        url: str | None = None,
-        response: BaseHTTPResponse | None = None,
-        error: Exception | None = None,
-        _pool: ConnectionPool | None = None,
-        _stacktrace: TracebackType | None = None,
-    ) -> Self:
-        """Return a new Retry object with incremented retry counters.
+    def readinto(self, b):
+        """Read up to len(b) bytes into the writable buffer *b* and return
+        the number of bytes read.  If the socket is non-blocking and no bytes
+        are available, None is returned.
     
-        :param response: A response object, or None, if the server did not
-            return a response.
-        :type response: :class:`~urllib3.response.BaseHTTPResponse`
-        :param Exception error: An error encountered during the request, or
-            None if the response was received successfully.
-    
-        :return: A new ``Retry`` object.
+        If *b* is non-empty, a 0 return value indicates that the connection
+        was shutdown at the other end.
         """
-        if self.total is False and error:
-            # Disabled, indicate to re-raise the error.
-            raise reraise(type(error), error, _stacktrace)
-    
-        total = self.total
-        if total is not None:
-            total -= 1
-    
-        connect = self.connect
-        read = self.read
-        redirect = self.redirect
-        status_count = self.status
-        other = self.other
-        cause = "unknown"
-        status = None
-        redirect_location = None
-    
-        if error and self._is_connection_error(error):
-            # Connect retry?
-            if connect is False:
-                raise reraise(type(error), error, _stacktrace)
-            elif connect is not None:
-                connect -= 1
-    
-        elif error and self._is_read_error(error):
-            # Read retry?
-            if read is False or method is None or not self._is_method_retryable(method):
-                raise reraise(type(error), error, _stacktrace)
-            elif read is not None:
-                read -= 1
-    
-        elif error:
-            # Other retry?
-            if other is not None:
-                other -= 1
-    
-        elif response and response.get_redirect_location():
-            # Redirect retry?
-            if redirect is not None:
-                redirect -= 1
-            cause = "too many redirects"
-            response_redirect_location = response.get_redirect_location()
-            if response_redirect_location:
-                redirect_location = response_redirect_location
-            status = response.status
-    
-        else:
-            # Incrementing because of a server error like a 500 in
-            # status_forcelist and the given method is in the allowed_methods
-            cause = ResponseError.GENERIC_ERROR
-            if response and response.status:
-                if status_count is not None:
-                    status_count -= 1
-                cause = ResponseError.SPECIFIC_ERROR.format(status_code=response.status)
-                status = response.status
-    
-        history = self.history + (
-            RequestHistory(method, url, error, status, redirect_location),
-        )
-    
-        new_retry = self.new(
-            total=total,
-            connect=connect,
-            read=read,
-            redirect=redirect,
-            status=status_count,
-            other=other,
-            history=history,
-        )
-    
-        if new_retry.is_exhausted():
-            reason = error or ResponseError(cause)
->           raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
-E           urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=4444): Max retries exceeded with url: /wd/hub/session (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fb43dd62980>: Failed to establish a new connection: [Errno 111] Connection refused'))
+        self._checkClosed()
+        self._checkReadable()
+        if self._timeout_occurred:
+            raise OSError("cannot read from timed out object")
+        while True:
+            try:
+>               return self._sock.recv_into(b)
+E               urllib3.exceptions.ProtocolError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
 
-../.venv/lib/python3.10/site-packages/urllib3/util/retry.py:519: MaxRetryError
+/opt/hostedtoolcache/Python/3.10.4/x64/lib/python3.10/socket.py:705: ProtocolError
 
                             </p>
                         </div>
@@ -1587,97 +1430,20 @@ E           urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost
                 <td>ERROR</td>
                 <td>0.22</td>
                 <td style="word-wrap: break-word;max-width: 200px; white-space: normal; text-align:left"">
-                    self = <urllib3.connection.HTTPConnection object a
+                    self = <urllib3.connectionpool.HTTPConnectionPool 
                     
-            <a data-toggle="modal" href="#myModal-17366160010343194" class="">(...)</a>
-            <div class="modal fade in" id="myModal-17366160010343194" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <a data-toggle="modal" href="#myModal-17366169900062647" class="">(...)</a>
+            <div class="modal fade in" id="myModal-17366169900062647" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-body">
                             <p>
                                 <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" width="1.12em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1856 1664"><path d="M1056 1375v-190q0-14-9.5-23.5t-22.5-9.5H832q-13 0-22.5 9.5T800 1185v190q0 14 9.5 23.5t22.5 9.5h192q13 0 22.5-9.5t9.5-23.5zm-2-374l18-459q0-12-10-19q-13-11-24-11H818q-11 0-24 11q-10 7-10 21l17 457q0 10 10 16.5t24 6.5h185q14 0 23.5-6.5t10.5-16.5zm-14-934l768 1408q35 63-2 126q-17 29-46.5 46t-63.5 17H160q-34 0-63.5-17T50 1601q-37-63-2-126L816 67q17-31 47-49t65-18t65 18t47 49z" fill="#DC143C"/></svg>
-                                self = <urllib3.connection.HTTPConnection object at 0x7fb43d897ac0>
-
-    def _new_conn(self) -> socket.socket:
-        """Establish a socket connection and set nodelay settings on it.
-    
-        :return: New socket connection.
-        """
-        try:
->           sock = connection.create_connection(
-                (self._dns_host, self.port),
-                self.timeout,
-                source_address=self.source_address,
-                socket_options=self.socket_options,
-            )
-
-../.venv/lib/python3.10/site-packages/urllib3/connection.py:198: 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-../.venv/lib/python3.10/site-packages/urllib3/util/connection.py:85: in create_connection
-    raise err
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-
-address = ('localhost', 4444), timeout = None, source_address = None
-socket_options = [(6, 1, 1)]
-
-    def create_connection(
-        address: tuple[str, int],
-        timeout: _TYPE_TIMEOUT = _DEFAULT_TIMEOUT,
-        source_address: tuple[str, int] | None = None,
-        socket_options: _TYPE_SOCKET_OPTIONS | None = None,
-    ) -> socket.socket:
-        """Connect to *address* and return the socket object.
-    
-        Convenience function.  Connect to *address* (a 2-tuple ``(host,
-        port)``) and return the socket object.  Passing the optional
-        *timeout* parameter will set the timeout on the socket instance
-        before attempting to connect.  If no *timeout* is supplied, the
-        global default timeout setting returned by :func:`socket.getdefaulttimeout`
-        is used.  If *source_address* is set it must be a tuple of (host, port)
-        for the socket to bind as a source address before making the connection.
-        An host of '' or port 0 tells the OS to use the default.
-        """
-    
-        host, port = address
-        if host.startswith("["):
-            host = host.strip("[]")
-        err = None
-    
-        # Using the value from allowed_gai_family() in the context of getaddrinfo lets
-        # us select whether to work with IPv4 DNS records, IPv6 records, or both.
-        # The original create_connection function always returns all records.
-        family = allowed_gai_family()
-    
-        try:
-            host.encode("idna")
-        except UnicodeError:
-            raise LocationParseError(f"'{host}', label empty or too long") from None
-    
-        for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
-            af, socktype, proto, canonname, sa = res
-            sock = None
-            try:
-                sock = socket.socket(af, socktype, proto)
-    
-                # If provided, set socket level options before connecting.
-                _set_socket_options(sock, socket_options)
-    
-                if timeout is not _DEFAULT_TIMEOUT:
-                    sock.settimeout(timeout)
-                if source_address:
-                    sock.bind(source_address)
->               sock.connect(sa)
-E               ConnectionRefusedError: [Errno 111] Connection refused
-
-../.venv/lib/python3.10/site-packages/urllib3/util/connection.py:73: ConnectionRefusedError
-
-The above exception was the direct cause of the following exception:
-
-self = <urllib3.connectionpool.HTTPConnectionPool object at 0x7fb43d896c50>
+                                self = <urllib3.connectionpool.HTTPConnectionPool object at 0x7f170476eb00>
 method = 'POST', url = '/wd/hub/session'
 body = '{"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "chrome", "pageLoadStrategy": "normal", "goog:ch...ptions": {"extensions": [], "args": ["--headless", "--no-sandbox", "--disable-dev-shm-usage", "--start-maximized"]}}}}'
 headers = HTTPHeaderDict({'Accept': 'application/json', 'Content-Type': 'application/json;charset=UTF-8', 'User-Agent': 'selenium/4.27.1 (python linux)', 'Connection': 'keep-alive'})
-retries = Retry(total=0, connect=None, read=None, redirect=None, status=None)
+retries = Retry(total=3, connect=None, read=None, redirect=None, status=None)
 redirect = False, assert_same_host = False, timeout = None, pool_timeout = None
 release_conn = True, chunked = False, body_pos = None, preload_content = True
 decode_content = True, response_kw = {}
@@ -1897,53 +1663,43 @@ http_tunnel_required = False, err = None, clean_exit = False
 
 ../.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:787: 
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-../.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:493: in _make_request
-    conn.request(
-../.venv/lib/python3.10/site-packages/urllib3/connection.py:445: in request
-    self.endheaders()
-/opt/hostedtoolcache/Python/3.10.4/x64/lib/python3.10/http/client.py:1277: in endheaders
-    self._send_output(message_body, encode_chunked=encode_chunked)
-/opt/hostedtoolcache/Python/3.10.4/x64/lib/python3.10/http/client.py:1037: in _send_output
-    self.send(msg)
-/opt/hostedtoolcache/Python/3.10.4/x64/lib/python3.10/http/client.py:975: in send
-    self.connect()
-../.venv/lib/python3.10/site-packages/urllib3/connection.py:276: in connect
-    self.sock = self._new_conn()
+../.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:534: in _make_request
+    response = conn.getresponse()
+../.venv/lib/python3.10/site-packages/urllib3/connection.py:516: in getresponse
+    httplib_response = super().getresponse()
+/opt/hostedtoolcache/Python/3.10.4/x64/lib/python3.10/http/client.py:1374: in getresponse
+    response.begin()
+/opt/hostedtoolcache/Python/3.10.4/x64/lib/python3.10/http/client.py:318: in begin
+    version, status, reason = self._read_status()
+/opt/hostedtoolcache/Python/3.10.4/x64/lib/python3.10/http/client.py:279: in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <urllib3.connection.HTTPConnection object at 0x7fb43d897ac0>
+self = <socket.SocketIO object at 0x7f170476e3e0>
+b = <memory at 0x7f1704d1f040>
 
-    def _new_conn(self) -> socket.socket:
-        """Establish a socket connection and set nodelay settings on it.
+    def readinto(self, b):
+        """Read up to len(b) bytes into the writable buffer *b* and return
+        the number of bytes read.  If the socket is non-blocking and no bytes
+        are available, None is returned.
     
-        :return: New socket connection.
+        If *b* is non-empty, a 0 return value indicates that the connection
+        was shutdown at the other end.
         """
-        try:
-            sock = connection.create_connection(
-                (self._dns_host, self.port),
-                self.timeout,
-                source_address=self.source_address,
-                socket_options=self.socket_options,
-            )
-        except socket.gaierror as e:
-            raise NameResolutionError(self.host, self, e) from e
-        except SocketTimeout as e:
-            raise ConnectTimeoutError(
-                self,
-                f"Connection to {self.host} timed out. (connect timeout={self.timeout})",
-            ) from e
-    
-        except OSError as e:
->           raise NewConnectionError(
-                self, f"Failed to establish a new connection: {e}"
-            ) from e
-E           urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7fb43d897ac0>: Failed to establish a new connection: [Errno 111] Connection refused
+        self._checkClosed()
+        self._checkReadable()
+        if self._timeout_occurred:
+            raise OSError("cannot read from timed out object")
+        while True:
+            try:
+>               return self._sock.recv_into(b)
+E               ConnectionResetError: [Errno 104] Connection reset by peer
 
-../.venv/lib/python3.10/site-packages/urllib3/connection.py:213: NewConnectionError
+/opt/hostedtoolcache/Python/3.10.4/x64/lib/python3.10/socket.py:705: ConnectionResetError
 
-The above exception was the direct cause of the following exception:
+During handling of the above exception, another exception occurred:
 
-self = <test_articles_e2e.TestCreateArticle object at 0x7fb43e24b0a0>
+self = <test_articles_e2e.TestCreateArticle object at 0x7f17052470a0>
 
     def setup_method(self):
         chrome_options = Options()
@@ -1974,117 +1730,47 @@ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
     return self.urlopen(method, url, **extra_kw)
 ../.venv/lib/python3.10/site-packages/urllib3/poolmanager.py:443: in urlopen
     response = conn.urlopen(method, u.request_uri, **kw)
-../.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:871: in urlopen
-    return self.urlopen(
-../.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:871: in urlopen
-    return self.urlopen(
-../.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:871: in urlopen
-    return self.urlopen(
 ../.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:841: in urlopen
     retries = retries.increment(
+../.venv/lib/python3.10/site-packages/urllib3/util/retry.py:474: in increment
+    raise reraise(type(error), error, _stacktrace)
+../.venv/lib/python3.10/site-packages/urllib3/util/util.py:38: in reraise
+    raise value.with_traceback(tb)
+../.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:787: in urlopen
+    response = self._make_request(
+../.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:534: in _make_request
+    response = conn.getresponse()
+../.venv/lib/python3.10/site-packages/urllib3/connection.py:516: in getresponse
+    httplib_response = super().getresponse()
+/opt/hostedtoolcache/Python/3.10.4/x64/lib/python3.10/http/client.py:1374: in getresponse
+    response.begin()
+/opt/hostedtoolcache/Python/3.10.4/x64/lib/python3.10/http/client.py:318: in begin
+    version, status, reason = self._read_status()
+/opt/hostedtoolcache/Python/3.10.4/x64/lib/python3.10/http/client.py:279: in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = Retry(total=0, connect=None, read=None, redirect=None, status=None)
-method = 'POST', url = '/wd/hub/session', response = None
-error = NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fb43d897ac0>: Failed to establish a new connection: [Errno 111] Connection refused')
-_pool = <urllib3.connectionpool.HTTPConnectionPool object at 0x7fb43d896c50>
-_stacktrace = <traceback object at 0x7fb43d558880>
+self = <socket.SocketIO object at 0x7f170476e3e0>
+b = <memory at 0x7f1704d1f040>
 
-    def increment(
-        self,
-        method: str | None = None,
-        url: str | None = None,
-        response: BaseHTTPResponse | None = None,
-        error: Exception | None = None,
-        _pool: ConnectionPool | None = None,
-        _stacktrace: TracebackType | None = None,
-    ) -> Self:
-        """Return a new Retry object with incremented retry counters.
+    def readinto(self, b):
+        """Read up to len(b) bytes into the writable buffer *b* and return
+        the number of bytes read.  If the socket is non-blocking and no bytes
+        are available, None is returned.
     
-        :param response: A response object, or None, if the server did not
-            return a response.
-        :type response: :class:`~urllib3.response.BaseHTTPResponse`
-        :param Exception error: An error encountered during the request, or
-            None if the response was received successfully.
-    
-        :return: A new ``Retry`` object.
+        If *b* is non-empty, a 0 return value indicates that the connection
+        was shutdown at the other end.
         """
-        if self.total is False and error:
-            # Disabled, indicate to re-raise the error.
-            raise reraise(type(error), error, _stacktrace)
-    
-        total = self.total
-        if total is not None:
-            total -= 1
-    
-        connect = self.connect
-        read = self.read
-        redirect = self.redirect
-        status_count = self.status
-        other = self.other
-        cause = "unknown"
-        status = None
-        redirect_location = None
-    
-        if error and self._is_connection_error(error):
-            # Connect retry?
-            if connect is False:
-                raise reraise(type(error), error, _stacktrace)
-            elif connect is not None:
-                connect -= 1
-    
-        elif error and self._is_read_error(error):
-            # Read retry?
-            if read is False or method is None or not self._is_method_retryable(method):
-                raise reraise(type(error), error, _stacktrace)
-            elif read is not None:
-                read -= 1
-    
-        elif error:
-            # Other retry?
-            if other is not None:
-                other -= 1
-    
-        elif response and response.get_redirect_location():
-            # Redirect retry?
-            if redirect is not None:
-                redirect -= 1
-            cause = "too many redirects"
-            response_redirect_location = response.get_redirect_location()
-            if response_redirect_location:
-                redirect_location = response_redirect_location
-            status = response.status
-    
-        else:
-            # Incrementing because of a server error like a 500 in
-            # status_forcelist and the given method is in the allowed_methods
-            cause = ResponseError.GENERIC_ERROR
-            if response and response.status:
-                if status_count is not None:
-                    status_count -= 1
-                cause = ResponseError.SPECIFIC_ERROR.format(status_code=response.status)
-                status = response.status
-    
-        history = self.history + (
-            RequestHistory(method, url, error, status, redirect_location),
-        )
-    
-        new_retry = self.new(
-            total=total,
-            connect=connect,
-            read=read,
-            redirect=redirect,
-            status=status_count,
-            other=other,
-            history=history,
-        )
-    
-        if new_retry.is_exhausted():
-            reason = error or ResponseError(cause)
->           raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
-E           urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=4444): Max retries exceeded with url: /wd/hub/session (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fb43d897ac0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+        self._checkClosed()
+        self._checkReadable()
+        if self._timeout_occurred:
+            raise OSError("cannot read from timed out object")
+        while True:
+            try:
+>               return self._sock.recv_into(b)
+E               urllib3.exceptions.ProtocolError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
 
-../.venv/lib/python3.10/site-packages/urllib3/util/retry.py:519: MaxRetryError
+/opt/hostedtoolcache/Python/3.10.4/x64/lib/python3.10/socket.py:705: ProtocolError
 
                             </p>
                         </div>
@@ -2102,99 +1788,22 @@ E           urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost
                 <td style="word-wrap: break-word;max-width: 200px; white-space: normal; text-align:left">tests/e2e/test_articles_e2e.py</td>
                 <td style="word-wrap: break-word;max-width: 200px; white-space: normal; text-align:left">test_edit_post</td>
                 <td>ERROR</td>
-                <td>0.18</td>
+                <td>0.19</td>
                 <td style="word-wrap: break-word;max-width: 200px; white-space: normal; text-align:left"">
-                    self = <urllib3.connection.HTTPConnection object a
+                    self = <urllib3.connectionpool.HTTPConnectionPool 
                     
-            <a data-toggle="modal" href="#myModal-17366160012123806" class="">(...)</a>
-            <div class="modal fade in" id="myModal-17366160012123806" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <a data-toggle="modal" href="#myModal-17366169901945574" class="">(...)</a>
+            <div class="modal fade in" id="myModal-17366169901945574" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-body">
                             <p>
                                 <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" width="1.12em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1856 1664"><path d="M1056 1375v-190q0-14-9.5-23.5t-22.5-9.5H832q-13 0-22.5 9.5T800 1185v190q0 14 9.5 23.5t22.5 9.5h192q13 0 22.5-9.5t9.5-23.5zm-2-374l18-459q0-12-10-19q-13-11-24-11H818q-11 0-24 11q-10 7-10 21l17 457q0 10 10 16.5t24 6.5h185q14 0 23.5-6.5t10.5-16.5zm-14-934l768 1408q35 63-2 126q-17 29-46.5 46t-63.5 17H160q-34 0-63.5-17T50 1601q-37-63-2-126L816 67q17-31 47-49t65-18t65 18t47 49z" fill="#DC143C"/></svg>
-                                self = <urllib3.connection.HTTPConnection object at 0x7fb43d76d2d0>
-
-    def _new_conn(self) -> socket.socket:
-        """Establish a socket connection and set nodelay settings on it.
-    
-        :return: New socket connection.
-        """
-        try:
->           sock = connection.create_connection(
-                (self._dns_host, self.port),
-                self.timeout,
-                source_address=self.source_address,
-                socket_options=self.socket_options,
-            )
-
-../.venv/lib/python3.10/site-packages/urllib3/connection.py:198: 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-../.venv/lib/python3.10/site-packages/urllib3/util/connection.py:85: in create_connection
-    raise err
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-
-address = ('localhost', 4444), timeout = None, source_address = None
-socket_options = [(6, 1, 1)]
-
-    def create_connection(
-        address: tuple[str, int],
-        timeout: _TYPE_TIMEOUT = _DEFAULT_TIMEOUT,
-        source_address: tuple[str, int] | None = None,
-        socket_options: _TYPE_SOCKET_OPTIONS | None = None,
-    ) -> socket.socket:
-        """Connect to *address* and return the socket object.
-    
-        Convenience function.  Connect to *address* (a 2-tuple ``(host,
-        port)``) and return the socket object.  Passing the optional
-        *timeout* parameter will set the timeout on the socket instance
-        before attempting to connect.  If no *timeout* is supplied, the
-        global default timeout setting returned by :func:`socket.getdefaulttimeout`
-        is used.  If *source_address* is set it must be a tuple of (host, port)
-        for the socket to bind as a source address before making the connection.
-        An host of '' or port 0 tells the OS to use the default.
-        """
-    
-        host, port = address
-        if host.startswith("["):
-            host = host.strip("[]")
-        err = None
-    
-        # Using the value from allowed_gai_family() in the context of getaddrinfo lets
-        # us select whether to work with IPv4 DNS records, IPv6 records, or both.
-        # The original create_connection function always returns all records.
-        family = allowed_gai_family()
-    
-        try:
-            host.encode("idna")
-        except UnicodeError:
-            raise LocationParseError(f"'{host}', label empty or too long") from None
-    
-        for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
-            af, socktype, proto, canonname, sa = res
-            sock = None
-            try:
-                sock = socket.socket(af, socktype, proto)
-    
-                # If provided, set socket level options before connecting.
-                _set_socket_options(sock, socket_options)
-    
-                if timeout is not _DEFAULT_TIMEOUT:
-                    sock.settimeout(timeout)
-                if source_address:
-                    sock.bind(source_address)
->               sock.connect(sa)
-E               ConnectionRefusedError: [Errno 111] Connection refused
-
-../.venv/lib/python3.10/site-packages/urllib3/util/connection.py:73: ConnectionRefusedError
-
-The above exception was the direct cause of the following exception:
-
-self = <urllib3.connectionpool.HTTPConnectionPool object at 0x7fb43dfd2830>
+                                self = <urllib3.connectionpool.HTTPConnectionPool object at 0x7f1704832950>
 method = 'POST', url = '/wd/hub/session'
 body = '{"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "chrome", "pageLoadStrategy": "normal", "goog:ch...ptions": {"extensions": [], "args": ["--headless", "--no-sandbox", "--disable-dev-shm-usage", "--start-maximized"]}}}}'
 headers = HTTPHeaderDict({'Accept': 'application/json', 'Content-Type': 'application/json;charset=UTF-8', 'User-Agent': 'selenium/4.27.1 (python linux)', 'Connection': 'keep-alive'})
-retries = Retry(total=0, connect=None, read=None, redirect=None, status=None)
+retries = Retry(total=3, connect=None, read=None, redirect=None, status=None)
 redirect = False, assert_same_host = False, timeout = None, pool_timeout = None
 release_conn = True, chunked = False, body_pos = None, preload_content = True
 decode_content = True, response_kw = {}
@@ -2414,53 +2023,43 @@ http_tunnel_required = False, err = None, clean_exit = False
 
 ../.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:787: 
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-../.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:493: in _make_request
-    conn.request(
-../.venv/lib/python3.10/site-packages/urllib3/connection.py:445: in request
-    self.endheaders()
-/opt/hostedtoolcache/Python/3.10.4/x64/lib/python3.10/http/client.py:1277: in endheaders
-    self._send_output(message_body, encode_chunked=encode_chunked)
-/opt/hostedtoolcache/Python/3.10.4/x64/lib/python3.10/http/client.py:1037: in _send_output
-    self.send(msg)
-/opt/hostedtoolcache/Python/3.10.4/x64/lib/python3.10/http/client.py:975: in send
-    self.connect()
-../.venv/lib/python3.10/site-packages/urllib3/connection.py:276: in connect
-    self.sock = self._new_conn()
+../.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:534: in _make_request
+    response = conn.getresponse()
+../.venv/lib/python3.10/site-packages/urllib3/connection.py:516: in getresponse
+    httplib_response = super().getresponse()
+/opt/hostedtoolcache/Python/3.10.4/x64/lib/python3.10/http/client.py:1374: in getresponse
+    response.begin()
+/opt/hostedtoolcache/Python/3.10.4/x64/lib/python3.10/http/client.py:318: in begin
+    version, status, reason = self._read_status()
+/opt/hostedtoolcache/Python/3.10.4/x64/lib/python3.10/http/client.py:279: in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <urllib3.connection.HTTPConnection object at 0x7fb43d76d2d0>
+self = <socket.SocketIO object at 0x7f1704832290>
+b = <memory at 0x7f1704c98ac0>
 
-    def _new_conn(self) -> socket.socket:
-        """Establish a socket connection and set nodelay settings on it.
+    def readinto(self, b):
+        """Read up to len(b) bytes into the writable buffer *b* and return
+        the number of bytes read.  If the socket is non-blocking and no bytes
+        are available, None is returned.
     
-        :return: New socket connection.
+        If *b* is non-empty, a 0 return value indicates that the connection
+        was shutdown at the other end.
         """
-        try:
-            sock = connection.create_connection(
-                (self._dns_host, self.port),
-                self.timeout,
-                source_address=self.source_address,
-                socket_options=self.socket_options,
-            )
-        except socket.gaierror as e:
-            raise NameResolutionError(self.host, self, e) from e
-        except SocketTimeout as e:
-            raise ConnectTimeoutError(
-                self,
-                f"Connection to {self.host} timed out. (connect timeout={self.timeout})",
-            ) from e
-    
-        except OSError as e:
->           raise NewConnectionError(
-                self, f"Failed to establish a new connection: {e}"
-            ) from e
-E           urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7fb43d76d2d0>: Failed to establish a new connection: [Errno 111] Connection refused
+        self._checkClosed()
+        self._checkReadable()
+        if self._timeout_occurred:
+            raise OSError("cannot read from timed out object")
+        while True:
+            try:
+>               return self._sock.recv_into(b)
+E               ConnectionResetError: [Errno 104] Connection reset by peer
 
-../.venv/lib/python3.10/site-packages/urllib3/connection.py:213: NewConnectionError
+/opt/hostedtoolcache/Python/3.10.4/x64/lib/python3.10/socket.py:705: ConnectionResetError
 
-The above exception was the direct cause of the following exception:
+During handling of the above exception, another exception occurred:
 
-self = <test_articles_e2e.TestCreateArticle object at 0x7fb43e24a890>
+self = <test_articles_e2e.TestCreateArticle object at 0x7f1705246890>
 
     def setup_method(self):
         chrome_options = Options()
@@ -2491,117 +2090,47 @@ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
     return self.urlopen(method, url, **extra_kw)
 ../.venv/lib/python3.10/site-packages/urllib3/poolmanager.py:443: in urlopen
     response = conn.urlopen(method, u.request_uri, **kw)
-../.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:871: in urlopen
-    return self.urlopen(
-../.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:871: in urlopen
-    return self.urlopen(
-../.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:871: in urlopen
-    return self.urlopen(
 ../.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:841: in urlopen
     retries = retries.increment(
+../.venv/lib/python3.10/site-packages/urllib3/util/retry.py:474: in increment
+    raise reraise(type(error), error, _stacktrace)
+../.venv/lib/python3.10/site-packages/urllib3/util/util.py:38: in reraise
+    raise value.with_traceback(tb)
+../.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:787: in urlopen
+    response = self._make_request(
+../.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:534: in _make_request
+    response = conn.getresponse()
+../.venv/lib/python3.10/site-packages/urllib3/connection.py:516: in getresponse
+    httplib_response = super().getresponse()
+/opt/hostedtoolcache/Python/3.10.4/x64/lib/python3.10/http/client.py:1374: in getresponse
+    response.begin()
+/opt/hostedtoolcache/Python/3.10.4/x64/lib/python3.10/http/client.py:318: in begin
+    version, status, reason = self._read_status()
+/opt/hostedtoolcache/Python/3.10.4/x64/lib/python3.10/http/client.py:279: in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = Retry(total=0, connect=None, read=None, redirect=None, status=None)
-method = 'POST', url = '/wd/hub/session', response = None
-error = NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fb43d76d2d0>: Failed to establish a new connection: [Errno 111] Connection refused')
-_pool = <urllib3.connectionpool.HTTPConnectionPool object at 0x7fb43dfd2830>
-_stacktrace = <traceback object at 0x7fb43dd5ce40>
+self = <socket.SocketIO object at 0x7f1704832290>
+b = <memory at 0x7f1704c98ac0>
 
-    def increment(
-        self,
-        method: str | None = None,
-        url: str | None = None,
-        response: BaseHTTPResponse | None = None,
-        error: Exception | None = None,
-        _pool: ConnectionPool | None = None,
-        _stacktrace: TracebackType | None = None,
-    ) -> Self:
-        """Return a new Retry object with incremented retry counters.
+    def readinto(self, b):
+        """Read up to len(b) bytes into the writable buffer *b* and return
+        the number of bytes read.  If the socket is non-blocking and no bytes
+        are available, None is returned.
     
-        :param response: A response object, or None, if the server did not
-            return a response.
-        :type response: :class:`~urllib3.response.BaseHTTPResponse`
-        :param Exception error: An error encountered during the request, or
-            None if the response was received successfully.
-    
-        :return: A new ``Retry`` object.
+        If *b* is non-empty, a 0 return value indicates that the connection
+        was shutdown at the other end.
         """
-        if self.total is False and error:
-            # Disabled, indicate to re-raise the error.
-            raise reraise(type(error), error, _stacktrace)
-    
-        total = self.total
-        if total is not None:
-            total -= 1
-    
-        connect = self.connect
-        read = self.read
-        redirect = self.redirect
-        status_count = self.status
-        other = self.other
-        cause = "unknown"
-        status = None
-        redirect_location = None
-    
-        if error and self._is_connection_error(error):
-            # Connect retry?
-            if connect is False:
-                raise reraise(type(error), error, _stacktrace)
-            elif connect is not None:
-                connect -= 1
-    
-        elif error and self._is_read_error(error):
-            # Read retry?
-            if read is False or method is None or not self._is_method_retryable(method):
-                raise reraise(type(error), error, _stacktrace)
-            elif read is not None:
-                read -= 1
-    
-        elif error:
-            # Other retry?
-            if other is not None:
-                other -= 1
-    
-        elif response and response.get_redirect_location():
-            # Redirect retry?
-            if redirect is not None:
-                redirect -= 1
-            cause = "too many redirects"
-            response_redirect_location = response.get_redirect_location()
-            if response_redirect_location:
-                redirect_location = response_redirect_location
-            status = response.status
-    
-        else:
-            # Incrementing because of a server error like a 500 in
-            # status_forcelist and the given method is in the allowed_methods
-            cause = ResponseError.GENERIC_ERROR
-            if response and response.status:
-                if status_count is not None:
-                    status_count -= 1
-                cause = ResponseError.SPECIFIC_ERROR.format(status_code=response.status)
-                status = response.status
-    
-        history = self.history + (
-            RequestHistory(method, url, error, status, redirect_location),
-        )
-    
-        new_retry = self.new(
-            total=total,
-            connect=connect,
-            read=read,
-            redirect=redirect,
-            status=status_count,
-            other=other,
-            history=history,
-        )
-    
-        if new_retry.is_exhausted():
-            reason = error or ResponseError(cause)
->           raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
-E           urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=4444): Max retries exceeded with url: /wd/hub/session (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fb43d76d2d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+        self._checkClosed()
+        self._checkReadable()
+        if self._timeout_occurred:
+            raise OSError("cannot read from timed out object")
+        while True:
+            try:
+>               return self._sock.recv_into(b)
+E               urllib3.exceptions.ProtocolError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
 
-../.venv/lib/python3.10/site-packages/urllib3/util/retry.py:519: MaxRetryError
+/opt/hostedtoolcache/Python/3.10.4/x64/lib/python3.10/socket.py:705: ProtocolError
 
                             </p>
                         </div>
@@ -2619,99 +2148,22 @@ E           urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost
                 <td style="word-wrap: break-word;max-width: 200px; white-space: normal; text-align:left">tests/e2e/test_articles_e2e.py</td>
                 <td style="word-wrap: break-word;max-width: 200px; white-space: normal; text-align:left">test_delete_added_article</td>
                 <td>ERROR</td>
-                <td>0.26</td>
+                <td>0.31</td>
                 <td style="word-wrap: break-word;max-width: 200px; white-space: normal; text-align:left"">
-                    self = <urllib3.connection.HTTPConnection object a
+                    self = <urllib3.connectionpool.HTTPConnectionPool 
                     
-            <a data-toggle="modal" href="#myModal-17366160014753041" class="">(...)</a>
-            <div class="modal fade in" id="myModal-17366160014753041" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <a data-toggle="modal" href="#myModal-17366169905031478" class="">(...)</a>
+            <div class="modal fade in" id="myModal-17366169905031478" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-body">
                             <p>
                                 <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" width="1.12em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1856 1664"><path d="M1056 1375v-190q0-14-9.5-23.5t-22.5-9.5H832q-13 0-22.5 9.5T800 1185v190q0 14 9.5 23.5t22.5 9.5h192q13 0 22.5-9.5t9.5-23.5zm-2-374l18-459q0-12-10-19q-13-11-24-11H818q-11 0-24 11q-10 7-10 21l17 457q0 10 10 16.5t24 6.5h185q14 0 23.5-6.5t10.5-16.5zm-14-934l768 1408q35 63-2 126q-17 29-46.5 46t-63.5 17H160q-34 0-63.5-17T50 1601q-37-63-2-126L816 67q17-31 47-49t65-18t65 18t47 49z" fill="#DC143C"/></svg>
-                                self = <urllib3.connection.HTTPConnection object at 0x7fb43dc0e1d0>
-
-    def _new_conn(self) -> socket.socket:
-        """Establish a socket connection and set nodelay settings on it.
-    
-        :return: New socket connection.
-        """
-        try:
->           sock = connection.create_connection(
-                (self._dns_host, self.port),
-                self.timeout,
-                source_address=self.source_address,
-                socket_options=self.socket_options,
-            )
-
-../.venv/lib/python3.10/site-packages/urllib3/connection.py:198: 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-../.venv/lib/python3.10/site-packages/urllib3/util/connection.py:85: in create_connection
-    raise err
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-
-address = ('localhost', 4444), timeout = None, source_address = None
-socket_options = [(6, 1, 1)]
-
-    def create_connection(
-        address: tuple[str, int],
-        timeout: _TYPE_TIMEOUT = _DEFAULT_TIMEOUT,
-        source_address: tuple[str, int] | None = None,
-        socket_options: _TYPE_SOCKET_OPTIONS | None = None,
-    ) -> socket.socket:
-        """Connect to *address* and return the socket object.
-    
-        Convenience function.  Connect to *address* (a 2-tuple ``(host,
-        port)``) and return the socket object.  Passing the optional
-        *timeout* parameter will set the timeout on the socket instance
-        before attempting to connect.  If no *timeout* is supplied, the
-        global default timeout setting returned by :func:`socket.getdefaulttimeout`
-        is used.  If *source_address* is set it must be a tuple of (host, port)
-        for the socket to bind as a source address before making the connection.
-        An host of '' or port 0 tells the OS to use the default.
-        """
-    
-        host, port = address
-        if host.startswith("["):
-            host = host.strip("[]")
-        err = None
-    
-        # Using the value from allowed_gai_family() in the context of getaddrinfo lets
-        # us select whether to work with IPv4 DNS records, IPv6 records, or both.
-        # The original create_connection function always returns all records.
-        family = allowed_gai_family()
-    
-        try:
-            host.encode("idna")
-        except UnicodeError:
-            raise LocationParseError(f"'{host}', label empty or too long") from None
-    
-        for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
-            af, socktype, proto, canonname, sa = res
-            sock = None
-            try:
-                sock = socket.socket(af, socktype, proto)
-    
-                # If provided, set socket level options before connecting.
-                _set_socket_options(sock, socket_options)
-    
-                if timeout is not _DEFAULT_TIMEOUT:
-                    sock.settimeout(timeout)
-                if source_address:
-                    sock.bind(source_address)
->               sock.connect(sa)
-E               ConnectionRefusedError: [Errno 111] Connection refused
-
-../.venv/lib/python3.10/site-packages/urllib3/util/connection.py:73: ConnectionRefusedError
-
-The above exception was the direct cause of the following exception:
-
-self = <urllib3.connectionpool.HTTPConnectionPool object at 0x7fb43dc0d990>
+                                self = <urllib3.connectionpool.HTTPConnectionPool object at 0x7f1704b458a0>
 method = 'POST', url = '/wd/hub/session'
 body = '{"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "chrome", "pageLoadStrategy": "normal", "goog:ch...ptions": {"extensions": [], "args": ["--headless", "--no-sandbox", "--disable-dev-shm-usage", "--start-maximized"]}}}}'
 headers = HTTPHeaderDict({'Accept': 'application/json', 'Content-Type': 'application/json;charset=UTF-8', 'User-Agent': 'selenium/4.27.1 (python linux)', 'Connection': 'keep-alive'})
-retries = Retry(total=0, connect=None, read=None, redirect=None, status=None)
+retries = Retry(total=3, connect=None, read=None, redirect=None, status=None)
 redirect = False, assert_same_host = False, timeout = None, pool_timeout = None
 release_conn = True, chunked = False, body_pos = None, preload_content = True
 decode_content = True, response_kw = {}
@@ -2931,53 +2383,43 @@ http_tunnel_required = False, err = None, clean_exit = False
 
 ../.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:787: 
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-../.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:493: in _make_request
-    conn.request(
-../.venv/lib/python3.10/site-packages/urllib3/connection.py:445: in request
-    self.endheaders()
-/opt/hostedtoolcache/Python/3.10.4/x64/lib/python3.10/http/client.py:1277: in endheaders
-    self._send_output(message_body, encode_chunked=encode_chunked)
-/opt/hostedtoolcache/Python/3.10.4/x64/lib/python3.10/http/client.py:1037: in _send_output
-    self.send(msg)
-/opt/hostedtoolcache/Python/3.10.4/x64/lib/python3.10/http/client.py:975: in send
-    self.connect()
-../.venv/lib/python3.10/site-packages/urllib3/connection.py:276: in connect
-    self.sock = self._new_conn()
+../.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:534: in _make_request
+    response = conn.getresponse()
+../.venv/lib/python3.10/site-packages/urllib3/connection.py:516: in getresponse
+    httplib_response = super().getresponse()
+/opt/hostedtoolcache/Python/3.10.4/x64/lib/python3.10/http/client.py:1374: in getresponse
+    response.begin()
+/opt/hostedtoolcache/Python/3.10.4/x64/lib/python3.10/http/client.py:318: in begin
+    version, status, reason = self._read_status()
+/opt/hostedtoolcache/Python/3.10.4/x64/lib/python3.10/http/client.py:279: in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = <urllib3.connection.HTTPConnection object at 0x7fb43dc0e1d0>
+self = <socket.SocketIO object at 0x7f1704b47c40>
+b = <memory at 0x7f1704efcac0>
 
-    def _new_conn(self) -> socket.socket:
-        """Establish a socket connection and set nodelay settings on it.
+    def readinto(self, b):
+        """Read up to len(b) bytes into the writable buffer *b* and return
+        the number of bytes read.  If the socket is non-blocking and no bytes
+        are available, None is returned.
     
-        :return: New socket connection.
+        If *b* is non-empty, a 0 return value indicates that the connection
+        was shutdown at the other end.
         """
-        try:
-            sock = connection.create_connection(
-                (self._dns_host, self.port),
-                self.timeout,
-                source_address=self.source_address,
-                socket_options=self.socket_options,
-            )
-        except socket.gaierror as e:
-            raise NameResolutionError(self.host, self, e) from e
-        except SocketTimeout as e:
-            raise ConnectTimeoutError(
-                self,
-                f"Connection to {self.host} timed out. (connect timeout={self.timeout})",
-            ) from e
-    
-        except OSError as e:
->           raise NewConnectionError(
-                self, f"Failed to establish a new connection: {e}"
-            ) from e
-E           urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7fb43dc0e1d0>: Failed to establish a new connection: [Errno 111] Connection refused
+        self._checkClosed()
+        self._checkReadable()
+        if self._timeout_occurred:
+            raise OSError("cannot read from timed out object")
+        while True:
+            try:
+>               return self._sock.recv_into(b)
+E               ConnectionResetError: [Errno 104] Connection reset by peer
 
-../.venv/lib/python3.10/site-packages/urllib3/connection.py:213: NewConnectionError
+/opt/hostedtoolcache/Python/3.10.4/x64/lib/python3.10/socket.py:705: ConnectionResetError
 
-The above exception was the direct cause of the following exception:
+During handling of the above exception, another exception occurred:
 
-self = <test_articles_e2e.TestCreateArticle object at 0x7fb43e248cd0>
+self = <test_articles_e2e.TestCreateArticle object at 0x7f1705244cd0>
 
     def setup_method(self):
         chrome_options = Options()
@@ -3008,117 +2450,47 @@ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
     return self.urlopen(method, url, **extra_kw)
 ../.venv/lib/python3.10/site-packages/urllib3/poolmanager.py:443: in urlopen
     response = conn.urlopen(method, u.request_uri, **kw)
-../.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:871: in urlopen
-    return self.urlopen(
-../.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:871: in urlopen
-    return self.urlopen(
-../.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:871: in urlopen
-    return self.urlopen(
 ../.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:841: in urlopen
     retries = retries.increment(
+../.venv/lib/python3.10/site-packages/urllib3/util/retry.py:474: in increment
+    raise reraise(type(error), error, _stacktrace)
+../.venv/lib/python3.10/site-packages/urllib3/util/util.py:38: in reraise
+    raise value.with_traceback(tb)
+../.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:787: in urlopen
+    response = self._make_request(
+../.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:534: in _make_request
+    response = conn.getresponse()
+../.venv/lib/python3.10/site-packages/urllib3/connection.py:516: in getresponse
+    httplib_response = super().getresponse()
+/opt/hostedtoolcache/Python/3.10.4/x64/lib/python3.10/http/client.py:1374: in getresponse
+    response.begin()
+/opt/hostedtoolcache/Python/3.10.4/x64/lib/python3.10/http/client.py:318: in begin
+    version, status, reason = self._read_status()
+/opt/hostedtoolcache/Python/3.10.4/x64/lib/python3.10/http/client.py:279: in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
 
-self = Retry(total=0, connect=None, read=None, redirect=None, status=None)
-method = 'POST', url = '/wd/hub/session', response = None
-error = NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fb43dc0e1d0>: Failed to establish a new connection: [Errno 111] Connection refused')
-_pool = <urllib3.connectionpool.HTTPConnectionPool object at 0x7fb43dc0d990>
-_stacktrace = <traceback object at 0x7fb43d606a00>
+self = <socket.SocketIO object at 0x7f1704b47c40>
+b = <memory at 0x7f1704efcac0>
 
-    def increment(
-        self,
-        method: str | None = None,
-        url: str | None = None,
-        response: BaseHTTPResponse | None = None,
-        error: Exception | None = None,
-        _pool: ConnectionPool | None = None,
-        _stacktrace: TracebackType | None = None,
-    ) -> Self:
-        """Return a new Retry object with incremented retry counters.
+    def readinto(self, b):
+        """Read up to len(b) bytes into the writable buffer *b* and return
+        the number of bytes read.  If the socket is non-blocking and no bytes
+        are available, None is returned.
     
-        :param response: A response object, or None, if the server did not
-            return a response.
-        :type response: :class:`~urllib3.response.BaseHTTPResponse`
-        :param Exception error: An error encountered during the request, or
-            None if the response was received successfully.
-    
-        :return: A new ``Retry`` object.
+        If *b* is non-empty, a 0 return value indicates that the connection
+        was shutdown at the other end.
         """
-        if self.total is False and error:
-            # Disabled, indicate to re-raise the error.
-            raise reraise(type(error), error, _stacktrace)
-    
-        total = self.total
-        if total is not None:
-            total -= 1
-    
-        connect = self.connect
-        read = self.read
-        redirect = self.redirect
-        status_count = self.status
-        other = self.other
-        cause = "unknown"
-        status = None
-        redirect_location = None
-    
-        if error and self._is_connection_error(error):
-            # Connect retry?
-            if connect is False:
-                raise reraise(type(error), error, _stacktrace)
-            elif connect is not None:
-                connect -= 1
-    
-        elif error and self._is_read_error(error):
-            # Read retry?
-            if read is False or method is None or not self._is_method_retryable(method):
-                raise reraise(type(error), error, _stacktrace)
-            elif read is not None:
-                read -= 1
-    
-        elif error:
-            # Other retry?
-            if other is not None:
-                other -= 1
-    
-        elif response and response.get_redirect_location():
-            # Redirect retry?
-            if redirect is not None:
-                redirect -= 1
-            cause = "too many redirects"
-            response_redirect_location = response.get_redirect_location()
-            if response_redirect_location:
-                redirect_location = response_redirect_location
-            status = response.status
-    
-        else:
-            # Incrementing because of a server error like a 500 in
-            # status_forcelist and the given method is in the allowed_methods
-            cause = ResponseError.GENERIC_ERROR
-            if response and response.status:
-                if status_count is not None:
-                    status_count -= 1
-                cause = ResponseError.SPECIFIC_ERROR.format(status_code=response.status)
-                status = response.status
-    
-        history = self.history + (
-            RequestHistory(method, url, error, status, redirect_location),
-        )
-    
-        new_retry = self.new(
-            total=total,
-            connect=connect,
-            read=read,
-            redirect=redirect,
-            status=status_count,
-            other=other,
-            history=history,
-        )
-    
-        if new_retry.is_exhausted():
-            reason = error or ResponseError(cause)
->           raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
-E           urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=4444): Max retries exceeded with url: /wd/hub/session (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fb43dc0e1d0>: Failed to establish a new connection: [Errno 111] Connection refused'))
+        self._checkClosed()
+        self._checkReadable()
+        if self._timeout_occurred:
+            raise OSError("cannot read from timed out object")
+        while True:
+            try:
+>               return self._sock.recv_into(b)
+E               urllib3.exceptions.ProtocolError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
 
-../.venv/lib/python3.10/site-packages/urllib3/util/retry.py:519: MaxRetryError
+/opt/hostedtoolcache/Python/3.10.4/x64/lib/python3.10/socket.py:705: ProtocolError
 
                             </p>
                         </div>
@@ -3144,7 +2516,7 @@ E           urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost
                     <a class ="list-group-item list-group-item-action" href="#list-item-1" style="font-size: 1.1rem; color: dimgray; margin-bottom: -7%;">
                         <i class="fa fa-times" aria-hidden="true" style="color: #fc6766"></i>
                         <span>build #1</span></br>
-                        <span style="font-size: 0.81rem; color: gray; padding-left: 12%;">2025-01-11 | 5:20 pm</span>
+                        <span style="font-size: 0.81rem; color: gray; padding-left: 12%;">2025-01-11 | 5:36 pm</span>
                     </a>
                     
             </div>
@@ -3708,7 +3080,7 @@ E           urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost
             var trends = new Chart(lineCanvas, {
                 type: 'line',
                 data: {
-                  labels : ['5:20 PM | Jan 11'],
+                  labels : ['5:36 PM | Jan 11'],
                   datasets : [
                     {
                       label: 'Passed',
