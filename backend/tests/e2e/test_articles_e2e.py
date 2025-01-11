@@ -16,8 +16,7 @@ class TestCreateArticle:
         chrome_options.add_argument("--no-sandbox")
         chrome_options.add_argument("--disable-dev-shm-usage")
         chrome_options.add_argument("--start-maximized")
-        self.driver = webdriver.Chrome(ChromeDriverManager().install(), options=chrome_options)
-        # self.driver = webdriver.Remote(
+        self.driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()), options=chrome_options)
         #     command_executor='http://localhost:4444/wd/hub',
         #     options=chrome_options
         # )
