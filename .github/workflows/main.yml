@@ -123,7 +123,9 @@ jobs:
       - name: Run tests
         run: |
           source .venv/bin/activate
-          cd ./backend 
+          cd ./frontend
+          npm run build  
+          cd ../backend
           python manage.py runserver &
           pytest --html-report=./report/report.html --title='PYTEST REPORT'
       
