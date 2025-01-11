@@ -73,8 +73,9 @@ jobs:
       - name: Upload code
         uses: actions/upload-artifact@v4
         with:
-          name: code-${{ github.run_number }}
+          name: code
           path: .
+          overwrite: true
           retention-days: 1
 
   test:
@@ -87,7 +88,7 @@ jobs:
       - name: Download code
         uses: actions/download-artifact@v4
         with:
-          name: code-${{ github.run_number }}
+          name: code
           path: .
 
       - name: Set up Python
