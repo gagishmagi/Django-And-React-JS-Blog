@@ -4,8 +4,6 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-
-# Chrome service and options
 from selenium.webdriver.chrome.options import Options
 
 class TestCreateArticle:
@@ -19,6 +17,7 @@ class TestCreateArticle:
             command_executor='http://localhost:4444/wd/hub',
             options=chrome_options
         )
+        self.driver.implicitly_wait(10)  # Set implicit wait to speed up tests
 
     def teardown_method(self):
         self.driver.quit()
@@ -31,11 +30,11 @@ class TestCreateArticle:
         post_description = 'This is a test post description'
         self._create_article(post_title, post_description)
 
-        post_header = WebDriverWait(self.driver, 30).until(
+        post_header = WebDriverWait(self.driver, 10).until(
             EC.presence_of_element_located((By.XPATH, f'//h1[contains(text(), "{post_title}")]'))
         )
 
-        post_description_element = WebDriverWait(self.driver, 30).until(
+        post_description_element = WebDriverWait(self.driver, 10).until(
             EC.presence_of_element_located((By.XPATH, f'//p[contains(text(), "{post_description}")]'))
         )
 
@@ -43,7 +42,6 @@ class TestCreateArticle:
         assert post_description in post_description_element.text
 
         self._logout()
-
 
     def test_create_multiple_articles(self):
         self.driver.get('http://localhost:8000/')
@@ -57,11 +55,11 @@ class TestCreateArticle:
         for article in articles:
             self._create_article(article['title'], article['description'])
 
-            post_header = WebDriverWait(self.driver, 30).until(
+            post_header = WebDriverWait(self.driver, 10).until(
                 EC.presence_of_element_located((By.XPATH, f'//h1[contains(text(), "{article["title"]}")]'))
             )
 
-            post_description_element = WebDriverWait(self.driver, 30).until(
+            post_description_element = WebDriverWait(self.driver, 10).until(
                 EC.presence_of_element_located((By.XPATH, f'//p[contains(text(), "{article["description"]}")]'))
             )
 
@@ -78,15 +76,15 @@ class TestCreateArticle:
         post_description = 'This is a test post description'
         self._create_article(post_title, post_description)
 
-        post_header = WebDriverWait(self.driver, 30).until(
+        post_header = WebDriverWait(self.driver, 10).until(
             EC.presence_of_element_located((By.XPATH, f'//h1[contains(text(), "{post_title}")]'))
         )
 
-        post_description_element = WebDriverWait(self.driver, 30).until(
+        post_description_element = WebDriverWait(self.driver, 10).until(
             EC.presence_of_element_located((By.XPATH, f'//p[contains(text(), "{post_description}")]'))
         )
 
-        edit_button = WebDriverWait(self.driver, 30).until(
+        edit_button = WebDriverWait(self.driver, 10).until(
             EC.element_to_be_clickable((By.XPATH, '//button[text()="Update"]'))
         )
         edit_button.click()
@@ -108,16 +106,13 @@ class TestCreateArticle:
         )
         submit_button.click()
 
-        time.sleep(5)
-
-        post_header = WebDriverWait(self.driver, 30).until(
+        post_header = WebDriverWait(self.driver, 10).until(
             EC.presence_of_element_located((By.XPATH, f'//h1[contains(text(), "Edited Test Post Title")]'))
         )
 
-        post_description_element = WebDriverWait(self.driver, 30).until(
+        post_description_element = WebDriverWait(self.driver, 10).until(
             EC.presence_of_element_located((By.XPATH, f'//p[contains(text(), "This is the edited test post description")]'))
         )
-
 
         assert 'Edited Test Post Title' in post_header.text
         assert 'This is the edited test post description' in post_description_element.text
@@ -132,35 +127,36 @@ class TestCreateArticle:
         post_description = 'This is a test post description'
         self._create_article(post_title, post_description)
 
-        post_header = WebDriverWait(self.driver, 30).until(
+        post_header = WebDriverWait(self.driver, 10).until(
             EC.presence_of_element_located((By.XPATH, f'//h1[contains(text(), "{post_title}")]'))
         )
 
-        delete_button = WebDriverWait(self.driver, 30).until(
+        delete_button = WebDriverWait(self.driver, 10).until(
             EC.element_to_be_clickable((By.XPATH, '//button[contains(@class, "btn-danger") and text()="Delete"]'))
         )
         delete_button.click()
 
-        time.sleep(5)
+        WebDriverWait(self.driver, 10).until(
+            EC.invisibility_of_element(post_header)
+        )
 
         assert 'Test Post Title' not in self.driver.page_source
 
         self._logout()
 
     def _login(self):
-        username_input = WebDriverWait(self.driver, 15).until(
+        username_input = WebDriverWait(self.driver, 10).until(
             EC.presence_of_element_located((By.CSS_SELECTOR, '#root > div > div > div > div.col-sm-4 > div:nth-child(2) > input'))
         )
         username_input.send_keys('test')
-        password_input = WebDriverWait(self.driver, 15).until(
+        password_input = WebDriverWait(self.driver, 10).until(
             EC.presence_of_element_located((By.CSS_SELECTOR, '#root > div > div > div > div.col-sm-4 > div:nth-child(3) > input'))
         )
         password_input.send_keys('test1234')
-        login_button = WebDriverWait(self.driver, 15).until(
+        login_button = WebDriverWait(self.driver, 10).until(
             EC.element_to_be_clickable((By.XPATH, '//*[@id="root"]/div/div/div/div[1]/div[3]/div/button[1]'))
         )
         login_button.click()
-        time.sleep(10)
 
     def _create_article(self, post_title, post_description):
         submit_button = WebDriverWait(self.driver, 10).until(
@@ -176,20 +172,17 @@ class TestCreateArticle:
         description_input = WebDriverWait(self.driver, 10).until(
             EC.presence_of_element_located((By.XPATH, '//textarea[@placeholder="Enter Post Description"]'))
         )
-
         description_input.send_keys(post_description)
 
-        save_button = WebDriverWait(self.driver, 30).until(
+        save_button = WebDriverWait(self.driver, 10).until(
             EC.element_to_be_clickable((By.XPATH, '//button[text()="Post"]'))
         )
         self.driver.execute_script("arguments[0].scrollIntoView(true);", save_button)
         save_button.click()
 
     def _logout(self):
-        logout_button = WebDriverWait(self.driver, 30).until(
+        logout_button = WebDriverWait(self.driver, 10).until(
             EC.element_to_be_clickable((By.XPATH, '//button[text()="Log out"]'))
         )
         logout_button.click()
-
-
 
