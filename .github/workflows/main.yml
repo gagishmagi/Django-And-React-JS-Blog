@@ -311,8 +311,8 @@ jobs:
           from: ${{ secrets.EMAIL_FROM }}
           body: |
             The CI/CD pipeline has failed. Please check the logs for more details.
-            <a href="https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/report.html">Test Report</a>
-            <a href="${{ needs.test.outputs.artifact-url }}">Test Report Zip</a>
+            Test Report: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/report.html
+            Test Report Zip: ${{ needs.test.outputs.artifact-url }}
 
       # - name: Login to Jira
       #   uses: atlassian/gajira-login@v3
