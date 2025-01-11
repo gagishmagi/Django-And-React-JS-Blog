@@ -730,9 +730,9 @@
             </style>
             <style>
                 .progress-bar.downloading {
-                    background: -webkit-linear-gradient(left, #fc6665 0%,#50597b 0%); /* Chrome10+,Safari5.1+ */
-                    background: -ms-linear-gradient(left, #fc6665 0%,#50597b 0%); /* IE10+ */
-                    background: linear-gradient(to right, #fc6665 0%,#50597b 0%); /* W3C */
+                    background: -webkit-linear-gradient(left, #fc6665 100.0%,#50597b 100.0%); /* Chrome10+,Safari5.1+ */
+                    background: -ms-linear-gradient(left, #fc6665 100.0%,#50597b 100.0%); /* IE10+ */
+                    background: linear-gradient(to right, #fc6665 100.0%,#50597b 100.0%); /* W3C */
                 }
             </style>
         </head>
@@ -769,7 +769,7 @@
                           <div style="margin-bottom: -4%; margin-left: 30%;">
                             <span class="time__taken">
                                 <svg width="22px" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" style="margin: -1% 2% 0% 29%; -ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1536 1536"><path d="M896 416v448q0 14-9 23t-23 9H544q-14 0-23-9t-9-23v-64q0-14 9-23t23-9h224V416q0-14 9-23t23-9h64q14 0 23 9t9 23zm416 352q0-148-73-273t-198-198t-273-73t-273 73t-198 198t-73 273t73 273t198 198t273 73t273-73t198-198t73-273zm224 0q0 209-103 385.5T1153.5 1433T768 1536t-385.5-103T103 1153.5T0 768t103-385.5T382.5 103T768 0t385.5 103T1433 382.5T1536 768z" fill="#a9a9a9"/></svg>
-                                    Time taken 1.58 secs
+                                    Time taken 00:01:05 Hrs
                             </span>
                           </div>
                           <div>
@@ -801,7 +801,7 @@
                                       <div class="footer-section__label">passed</div>
                                     </div>
                                     <div class="card__footer-section">
-                                      <div class="footer-section__data" style="color:#fc6766">0</div>
+                                      <div class="footer-section__data" style="color:#fc6766">4</div>
                                       <div class="footer-section__label">failed</div>
                                     </div>
                                     <div class="card__footer-section">
@@ -817,7 +817,7 @@
                                       <div class="footer-section__label">xfailed</div>
                                     </div>
                                     <div class="card__footer-section">
-                                      <div class="footer-section__data" style="color:#b13635">4</div>
+                                      <div class="footer-section__data" style="color:#b13635">0</div>
                                       <div class="footer-section__label">error</div>
                                     </div>
                                     <div class="card__footer-section">
@@ -869,9 +869,9 @@
                                     <div style="display: flow-root;">
                                         <div class="tooltip bs-tooltip-top tooltip-dark" role="tooltip">
                                            <div class="arrow" style="left: 50%"></div>
-                                           <div class="tooltip-inner">No failures in History</div>
+                                           <div class="tooltip-inner">..2e/test_articles_e2e.py</div>
                                         </div>
-                                        <p class="percentage">0<sup> /0</sup> Times</p>
+                                        <p class="percentage">1<sup> /1</sup> Times</p>
                                     </div>
                                     <div class="progress-bar downloading"></div>
                                     <span class="suite-highlights-header">MOST FAILED SUITE</span>
@@ -938,11 +938,11 @@
             <tr>
                 <td style="word-wrap: break-word;max-width: 200px; white-space: normal; text-align:left">tests/e2e/test_articles_e2e.py</td>
                 <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
                 <td>4</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
                 <td>0</td>
             </tr>
         
@@ -969,7 +969,7 @@
                 <td style="word-wrap: break-word;max-width: 200px; white-space: normal; text-align:left">tests/integration/test_articles_api.py</td>
                 <td style="word-wrap: break-word;max-width: 200px; white-space: normal; text-align:left">test_create_article</td>
                 <td>PASS</td>
-                <td>0.33</td>
+                <td>0.25</td>
                 <td style="word-wrap: break-word;max-width: 200px; white-space: normal; text-align:left"">
                     
                     
@@ -980,7 +980,7 @@
                 <td style="word-wrap: break-word;max-width: 200px; white-space: normal; text-align:left">tests/integration/test_articles_api.py</td>
                 <td style="word-wrap: break-word;max-width: 200px; white-space: normal; text-align:left">test_delete_article</td>
                 <td>PASS</td>
-                <td>0.01</td>
+                <td>0.0</td>
                 <td style="word-wrap: break-word;max-width: 200px; white-space: normal; text-align:left"">
                     
                     
@@ -1013,7 +1013,7 @@
                 <td style="word-wrap: break-word;max-width: 200px; white-space: normal; text-align:left">tests/integration/test_articles_api.py</td>
                 <td style="word-wrap: break-word;max-width: 200px; white-space: normal; text-align:left">test_update_article</td>
                 <td>PASS</td>
-                <td>0.0</td>
+                <td>0.01</td>
                 <td style="word-wrap: break-word;max-width: 200px; white-space: normal; text-align:left"">
                     
                     
@@ -1067,350 +1067,42 @@
             <tr>
                 <td style="word-wrap: break-word;max-width: 200px; white-space: normal; text-align:left">tests/e2e/test_articles_e2e.py</td>
                 <td style="word-wrap: break-word;max-width: 200px; white-space: normal; text-align:left">test_create_article</td>
-                <td>ERROR</td>
-                <td>0.25</td>
+                <td>FAIL</td>
+                <td>16.49</td>
                 <td style="word-wrap: break-word;max-width: 200px; white-space: normal; text-align:left"">
-                    self = <urllib3.connectionpool.HTTPConnectionPool 
+                       selenium.common.exceptions.TimeoutException: Me
                     
-            <a data-toggle="modal" href="#myModal-17366176603043084" class="">(...)</a>
-            <div class="modal fade in" id="myModal-17366176603043084" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <a data-toggle="modal" href="#myModal-173661787051505" class="">(...)</a>
+            <div class="modal fade in" id="myModal-173661787051505" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-body">
                             <p>
                                 <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" width="1.12em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1856 1664"><path d="M1056 1375v-190q0-14-9.5-23.5t-22.5-9.5H832q-13 0-22.5 9.5T800 1185v190q0 14 9.5 23.5t22.5 9.5h192q13 0 22.5-9.5t9.5-23.5zm-2-374l18-459q0-12-10-19q-13-11-24-11H818q-11 0-24 11q-10 7-10 21l17 457q0 10 10 16.5t24 6.5h185q14 0 23.5-6.5t10.5-16.5zm-14-934l768 1408q35 63-2 126q-17 29-46.5 46t-63.5 17H160q-34 0-63.5-17T50 1601q-37-63-2-126L816 67q17-31 47-49t65-18t65 18t47 49z" fill="#DC143C"/></svg>
-                                self = <urllib3.connectionpool.HTTPConnectionPool object at 0x7ff990c2b880>
-method = 'POST', url = '/wd/hub/session'
-body = '{"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "chrome", "pageLoadStrategy": "normal", "goog:ch...ptions": {"extensions": [], "args": ["--headless", "--no-sandbox", "--disable-dev-shm-usage", "--start-maximized"]}}}}'
-headers = HTTPHeaderDict({'Accept': 'application/json', 'Content-Type': 'application/json;charset=UTF-8', 'User-Agent': 'selenium/4.27.1 (python linux)', 'Connection': 'keep-alive'})
-retries = Retry(total=3, connect=None, read=None, redirect=None, status=None)
-redirect = False, assert_same_host = False, timeout = None, pool_timeout = None
-release_conn = True, chunked = False, body_pos = None, preload_content = True
-decode_content = True, response_kw = {}
-parsed_url = Url(scheme=None, auth=None, host=None, port=None, path='/wd/hub/session', query=None, fragment=None)
-destination_scheme = None, conn = None, release_this_conn = True
-http_tunnel_required = False, err = None, clean_exit = False
-
-    def urlopen(  # type: ignore[override]
-        self,
-        method: str,
-        url: str,
-        body: _TYPE_BODY | None = None,
-        headers: typing.Mapping[str, str] | None = None,
-        retries: Retry | bool | int | None = None,
-        redirect: bool = True,
-        assert_same_host: bool = True,
-        timeout: _TYPE_TIMEOUT = _DEFAULT_TIMEOUT,
-        pool_timeout: int | None = None,
-        release_conn: bool | None = None,
-        chunked: bool = False,
-        body_pos: _TYPE_BODY_POSITION | None = None,
-        preload_content: bool = True,
-        decode_content: bool = True,
-        **response_kw: typing.Any,
-    ) -> BaseHTTPResponse:
-        """
-        Get a connection from the pool and perform an HTTP request. This is the
-        lowest level call for making a request, so you'll need to specify all
-        the raw details.
-    
-        .. note::
-    
-           More commonly, it's appropriate to use a convenience method
-           such as :meth:`request`.
-    
-        .. note::
-    
-           `release_conn` will only behave as expected if
-           `preload_content=False` because we want to make
-           `preload_content=False` the default behaviour someday soon without
-           breaking backwards compatibility.
-    
-        :param method:
-            HTTP request method (such as GET, POST, PUT, etc.)
-    
-        :param url:
-            The URL to perform the request on.
-    
-        :param body:
-            Data to send in the request body, either :class:`str`, :class:`bytes`,
-            an iterable of :class:`str`/:class:`bytes`, or a file-like object.
-    
-        :param headers:
-            Dictionary of custom headers to send, such as User-Agent,
-            If-None-Match, etc. If None, pool headers are used. If provided,
-            these headers completely replace any pool-specific headers.
-    
-        :param retries:
-            Configure the number of retries to allow before raising a
-            :class:`~urllib3.exceptions.MaxRetryError` exception.
-    
-            If ``None`` (default) will retry 3 times, see ``Retry.DEFAULT``. Pass a
-            :class:`~urllib3.util.retry.Retry` object for fine-grained control
-            over different types of retries.
-            Pass an integer number to retry connection errors that many times,
-            but no other types of errors. Pass zero to never retry.
-    
-            If ``False``, then retries are disabled and any exception is raised
-            immediately. Also, instead of raising a MaxRetryError on redirects,
-            the redirect response will be returned.
-    
-        :type retries: :class:`~urllib3.util.retry.Retry`, False, or an int.
-    
-        :param redirect:
-            If True, automatically handle redirects (status codes 301, 302,
-            303, 307, 308). Each redirect counts as a retry. Disabling retries
-            will disable redirect, too.
-    
-        :param assert_same_host:
-            If ``True``, will make sure that the host of the pool requests is
-            consistent else will raise HostChangedError. When ``False``, you can
-            use the pool on an HTTP proxy and request foreign hosts.
-    
-        :param timeout:
-            If specified, overrides the default timeout for this one
-            request. It may be a float (in seconds) or an instance of
-            :class:`urllib3.util.Timeout`.
-    
-        :param pool_timeout:
-            If set and the pool is set to block=True, then this method will
-            block for ``pool_timeout`` seconds and raise EmptyPoolError if no
-            connection is available within the time period.
-    
-        :param bool preload_content:
-            If True, the response's body will be preloaded into memory.
-    
-        :param bool decode_content:
-            If True, will attempt to decode the body based on the
-            'content-encoding' header.
-    
-        :param release_conn:
-            If False, then the urlopen call will not release the connection
-            back into the pool once a response is received (but will release if
-            you read the entire contents of the response such as when
-            `preload_content=True`). This is useful if you're not preloading
-            the response's content immediately. You will need to call
-            ``r.release_conn()`` on the response ``r`` to return the connection
-            back into the pool. If None, it takes the value of ``preload_content``
-            which defaults to ``True``.
-    
-        :param bool chunked:
-            If True, urllib3 will send the body using chunked transfer
-            encoding. Otherwise, urllib3 will send the body using the standard
-            content-length form. Defaults to False.
-    
-        :param int body_pos:
-            Position to seek to in file-like body in the event of a retry or
-            redirect. Typically this won't need to be set because urllib3 will
-            auto-populate the value when needed.
-        """
-        parsed_url = parse_url(url)
-        destination_scheme = parsed_url.scheme
-    
-        if headers is None:
-            headers = self.headers
-    
-        if not isinstance(retries, Retry):
-            retries = Retry.from_int(retries, redirect=redirect, default=self.retries)
-    
-        if release_conn is None:
-            release_conn = preload_content
-    
-        # Check host
-        if assert_same_host and not self.is_same_host(url):
-            raise HostChangedError(self, url, retries)
-    
-        # Ensure that the URL we're connecting to is properly encoded
-        if url.startswith("/"):
-            url = to_str(_encode_target(url))
-        else:
-            url = to_str(parsed_url.url)
-    
-        conn = None
-    
-        # Track whether `conn` needs to be released before
-        # returning/raising/recursing. Update this variable if necessary, and
-        # leave `release_conn` constant throughout the function. That way, if
-        # the function recurses, the original value of `release_conn` will be
-        # passed down into the recursive call, and its value will be respected.
-        #
-        # See issue #651 [1] for details.
-        #
-        # [1] <https://github.com/urllib3/urllib3/issues/651>
-        release_this_conn = release_conn
-    
-        http_tunnel_required = connection_requires_http_tunnel(
-            self.proxy, self.proxy_config, destination_scheme
-        )
-    
-        # Merge the proxy headers. Only done when not using HTTP CONNECT. We
-        # have to copy the headers dict so we can safely change it without those
-        # changes being reflected in anyone else's copy.
-        if not http_tunnel_required:
-            headers = headers.copy()  # type: ignore[attr-defined]
-            headers.update(self.proxy_headers)  # type: ignore[union-attr]
-    
-        # Must keep the exception bound to a separate variable or else Python 3
-        # complains about UnboundLocalError.
-        err = None
-    
-        # Keep track of whether we cleanly exited the except block. This
-        # ensures we do proper cleanup in finally.
-        clean_exit = False
-    
-        # Rewind body position, if needed. Record current position
-        # for future rewinds in the event of a redirect/retry.
-        body_pos = set_file_position(body, body_pos)
-    
-        try:
-            # Request a connection from the queue.
-            timeout_obj = self._get_timeout(timeout)
-            conn = self._get_conn(timeout=pool_timeout)
-    
-            conn.timeout = timeout_obj.connect_timeout  # type: ignore[assignment]
-    
-            # Is this a closed/new connection that requires CONNECT tunnelling?
-            if self.proxy is not None and http_tunnel_required and conn.is_closed:
-                try:
-                    self._prepare_proxy(conn)
-                except (BaseSSLError, OSError, SocketTimeout) as e:
-                    self._raise_timeout(
-                        err=e, url=self.proxy.url, timeout_value=conn.timeout
-                    )
-                    raise
-    
-            # If we're going to release the connection in ``finally:``, then
-            # the response doesn't need to know about the connection. Otherwise
-            # it will also try to release it and we'll have a double-release
-            # mess.
-            response_conn = conn if not release_conn else None
-    
-            # Make the request on the HTTPConnection object
->           response = self._make_request(
-                conn,
-                method,
-                url,
-                timeout=timeout_obj,
-                body=body,
-                headers=headers,
-                chunked=chunked,
-                retries=retries,
-                response_conn=response_conn,
-                preload_content=preload_content,
-                decode_content=decode_content,
-                **response_kw,
-            )
-
-../.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:787: 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-../.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:534: in _make_request
-    response = conn.getresponse()
-../.venv/lib/python3.10/site-packages/urllib3/connection.py:516: in getresponse
-    httplib_response = super().getresponse()
-/opt/hostedtoolcache/Python/3.10.4/x64/lib/python3.10/http/client.py:1374: in getresponse
-    response.begin()
-/opt/hostedtoolcache/Python/3.10.4/x64/lib/python3.10/http/client.py:318: in begin
-    version, status, reason = self._read_status()
-/opt/hostedtoolcache/Python/3.10.4/x64/lib/python3.10/http/client.py:279: in _read_status
-    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-
-self = <socket.SocketIO object at 0x7ff990b77730>
-b = <memory at 0x7ff990a9cac0>
-
-    def readinto(self, b):
-        """Read up to len(b) bytes into the writable buffer *b* and return
-        the number of bytes read.  If the socket is non-blocking and no bytes
-        are available, None is returned.
-    
-        If *b* is non-empty, a 0 return value indicates that the connection
-        was shutdown at the other end.
-        """
-        self._checkClosed()
-        self._checkReadable()
-        if self._timeout_occurred:
-            raise OSError("cannot read from timed out object")
-        while True:
-            try:
->               return self._sock.recv_into(b)
-E               ConnectionResetError: [Errno 104] Connection reset by peer
-
-/opt/hostedtoolcache/Python/3.10.4/x64/lib/python3.10/socket.py:705: ConnectionResetError
-
-During handling of the above exception, another exception occurred:
-
-self = <test_articles_e2e.TestCreateArticle object at 0x7ff991146800>
-
-    def setup_method(self):
-        chrome_options = Options()
-        chrome_options.add_argument("--headless")
-        chrome_options.add_argument("--no-sandbox")
-        chrome_options.add_argument("--disable-dev-shm-usage")
-        chrome_options.add_argument("--start-maximized")
->       self.driver = webdriver.Remote(
-            command_executor='http://localhost:4444/wd/hub',
-            options=chrome_options
-        )
-
-tests/e2e/test_articles_e2e.py:18: 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-../.venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py:241: in __init__
-    self.start_session(capabilities)
-../.venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py:329: in start_session
-    response = self.execute(Command.NEW_SESSION, caps)["value"]
-../.venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py:382: in execute
-    response = self.command_executor.execute(driver_command, params)
-../.venv/lib/python3.10/site-packages/selenium/webdriver/remote/remote_connection.py:404: in execute
-    return self._request(command_info[0], url, body=data)
-../.venv/lib/python3.10/site-packages/selenium/webdriver/remote/remote_connection.py:428: in _request
-    response = self._conn.request(method, url, body=body, headers=headers, timeout=self._client_config.timeout)
-../.venv/lib/python3.10/site-packages/urllib3/_request_methods.py:143: in request
-    return self.request_encode_body(
-../.venv/lib/python3.10/site-packages/urllib3/_request_methods.py:278: in request_encode_body
-    return self.urlopen(method, url, **extra_kw)
-../.venv/lib/python3.10/site-packages/urllib3/poolmanager.py:443: in urlopen
-    response = conn.urlopen(method, u.request_uri, **kw)
-../.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:841: in urlopen
-    retries = retries.increment(
-../.venv/lib/python3.10/site-packages/urllib3/util/retry.py:474: in increment
-    raise reraise(type(error), error, _stacktrace)
-../.venv/lib/python3.10/site-packages/urllib3/util/util.py:38: in reraise
-    raise value.with_traceback(tb)
-../.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:787: in urlopen
-    response = self._make_request(
-../.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:534: in _make_request
-    response = conn.getresponse()
-../.venv/lib/python3.10/site-packages/urllib3/connection.py:516: in getresponse
-    httplib_response = super().getresponse()
-/opt/hostedtoolcache/Python/3.10.4/x64/lib/python3.10/http/client.py:1374: in getresponse
-    response.begin()
-/opt/hostedtoolcache/Python/3.10.4/x64/lib/python3.10/http/client.py:318: in begin
-    version, status, reason = self._read_status()
-/opt/hostedtoolcache/Python/3.10.4/x64/lib/python3.10/http/client.py:279: in _read_status
-    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-
-self = <socket.SocketIO object at 0x7ff990b77730>
-b = <memory at 0x7ff990a9cac0>
-
-    def readinto(self, b):
-        """Read up to len(b) bytes into the writable buffer *b* and return
-        the number of bytes read.  If the socket is non-blocking and no bytes
-        are available, None is returned.
-    
-        If *b* is non-empty, a 0 return value indicates that the connection
-        was shutdown at the other end.
-        """
-        self._checkClosed()
-        self._checkReadable()
-        if self._timeout_occurred:
-            raise OSError("cannot read from timed out object")
-        while True:
-            try:
->               return self._sock.recv_into(b)
-E               urllib3.exceptions.ProtocolError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
-
-/opt/hostedtoolcache/Python/3.10.4/x64/lib/python3.10/socket.py:705: ProtocolError
+                                   selenium.common.exceptions.TimeoutException: Message: 
+   Stacktrace:
+   #0 0x559acfcf5922 <unknown>
+   #1 0x559acf80d7d3 <unknown>
+   #2 0x559acf854cba <unknown>
+   #3 0x559acf854d95 <unknown>
+   #4 0x559acf89a088 <unknown>
+   #5 0x559acf87acc1 <unknown>
+   #6 0x559acf89803e <unknown>
+   #7 0x559acf87a9f7 <unknown>
+   #8 0x559acf84912b <unknown>
+   #9 0x559acf849f16 <unknown>
+   #10 0x559acfcc89de <unknown>
+   #11 0x559acfccbd1f <unknown>
+   #12 0x559acfccb79c <unknown>
+   #13 0x559acfccc1a9 <unknown>
+   #14 0x559acfcb9212 <unknown>
+   #15 0x559acfccc527 <unknown>
+   #16 0x559acfca140d <unknown>
+   #17 0x559acfce5889 <unknown>
+   #18 0x559acfce5a6f <unknown>
+   #19 0x559acfcf4a19 <unknown>
+   #20 0x7fa018a5ba94 <unknown>
+   #21 0x7fa018ae8a34 __clone
 
                             </p>
                         </div>
@@ -1427,350 +1119,42 @@ E               urllib3.exceptions.ProtocolError: ('Connection aborted.', Connec
             <tr>
                 <td style="word-wrap: break-word;max-width: 200px; white-space: normal; text-align:left">tests/e2e/test_articles_e2e.py</td>
                 <td style="word-wrap: break-word;max-width: 200px; white-space: normal; text-align:left">test_create_multiple_articles</td>
-                <td>ERROR</td>
-                <td>0.25</td>
+                <td>FAIL</td>
+                <td>15.93</td>
                 <td style="word-wrap: break-word;max-width: 200px; white-space: normal; text-align:left"">
-                    self = <urllib3.connectionpool.HTTPConnectionPool 
+                       selenium.common.exceptions.TimeoutException: Me
                     
-            <a data-toggle="modal" href="#myModal-17366176605510452" class="">(...)</a>
-            <div class="modal fade in" id="myModal-17366176605510452" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <a data-toggle="modal" href="#myModal-17366178865290468" class="">(...)</a>
+            <div class="modal fade in" id="myModal-17366178865290468" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-body">
                             <p>
                                 <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" width="1.12em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1856 1664"><path d="M1056 1375v-190q0-14-9.5-23.5t-22.5-9.5H832q-13 0-22.5 9.5T800 1185v190q0 14 9.5 23.5t22.5 9.5h192q13 0 22.5-9.5t9.5-23.5zm-2-374l18-459q0-12-10-19q-13-11-24-11H818q-11 0-24 11q-10 7-10 21l17 457q0 10 10 16.5t24 6.5h185q14 0 23.5-6.5t10.5-16.5zm-14-934l768 1408q35 63-2 126q-17 29-46.5 46t-63.5 17H160q-34 0-63.5-17T50 1601q-37-63-2-126L816 67q17-31 47-49t65-18t65 18t47 49z" fill="#DC143C"/></svg>
-                                self = <urllib3.connectionpool.HTTPConnectionPool object at 0x7ff99071a890>
-method = 'POST', url = '/wd/hub/session'
-body = '{"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "chrome", "pageLoadStrategy": "normal", "goog:ch...ptions": {"extensions": [], "args": ["--headless", "--no-sandbox", "--disable-dev-shm-usage", "--start-maximized"]}}}}'
-headers = HTTPHeaderDict({'Accept': 'application/json', 'Content-Type': 'application/json;charset=UTF-8', 'User-Agent': 'selenium/4.27.1 (python linux)', 'Connection': 'keep-alive'})
-retries = Retry(total=3, connect=None, read=None, redirect=None, status=None)
-redirect = False, assert_same_host = False, timeout = None, pool_timeout = None
-release_conn = True, chunked = False, body_pos = None, preload_content = True
-decode_content = True, response_kw = {}
-parsed_url = Url(scheme=None, auth=None, host=None, port=None, path='/wd/hub/session', query=None, fragment=None)
-destination_scheme = None, conn = None, release_this_conn = True
-http_tunnel_required = False, err = None, clean_exit = False
-
-    def urlopen(  # type: ignore[override]
-        self,
-        method: str,
-        url: str,
-        body: _TYPE_BODY | None = None,
-        headers: typing.Mapping[str, str] | None = None,
-        retries: Retry | bool | int | None = None,
-        redirect: bool = True,
-        assert_same_host: bool = True,
-        timeout: _TYPE_TIMEOUT = _DEFAULT_TIMEOUT,
-        pool_timeout: int | None = None,
-        release_conn: bool | None = None,
-        chunked: bool = False,
-        body_pos: _TYPE_BODY_POSITION | None = None,
-        preload_content: bool = True,
-        decode_content: bool = True,
-        **response_kw: typing.Any,
-    ) -> BaseHTTPResponse:
-        """
-        Get a connection from the pool and perform an HTTP request. This is the
-        lowest level call for making a request, so you'll need to specify all
-        the raw details.
-    
-        .. note::
-    
-           More commonly, it's appropriate to use a convenience method
-           such as :meth:`request`.
-    
-        .. note::
-    
-           `release_conn` will only behave as expected if
-           `preload_content=False` because we want to make
-           `preload_content=False` the default behaviour someday soon without
-           breaking backwards compatibility.
-    
-        :param method:
-            HTTP request method (such as GET, POST, PUT, etc.)
-    
-        :param url:
-            The URL to perform the request on.
-    
-        :param body:
-            Data to send in the request body, either :class:`str`, :class:`bytes`,
-            an iterable of :class:`str`/:class:`bytes`, or a file-like object.
-    
-        :param headers:
-            Dictionary of custom headers to send, such as User-Agent,
-            If-None-Match, etc. If None, pool headers are used. If provided,
-            these headers completely replace any pool-specific headers.
-    
-        :param retries:
-            Configure the number of retries to allow before raising a
-            :class:`~urllib3.exceptions.MaxRetryError` exception.
-    
-            If ``None`` (default) will retry 3 times, see ``Retry.DEFAULT``. Pass a
-            :class:`~urllib3.util.retry.Retry` object for fine-grained control
-            over different types of retries.
-            Pass an integer number to retry connection errors that many times,
-            but no other types of errors. Pass zero to never retry.
-    
-            If ``False``, then retries are disabled and any exception is raised
-            immediately. Also, instead of raising a MaxRetryError on redirects,
-            the redirect response will be returned.
-    
-        :type retries: :class:`~urllib3.util.retry.Retry`, False, or an int.
-    
-        :param redirect:
-            If True, automatically handle redirects (status codes 301, 302,
-            303, 307, 308). Each redirect counts as a retry. Disabling retries
-            will disable redirect, too.
-    
-        :param assert_same_host:
-            If ``True``, will make sure that the host of the pool requests is
-            consistent else will raise HostChangedError. When ``False``, you can
-            use the pool on an HTTP proxy and request foreign hosts.
-    
-        :param timeout:
-            If specified, overrides the default timeout for this one
-            request. It may be a float (in seconds) or an instance of
-            :class:`urllib3.util.Timeout`.
-    
-        :param pool_timeout:
-            If set and the pool is set to block=True, then this method will
-            block for ``pool_timeout`` seconds and raise EmptyPoolError if no
-            connection is available within the time period.
-    
-        :param bool preload_content:
-            If True, the response's body will be preloaded into memory.
-    
-        :param bool decode_content:
-            If True, will attempt to decode the body based on the
-            'content-encoding' header.
-    
-        :param release_conn:
-            If False, then the urlopen call will not release the connection
-            back into the pool once a response is received (but will release if
-            you read the entire contents of the response such as when
-            `preload_content=True`). This is useful if you're not preloading
-            the response's content immediately. You will need to call
-            ``r.release_conn()`` on the response ``r`` to return the connection
-            back into the pool. If None, it takes the value of ``preload_content``
-            which defaults to ``True``.
-    
-        :param bool chunked:
-            If True, urllib3 will send the body using chunked transfer
-            encoding. Otherwise, urllib3 will send the body using the standard
-            content-length form. Defaults to False.
-    
-        :param int body_pos:
-            Position to seek to in file-like body in the event of a retry or
-            redirect. Typically this won't need to be set because urllib3 will
-            auto-populate the value when needed.
-        """
-        parsed_url = parse_url(url)
-        destination_scheme = parsed_url.scheme
-    
-        if headers is None:
-            headers = self.headers
-    
-        if not isinstance(retries, Retry):
-            retries = Retry.from_int(retries, redirect=redirect, default=self.retries)
-    
-        if release_conn is None:
-            release_conn = preload_content
-    
-        # Check host
-        if assert_same_host and not self.is_same_host(url):
-            raise HostChangedError(self, url, retries)
-    
-        # Ensure that the URL we're connecting to is properly encoded
-        if url.startswith("/"):
-            url = to_str(_encode_target(url))
-        else:
-            url = to_str(parsed_url.url)
-    
-        conn = None
-    
-        # Track whether `conn` needs to be released before
-        # returning/raising/recursing. Update this variable if necessary, and
-        # leave `release_conn` constant throughout the function. That way, if
-        # the function recurses, the original value of `release_conn` will be
-        # passed down into the recursive call, and its value will be respected.
-        #
-        # See issue #651 [1] for details.
-        #
-        # [1] <https://github.com/urllib3/urllib3/issues/651>
-        release_this_conn = release_conn
-    
-        http_tunnel_required = connection_requires_http_tunnel(
-            self.proxy, self.proxy_config, destination_scheme
-        )
-    
-        # Merge the proxy headers. Only done when not using HTTP CONNECT. We
-        # have to copy the headers dict so we can safely change it without those
-        # changes being reflected in anyone else's copy.
-        if not http_tunnel_required:
-            headers = headers.copy()  # type: ignore[attr-defined]
-            headers.update(self.proxy_headers)  # type: ignore[union-attr]
-    
-        # Must keep the exception bound to a separate variable or else Python 3
-        # complains about UnboundLocalError.
-        err = None
-    
-        # Keep track of whether we cleanly exited the except block. This
-        # ensures we do proper cleanup in finally.
-        clean_exit = False
-    
-        # Rewind body position, if needed. Record current position
-        # for future rewinds in the event of a redirect/retry.
-        body_pos = set_file_position(body, body_pos)
-    
-        try:
-            # Request a connection from the queue.
-            timeout_obj = self._get_timeout(timeout)
-            conn = self._get_conn(timeout=pool_timeout)
-    
-            conn.timeout = timeout_obj.connect_timeout  # type: ignore[assignment]
-    
-            # Is this a closed/new connection that requires CONNECT tunnelling?
-            if self.proxy is not None and http_tunnel_required and conn.is_closed:
-                try:
-                    self._prepare_proxy(conn)
-                except (BaseSSLError, OSError, SocketTimeout) as e:
-                    self._raise_timeout(
-                        err=e, url=self.proxy.url, timeout_value=conn.timeout
-                    )
-                    raise
-    
-            # If we're going to release the connection in ``finally:``, then
-            # the response doesn't need to know about the connection. Otherwise
-            # it will also try to release it and we'll have a double-release
-            # mess.
-            response_conn = conn if not release_conn else None
-    
-            # Make the request on the HTTPConnection object
->           response = self._make_request(
-                conn,
-                method,
-                url,
-                timeout=timeout_obj,
-                body=body,
-                headers=headers,
-                chunked=chunked,
-                retries=retries,
-                response_conn=response_conn,
-                preload_content=preload_content,
-                decode_content=decode_content,
-                **response_kw,
-            )
-
-../.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:787: 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-../.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:534: in _make_request
-    response = conn.getresponse()
-../.venv/lib/python3.10/site-packages/urllib3/connection.py:516: in getresponse
-    httplib_response = super().getresponse()
-/opt/hostedtoolcache/Python/3.10.4/x64/lib/python3.10/http/client.py:1374: in getresponse
-    response.begin()
-/opt/hostedtoolcache/Python/3.10.4/x64/lib/python3.10/http/client.py:318: in begin
-    version, status, reason = self._read_status()
-/opt/hostedtoolcache/Python/3.10.4/x64/lib/python3.10/http/client.py:279: in _read_status
-    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-
-self = <socket.SocketIO object at 0x7ff99071a620>
-b = <memory at 0x7ff990b1f040>
-
-    def readinto(self, b):
-        """Read up to len(b) bytes into the writable buffer *b* and return
-        the number of bytes read.  If the socket is non-blocking and no bytes
-        are available, None is returned.
-    
-        If *b* is non-empty, a 0 return value indicates that the connection
-        was shutdown at the other end.
-        """
-        self._checkClosed()
-        self._checkReadable()
-        if self._timeout_occurred:
-            raise OSError("cannot read from timed out object")
-        while True:
-            try:
->               return self._sock.recv_into(b)
-E               ConnectionResetError: [Errno 104] Connection reset by peer
-
-/opt/hostedtoolcache/Python/3.10.4/x64/lib/python3.10/socket.py:705: ConnectionResetError
-
-During handling of the above exception, another exception occurred:
-
-self = <test_articles_e2e.TestCreateArticle object at 0x7ff9910470d0>
-
-    def setup_method(self):
-        chrome_options = Options()
-        chrome_options.add_argument("--headless")
-        chrome_options.add_argument("--no-sandbox")
-        chrome_options.add_argument("--disable-dev-shm-usage")
-        chrome_options.add_argument("--start-maximized")
->       self.driver = webdriver.Remote(
-            command_executor='http://localhost:4444/wd/hub',
-            options=chrome_options
-        )
-
-tests/e2e/test_articles_e2e.py:18: 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-../.venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py:241: in __init__
-    self.start_session(capabilities)
-../.venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py:329: in start_session
-    response = self.execute(Command.NEW_SESSION, caps)["value"]
-../.venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py:382: in execute
-    response = self.command_executor.execute(driver_command, params)
-../.venv/lib/python3.10/site-packages/selenium/webdriver/remote/remote_connection.py:404: in execute
-    return self._request(command_info[0], url, body=data)
-../.venv/lib/python3.10/site-packages/selenium/webdriver/remote/remote_connection.py:428: in _request
-    response = self._conn.request(method, url, body=body, headers=headers, timeout=self._client_config.timeout)
-../.venv/lib/python3.10/site-packages/urllib3/_request_methods.py:143: in request
-    return self.request_encode_body(
-../.venv/lib/python3.10/site-packages/urllib3/_request_methods.py:278: in request_encode_body
-    return self.urlopen(method, url, **extra_kw)
-../.venv/lib/python3.10/site-packages/urllib3/poolmanager.py:443: in urlopen
-    response = conn.urlopen(method, u.request_uri, **kw)
-../.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:841: in urlopen
-    retries = retries.increment(
-../.venv/lib/python3.10/site-packages/urllib3/util/retry.py:474: in increment
-    raise reraise(type(error), error, _stacktrace)
-../.venv/lib/python3.10/site-packages/urllib3/util/util.py:38: in reraise
-    raise value.with_traceback(tb)
-../.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:787: in urlopen
-    response = self._make_request(
-../.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:534: in _make_request
-    response = conn.getresponse()
-../.venv/lib/python3.10/site-packages/urllib3/connection.py:516: in getresponse
-    httplib_response = super().getresponse()
-/opt/hostedtoolcache/Python/3.10.4/x64/lib/python3.10/http/client.py:1374: in getresponse
-    response.begin()
-/opt/hostedtoolcache/Python/3.10.4/x64/lib/python3.10/http/client.py:318: in begin
-    version, status, reason = self._read_status()
-/opt/hostedtoolcache/Python/3.10.4/x64/lib/python3.10/http/client.py:279: in _read_status
-    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-
-self = <socket.SocketIO object at 0x7ff99071a620>
-b = <memory at 0x7ff990b1f040>
-
-    def readinto(self, b):
-        """Read up to len(b) bytes into the writable buffer *b* and return
-        the number of bytes read.  If the socket is non-blocking and no bytes
-        are available, None is returned.
-    
-        If *b* is non-empty, a 0 return value indicates that the connection
-        was shutdown at the other end.
-        """
-        self._checkClosed()
-        self._checkReadable()
-        if self._timeout_occurred:
-            raise OSError("cannot read from timed out object")
-        while True:
-            try:
->               return self._sock.recv_into(b)
-E               urllib3.exceptions.ProtocolError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
-
-/opt/hostedtoolcache/Python/3.10.4/x64/lib/python3.10/socket.py:705: ProtocolError
+                                   selenium.common.exceptions.TimeoutException: Message: 
+   Stacktrace:
+   #0 0x560597fa2922 <unknown>
+   #1 0x560597aba7d3 <unknown>
+   #2 0x560597b01cba <unknown>
+   #3 0x560597b01d95 <unknown>
+   #4 0x560597b47088 <unknown>
+   #5 0x560597b27cc1 <unknown>
+   #6 0x560597b4503e <unknown>
+   #7 0x560597b279f7 <unknown>
+   #8 0x560597af612b <unknown>
+   #9 0x560597af6f16 <unknown>
+   #10 0x560597f759de <unknown>
+   #11 0x560597f78d1f <unknown>
+   #12 0x560597f7879c <unknown>
+   #13 0x560597f791a9 <unknown>
+   #14 0x560597f66212 <unknown>
+   #15 0x560597f79527 <unknown>
+   #16 0x560597f4e40d <unknown>
+   #17 0x560597f92889 <unknown>
+   #18 0x560597f92a6f <unknown>
+   #19 0x560597fa1a19 <unknown>
+   #20 0x7fc7e9a75a94 <unknown>
+   #21 0x7fc7e9b02a34 __clone
 
                             </p>
                         </div>
@@ -1787,350 +1171,42 @@ E               urllib3.exceptions.ProtocolError: ('Connection aborted.', Connec
             <tr>
                 <td style="word-wrap: break-word;max-width: 200px; white-space: normal; text-align:left">tests/e2e/test_articles_e2e.py</td>
                 <td style="word-wrap: break-word;max-width: 200px; white-space: normal; text-align:left">test_edit_post</td>
-                <td>ERROR</td>
-                <td>0.24</td>
+                <td>FAIL</td>
+                <td>15.91</td>
                 <td style="word-wrap: break-word;max-width: 200px; white-space: normal; text-align:left"">
-                    self = <urllib3.connectionpool.HTTPConnectionPool 
+                       selenium.common.exceptions.TimeoutException: Me
                     
-            <a data-toggle="modal" href="#myModal-17366176607886443" class="">(...)</a>
-            <div class="modal fade in" id="myModal-17366176607886443" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <a data-toggle="modal" href="#myModal-17366179025172906" class="">(...)</a>
+            <div class="modal fade in" id="myModal-17366179025172906" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-body">
                             <p>
                                 <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" width="1.12em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1856 1664"><path d="M1056 1375v-190q0-14-9.5-23.5t-22.5-9.5H832q-13 0-22.5 9.5T800 1185v190q0 14 9.5 23.5t22.5 9.5h192q13 0 22.5-9.5t9.5-23.5zm-2-374l18-459q0-12-10-19q-13-11-24-11H818q-11 0-24 11q-10 7-10 21l17 457q0 10 10 16.5t24 6.5h185q14 0 23.5-6.5t10.5-16.5zm-14-934l768 1408q35 63-2 126q-17 29-46.5 46t-63.5 17H160q-34 0-63.5-17T50 1601q-37-63-2-126L816 67q17-31 47-49t65-18t65 18t47 49z" fill="#DC143C"/></svg>
-                                self = <urllib3.connectionpool.HTTPConnectionPool object at 0x7ff990822fe0>
-method = 'POST', url = '/wd/hub/session'
-body = '{"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "chrome", "pageLoadStrategy": "normal", "goog:ch...ptions": {"extensions": [], "args": ["--headless", "--no-sandbox", "--disable-dev-shm-usage", "--start-maximized"]}}}}'
-headers = HTTPHeaderDict({'Accept': 'application/json', 'Content-Type': 'application/json;charset=UTF-8', 'User-Agent': 'selenium/4.27.1 (python linux)', 'Connection': 'keep-alive'})
-retries = Retry(total=3, connect=None, read=None, redirect=None, status=None)
-redirect = False, assert_same_host = False, timeout = None, pool_timeout = None
-release_conn = True, chunked = False, body_pos = None, preload_content = True
-decode_content = True, response_kw = {}
-parsed_url = Url(scheme=None, auth=None, host=None, port=None, path='/wd/hub/session', query=None, fragment=None)
-destination_scheme = None, conn = None, release_this_conn = True
-http_tunnel_required = False, err = None, clean_exit = False
-
-    def urlopen(  # type: ignore[override]
-        self,
-        method: str,
-        url: str,
-        body: _TYPE_BODY | None = None,
-        headers: typing.Mapping[str, str] | None = None,
-        retries: Retry | bool | int | None = None,
-        redirect: bool = True,
-        assert_same_host: bool = True,
-        timeout: _TYPE_TIMEOUT = _DEFAULT_TIMEOUT,
-        pool_timeout: int | None = None,
-        release_conn: bool | None = None,
-        chunked: bool = False,
-        body_pos: _TYPE_BODY_POSITION | None = None,
-        preload_content: bool = True,
-        decode_content: bool = True,
-        **response_kw: typing.Any,
-    ) -> BaseHTTPResponse:
-        """
-        Get a connection from the pool and perform an HTTP request. This is the
-        lowest level call for making a request, so you'll need to specify all
-        the raw details.
-    
-        .. note::
-    
-           More commonly, it's appropriate to use a convenience method
-           such as :meth:`request`.
-    
-        .. note::
-    
-           `release_conn` will only behave as expected if
-           `preload_content=False` because we want to make
-           `preload_content=False` the default behaviour someday soon without
-           breaking backwards compatibility.
-    
-        :param method:
-            HTTP request method (such as GET, POST, PUT, etc.)
-    
-        :param url:
-            The URL to perform the request on.
-    
-        :param body:
-            Data to send in the request body, either :class:`str`, :class:`bytes`,
-            an iterable of :class:`str`/:class:`bytes`, or a file-like object.
-    
-        :param headers:
-            Dictionary of custom headers to send, such as User-Agent,
-            If-None-Match, etc. If None, pool headers are used. If provided,
-            these headers completely replace any pool-specific headers.
-    
-        :param retries:
-            Configure the number of retries to allow before raising a
-            :class:`~urllib3.exceptions.MaxRetryError` exception.
-    
-            If ``None`` (default) will retry 3 times, see ``Retry.DEFAULT``. Pass a
-            :class:`~urllib3.util.retry.Retry` object for fine-grained control
-            over different types of retries.
-            Pass an integer number to retry connection errors that many times,
-            but no other types of errors. Pass zero to never retry.
-    
-            If ``False``, then retries are disabled and any exception is raised
-            immediately. Also, instead of raising a MaxRetryError on redirects,
-            the redirect response will be returned.
-    
-        :type retries: :class:`~urllib3.util.retry.Retry`, False, or an int.
-    
-        :param redirect:
-            If True, automatically handle redirects (status codes 301, 302,
-            303, 307, 308). Each redirect counts as a retry. Disabling retries
-            will disable redirect, too.
-    
-        :param assert_same_host:
-            If ``True``, will make sure that the host of the pool requests is
-            consistent else will raise HostChangedError. When ``False``, you can
-            use the pool on an HTTP proxy and request foreign hosts.
-    
-        :param timeout:
-            If specified, overrides the default timeout for this one
-            request. It may be a float (in seconds) or an instance of
-            :class:`urllib3.util.Timeout`.
-    
-        :param pool_timeout:
-            If set and the pool is set to block=True, then this method will
-            block for ``pool_timeout`` seconds and raise EmptyPoolError if no
-            connection is available within the time period.
-    
-        :param bool preload_content:
-            If True, the response's body will be preloaded into memory.
-    
-        :param bool decode_content:
-            If True, will attempt to decode the body based on the
-            'content-encoding' header.
-    
-        :param release_conn:
-            If False, then the urlopen call will not release the connection
-            back into the pool once a response is received (but will release if
-            you read the entire contents of the response such as when
-            `preload_content=True`). This is useful if you're not preloading
-            the response's content immediately. You will need to call
-            ``r.release_conn()`` on the response ``r`` to return the connection
-            back into the pool. If None, it takes the value of ``preload_content``
-            which defaults to ``True``.
-    
-        :param bool chunked:
-            If True, urllib3 will send the body using chunked transfer
-            encoding. Otherwise, urllib3 will send the body using the standard
-            content-length form. Defaults to False.
-    
-        :param int body_pos:
-            Position to seek to in file-like body in the event of a retry or
-            redirect. Typically this won't need to be set because urllib3 will
-            auto-populate the value when needed.
-        """
-        parsed_url = parse_url(url)
-        destination_scheme = parsed_url.scheme
-    
-        if headers is None:
-            headers = self.headers
-    
-        if not isinstance(retries, Retry):
-            retries = Retry.from_int(retries, redirect=redirect, default=self.retries)
-    
-        if release_conn is None:
-            release_conn = preload_content
-    
-        # Check host
-        if assert_same_host and not self.is_same_host(url):
-            raise HostChangedError(self, url, retries)
-    
-        # Ensure that the URL we're connecting to is properly encoded
-        if url.startswith("/"):
-            url = to_str(_encode_target(url))
-        else:
-            url = to_str(parsed_url.url)
-    
-        conn = None
-    
-        # Track whether `conn` needs to be released before
-        # returning/raising/recursing. Update this variable if necessary, and
-        # leave `release_conn` constant throughout the function. That way, if
-        # the function recurses, the original value of `release_conn` will be
-        # passed down into the recursive call, and its value will be respected.
-        #
-        # See issue #651 [1] for details.
-        #
-        # [1] <https://github.com/urllib3/urllib3/issues/651>
-        release_this_conn = release_conn
-    
-        http_tunnel_required = connection_requires_http_tunnel(
-            self.proxy, self.proxy_config, destination_scheme
-        )
-    
-        # Merge the proxy headers. Only done when not using HTTP CONNECT. We
-        # have to copy the headers dict so we can safely change it without those
-        # changes being reflected in anyone else's copy.
-        if not http_tunnel_required:
-            headers = headers.copy()  # type: ignore[attr-defined]
-            headers.update(self.proxy_headers)  # type: ignore[union-attr]
-    
-        # Must keep the exception bound to a separate variable or else Python 3
-        # complains about UnboundLocalError.
-        err = None
-    
-        # Keep track of whether we cleanly exited the except block. This
-        # ensures we do proper cleanup in finally.
-        clean_exit = False
-    
-        # Rewind body position, if needed. Record current position
-        # for future rewinds in the event of a redirect/retry.
-        body_pos = set_file_position(body, body_pos)
-    
-        try:
-            # Request a connection from the queue.
-            timeout_obj = self._get_timeout(timeout)
-            conn = self._get_conn(timeout=pool_timeout)
-    
-            conn.timeout = timeout_obj.connect_timeout  # type: ignore[assignment]
-    
-            # Is this a closed/new connection that requires CONNECT tunnelling?
-            if self.proxy is not None and http_tunnel_required and conn.is_closed:
-                try:
-                    self._prepare_proxy(conn)
-                except (BaseSSLError, OSError, SocketTimeout) as e:
-                    self._raise_timeout(
-                        err=e, url=self.proxy.url, timeout_value=conn.timeout
-                    )
-                    raise
-    
-            # If we're going to release the connection in ``finally:``, then
-            # the response doesn't need to know about the connection. Otherwise
-            # it will also try to release it and we'll have a double-release
-            # mess.
-            response_conn = conn if not release_conn else None
-    
-            # Make the request on the HTTPConnection object
->           response = self._make_request(
-                conn,
-                method,
-                url,
-                timeout=timeout_obj,
-                body=body,
-                headers=headers,
-                chunked=chunked,
-                retries=retries,
-                response_conn=response_conn,
-                preload_content=preload_content,
-                decode_content=decode_content,
-                **response_kw,
-            )
-
-../.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:787: 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-../.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:534: in _make_request
-    response = conn.getresponse()
-../.venv/lib/python3.10/site-packages/urllib3/connection.py:516: in getresponse
-    httplib_response = super().getresponse()
-/opt/hostedtoolcache/Python/3.10.4/x64/lib/python3.10/http/client.py:1374: in getresponse
-    response.begin()
-/opt/hostedtoolcache/Python/3.10.4/x64/lib/python3.10/http/client.py:318: in begin
-    version, status, reason = self._read_status()
-/opt/hostedtoolcache/Python/3.10.4/x64/lib/python3.10/http/client.py:279: in _read_status
-    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-
-self = <socket.SocketIO object at 0x7ff990822c80>
-b = <memory at 0x7ff990a9cac0>
-
-    def readinto(self, b):
-        """Read up to len(b) bytes into the writable buffer *b* and return
-        the number of bytes read.  If the socket is non-blocking and no bytes
-        are available, None is returned.
-    
-        If *b* is non-empty, a 0 return value indicates that the connection
-        was shutdown at the other end.
-        """
-        self._checkClosed()
-        self._checkReadable()
-        if self._timeout_occurred:
-            raise OSError("cannot read from timed out object")
-        while True:
-            try:
->               return self._sock.recv_into(b)
-E               ConnectionResetError: [Errno 104] Connection reset by peer
-
-/opt/hostedtoolcache/Python/3.10.4/x64/lib/python3.10/socket.py:705: ConnectionResetError
-
-During handling of the above exception, another exception occurred:
-
-self = <test_articles_e2e.TestCreateArticle object at 0x7ff9910468c0>
-
-    def setup_method(self):
-        chrome_options = Options()
-        chrome_options.add_argument("--headless")
-        chrome_options.add_argument("--no-sandbox")
-        chrome_options.add_argument("--disable-dev-shm-usage")
-        chrome_options.add_argument("--start-maximized")
->       self.driver = webdriver.Remote(
-            command_executor='http://localhost:4444/wd/hub',
-            options=chrome_options
-        )
-
-tests/e2e/test_articles_e2e.py:18: 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-../.venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py:241: in __init__
-    self.start_session(capabilities)
-../.venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py:329: in start_session
-    response = self.execute(Command.NEW_SESSION, caps)["value"]
-../.venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py:382: in execute
-    response = self.command_executor.execute(driver_command, params)
-../.venv/lib/python3.10/site-packages/selenium/webdriver/remote/remote_connection.py:404: in execute
-    return self._request(command_info[0], url, body=data)
-../.venv/lib/python3.10/site-packages/selenium/webdriver/remote/remote_connection.py:428: in _request
-    response = self._conn.request(method, url, body=body, headers=headers, timeout=self._client_config.timeout)
-../.venv/lib/python3.10/site-packages/urllib3/_request_methods.py:143: in request
-    return self.request_encode_body(
-../.venv/lib/python3.10/site-packages/urllib3/_request_methods.py:278: in request_encode_body
-    return self.urlopen(method, url, **extra_kw)
-../.venv/lib/python3.10/site-packages/urllib3/poolmanager.py:443: in urlopen
-    response = conn.urlopen(method, u.request_uri, **kw)
-../.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:841: in urlopen
-    retries = retries.increment(
-../.venv/lib/python3.10/site-packages/urllib3/util/retry.py:474: in increment
-    raise reraise(type(error), error, _stacktrace)
-../.venv/lib/python3.10/site-packages/urllib3/util/util.py:38: in reraise
-    raise value.with_traceback(tb)
-../.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:787: in urlopen
-    response = self._make_request(
-../.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:534: in _make_request
-    response = conn.getresponse()
-../.venv/lib/python3.10/site-packages/urllib3/connection.py:516: in getresponse
-    httplib_response = super().getresponse()
-/opt/hostedtoolcache/Python/3.10.4/x64/lib/python3.10/http/client.py:1374: in getresponse
-    response.begin()
-/opt/hostedtoolcache/Python/3.10.4/x64/lib/python3.10/http/client.py:318: in begin
-    version, status, reason = self._read_status()
-/opt/hostedtoolcache/Python/3.10.4/x64/lib/python3.10/http/client.py:279: in _read_status
-    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-
-self = <socket.SocketIO object at 0x7ff990822c80>
-b = <memory at 0x7ff990a9cac0>
-
-    def readinto(self, b):
-        """Read up to len(b) bytes into the writable buffer *b* and return
-        the number of bytes read.  If the socket is non-blocking and no bytes
-        are available, None is returned.
-    
-        If *b* is non-empty, a 0 return value indicates that the connection
-        was shutdown at the other end.
-        """
-        self._checkClosed()
-        self._checkReadable()
-        if self._timeout_occurred:
-            raise OSError("cannot read from timed out object")
-        while True:
-            try:
->               return self._sock.recv_into(b)
-E               urllib3.exceptions.ProtocolError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
-
-/opt/hostedtoolcache/Python/3.10.4/x64/lib/python3.10/socket.py:705: ProtocolError
+                                   selenium.common.exceptions.TimeoutException: Message: 
+   Stacktrace:
+   #0 0x565035f08922 <unknown>
+   #1 0x565035a207d3 <unknown>
+   #2 0x565035a67cba <unknown>
+   #3 0x565035a67d95 <unknown>
+   #4 0x565035aad088 <unknown>
+   #5 0x565035a8dcc1 <unknown>
+   #6 0x565035aab03e <unknown>
+   #7 0x565035a8d9f7 <unknown>
+   #8 0x565035a5c12b <unknown>
+   #9 0x565035a5cf16 <unknown>
+   #10 0x565035edb9de <unknown>
+   #11 0x565035eded1f <unknown>
+   #12 0x565035ede79c <unknown>
+   #13 0x565035edf1a9 <unknown>
+   #14 0x565035ecc212 <unknown>
+   #15 0x565035edf527 <unknown>
+   #16 0x565035eb440d <unknown>
+   #17 0x565035ef8889 <unknown>
+   #18 0x565035ef8a6f <unknown>
+   #19 0x565035f07a19 <unknown>
+   #20 0x7f337815fa94 <unknown>
+   #21 0x7f33781eca34 __clone
 
                             </p>
                         </div>
@@ -2147,350 +1223,42 @@ E               urllib3.exceptions.ProtocolError: ('Connection aborted.', Connec
             <tr>
                 <td style="word-wrap: break-word;max-width: 200px; white-space: normal; text-align:left">tests/e2e/test_articles_e2e.py</td>
                 <td style="word-wrap: break-word;max-width: 200px; white-space: normal; text-align:left">test_delete_added_article</td>
-                <td>ERROR</td>
-                <td>0.25</td>
+                <td>FAIL</td>
+                <td>15.91</td>
                 <td style="word-wrap: break-word;max-width: 200px; white-space: normal; text-align:left"">
-                    self = <urllib3.connectionpool.HTTPConnectionPool 
+                       selenium.common.exceptions.TimeoutException: Me
                     
-            <a data-toggle="modal" href="#myModal-17366176610395937" class="">(...)</a>
-            <div class="modal fade in" id="myModal-17366176610395937" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <a data-toggle="modal" href="#myModal-1736617918513893" class="">(...)</a>
+            <div class="modal fade in" id="myModal-1736617918513893" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-body">
                             <p>
                                 <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" width="1.12em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1856 1664"><path d="M1056 1375v-190q0-14-9.5-23.5t-22.5-9.5H832q-13 0-22.5 9.5T800 1185v190q0 14 9.5 23.5t22.5 9.5h192q13 0 22.5-9.5t9.5-23.5zm-2-374l18-459q0-12-10-19q-13-11-24-11H818q-11 0-24 11q-10 7-10 21l17 457q0 10 10 16.5t24 6.5h185q14 0 23.5-6.5t10.5-16.5zm-14-934l768 1408q35 63-2 126q-17 29-46.5 46t-63.5 17H160q-34 0-63.5-17T50 1601q-37-63-2-126L816 67q17-31 47-49t65-18t65 18t47 49z" fill="#DC143C"/></svg>
-                                self = <urllib3.connectionpool.HTTPConnectionPool object at 0x7ff9908ef0d0>
-method = 'POST', url = '/wd/hub/session'
-body = '{"capabilities": {"firstMatch": [{}], "alwaysMatch": {"browserName": "chrome", "pageLoadStrategy": "normal", "goog:ch...ptions": {"extensions": [], "args": ["--headless", "--no-sandbox", "--disable-dev-shm-usage", "--start-maximized"]}}}}'
-headers = HTTPHeaderDict({'Accept': 'application/json', 'Content-Type': 'application/json;charset=UTF-8', 'User-Agent': 'selenium/4.27.1 (python linux)', 'Connection': 'keep-alive'})
-retries = Retry(total=3, connect=None, read=None, redirect=None, status=None)
-redirect = False, assert_same_host = False, timeout = None, pool_timeout = None
-release_conn = True, chunked = False, body_pos = None, preload_content = True
-decode_content = True, response_kw = {}
-parsed_url = Url(scheme=None, auth=None, host=None, port=None, path='/wd/hub/session', query=None, fragment=None)
-destination_scheme = None, conn = None, release_this_conn = True
-http_tunnel_required = False, err = None, clean_exit = False
-
-    def urlopen(  # type: ignore[override]
-        self,
-        method: str,
-        url: str,
-        body: _TYPE_BODY | None = None,
-        headers: typing.Mapping[str, str] | None = None,
-        retries: Retry | bool | int | None = None,
-        redirect: bool = True,
-        assert_same_host: bool = True,
-        timeout: _TYPE_TIMEOUT = _DEFAULT_TIMEOUT,
-        pool_timeout: int | None = None,
-        release_conn: bool | None = None,
-        chunked: bool = False,
-        body_pos: _TYPE_BODY_POSITION | None = None,
-        preload_content: bool = True,
-        decode_content: bool = True,
-        **response_kw: typing.Any,
-    ) -> BaseHTTPResponse:
-        """
-        Get a connection from the pool and perform an HTTP request. This is the
-        lowest level call for making a request, so you'll need to specify all
-        the raw details.
-    
-        .. note::
-    
-           More commonly, it's appropriate to use a convenience method
-           such as :meth:`request`.
-    
-        .. note::
-    
-           `release_conn` will only behave as expected if
-           `preload_content=False` because we want to make
-           `preload_content=False` the default behaviour someday soon without
-           breaking backwards compatibility.
-    
-        :param method:
-            HTTP request method (such as GET, POST, PUT, etc.)
-    
-        :param url:
-            The URL to perform the request on.
-    
-        :param body:
-            Data to send in the request body, either :class:`str`, :class:`bytes`,
-            an iterable of :class:`str`/:class:`bytes`, or a file-like object.
-    
-        :param headers:
-            Dictionary of custom headers to send, such as User-Agent,
-            If-None-Match, etc. If None, pool headers are used. If provided,
-            these headers completely replace any pool-specific headers.
-    
-        :param retries:
-            Configure the number of retries to allow before raising a
-            :class:`~urllib3.exceptions.MaxRetryError` exception.
-    
-            If ``None`` (default) will retry 3 times, see ``Retry.DEFAULT``. Pass a
-            :class:`~urllib3.util.retry.Retry` object for fine-grained control
-            over different types of retries.
-            Pass an integer number to retry connection errors that many times,
-            but no other types of errors. Pass zero to never retry.
-    
-            If ``False``, then retries are disabled and any exception is raised
-            immediately. Also, instead of raising a MaxRetryError on redirects,
-            the redirect response will be returned.
-    
-        :type retries: :class:`~urllib3.util.retry.Retry`, False, or an int.
-    
-        :param redirect:
-            If True, automatically handle redirects (status codes 301, 302,
-            303, 307, 308). Each redirect counts as a retry. Disabling retries
-            will disable redirect, too.
-    
-        :param assert_same_host:
-            If ``True``, will make sure that the host of the pool requests is
-            consistent else will raise HostChangedError. When ``False``, you can
-            use the pool on an HTTP proxy and request foreign hosts.
-    
-        :param timeout:
-            If specified, overrides the default timeout for this one
-            request. It may be a float (in seconds) or an instance of
-            :class:`urllib3.util.Timeout`.
-    
-        :param pool_timeout:
-            If set and the pool is set to block=True, then this method will
-            block for ``pool_timeout`` seconds and raise EmptyPoolError if no
-            connection is available within the time period.
-    
-        :param bool preload_content:
-            If True, the response's body will be preloaded into memory.
-    
-        :param bool decode_content:
-            If True, will attempt to decode the body based on the
-            'content-encoding' header.
-    
-        :param release_conn:
-            If False, then the urlopen call will not release the connection
-            back into the pool once a response is received (but will release if
-            you read the entire contents of the response such as when
-            `preload_content=True`). This is useful if you're not preloading
-            the response's content immediately. You will need to call
-            ``r.release_conn()`` on the response ``r`` to return the connection
-            back into the pool. If None, it takes the value of ``preload_content``
-            which defaults to ``True``.
-    
-        :param bool chunked:
-            If True, urllib3 will send the body using chunked transfer
-            encoding. Otherwise, urllib3 will send the body using the standard
-            content-length form. Defaults to False.
-    
-        :param int body_pos:
-            Position to seek to in file-like body in the event of a retry or
-            redirect. Typically this won't need to be set because urllib3 will
-            auto-populate the value when needed.
-        """
-        parsed_url = parse_url(url)
-        destination_scheme = parsed_url.scheme
-    
-        if headers is None:
-            headers = self.headers
-    
-        if not isinstance(retries, Retry):
-            retries = Retry.from_int(retries, redirect=redirect, default=self.retries)
-    
-        if release_conn is None:
-            release_conn = preload_content
-    
-        # Check host
-        if assert_same_host and not self.is_same_host(url):
-            raise HostChangedError(self, url, retries)
-    
-        # Ensure that the URL we're connecting to is properly encoded
-        if url.startswith("/"):
-            url = to_str(_encode_target(url))
-        else:
-            url = to_str(parsed_url.url)
-    
-        conn = None
-    
-        # Track whether `conn` needs to be released before
-        # returning/raising/recursing. Update this variable if necessary, and
-        # leave `release_conn` constant throughout the function. That way, if
-        # the function recurses, the original value of `release_conn` will be
-        # passed down into the recursive call, and its value will be respected.
-        #
-        # See issue #651 [1] for details.
-        #
-        # [1] <https://github.com/urllib3/urllib3/issues/651>
-        release_this_conn = release_conn
-    
-        http_tunnel_required = connection_requires_http_tunnel(
-            self.proxy, self.proxy_config, destination_scheme
-        )
-    
-        # Merge the proxy headers. Only done when not using HTTP CONNECT. We
-        # have to copy the headers dict so we can safely change it without those
-        # changes being reflected in anyone else's copy.
-        if not http_tunnel_required:
-            headers = headers.copy()  # type: ignore[attr-defined]
-            headers.update(self.proxy_headers)  # type: ignore[union-attr]
-    
-        # Must keep the exception bound to a separate variable or else Python 3
-        # complains about UnboundLocalError.
-        err = None
-    
-        # Keep track of whether we cleanly exited the except block. This
-        # ensures we do proper cleanup in finally.
-        clean_exit = False
-    
-        # Rewind body position, if needed. Record current position
-        # for future rewinds in the event of a redirect/retry.
-        body_pos = set_file_position(body, body_pos)
-    
-        try:
-            # Request a connection from the queue.
-            timeout_obj = self._get_timeout(timeout)
-            conn = self._get_conn(timeout=pool_timeout)
-    
-            conn.timeout = timeout_obj.connect_timeout  # type: ignore[assignment]
-    
-            # Is this a closed/new connection that requires CONNECT tunnelling?
-            if self.proxy is not None and http_tunnel_required and conn.is_closed:
-                try:
-                    self._prepare_proxy(conn)
-                except (BaseSSLError, OSError, SocketTimeout) as e:
-                    self._raise_timeout(
-                        err=e, url=self.proxy.url, timeout_value=conn.timeout
-                    )
-                    raise
-    
-            # If we're going to release the connection in ``finally:``, then
-            # the response doesn't need to know about the connection. Otherwise
-            # it will also try to release it and we'll have a double-release
-            # mess.
-            response_conn = conn if not release_conn else None
-    
-            # Make the request on the HTTPConnection object
->           response = self._make_request(
-                conn,
-                method,
-                url,
-                timeout=timeout_obj,
-                body=body,
-                headers=headers,
-                chunked=chunked,
-                retries=retries,
-                response_conn=response_conn,
-                preload_content=preload_content,
-                decode_content=decode_content,
-                **response_kw,
-            )
-
-../.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:787: 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-../.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:534: in _make_request
-    response = conn.getresponse()
-../.venv/lib/python3.10/site-packages/urllib3/connection.py:516: in getresponse
-    httplib_response = super().getresponse()
-/opt/hostedtoolcache/Python/3.10.4/x64/lib/python3.10/http/client.py:1374: in getresponse
-    response.begin()
-/opt/hostedtoolcache/Python/3.10.4/x64/lib/python3.10/http/client.py:318: in begin
-    version, status, reason = self._read_status()
-/opt/hostedtoolcache/Python/3.10.4/x64/lib/python3.10/http/client.py:279: in _read_status
-    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-
-self = <socket.SocketIO object at 0x7ff9908ecbb0>
-b = <memory at 0x7ff990bb7880>
-
-    def readinto(self, b):
-        """Read up to len(b) bytes into the writable buffer *b* and return
-        the number of bytes read.  If the socket is non-blocking and no bytes
-        are available, None is returned.
-    
-        If *b* is non-empty, a 0 return value indicates that the connection
-        was shutdown at the other end.
-        """
-        self._checkClosed()
-        self._checkReadable()
-        if self._timeout_occurred:
-            raise OSError("cannot read from timed out object")
-        while True:
-            try:
->               return self._sock.recv_into(b)
-E               ConnectionResetError: [Errno 104] Connection reset by peer
-
-/opt/hostedtoolcache/Python/3.10.4/x64/lib/python3.10/socket.py:705: ConnectionResetError
-
-During handling of the above exception, another exception occurred:
-
-self = <test_articles_e2e.TestCreateArticle object at 0x7ff991046500>
-
-    def setup_method(self):
-        chrome_options = Options()
-        chrome_options.add_argument("--headless")
-        chrome_options.add_argument("--no-sandbox")
-        chrome_options.add_argument("--disable-dev-shm-usage")
-        chrome_options.add_argument("--start-maximized")
->       self.driver = webdriver.Remote(
-            command_executor='http://localhost:4444/wd/hub',
-            options=chrome_options
-        )
-
-tests/e2e/test_articles_e2e.py:18: 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-../.venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py:241: in __init__
-    self.start_session(capabilities)
-../.venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py:329: in start_session
-    response = self.execute(Command.NEW_SESSION, caps)["value"]
-../.venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py:382: in execute
-    response = self.command_executor.execute(driver_command, params)
-../.venv/lib/python3.10/site-packages/selenium/webdriver/remote/remote_connection.py:404: in execute
-    return self._request(command_info[0], url, body=data)
-../.venv/lib/python3.10/site-packages/selenium/webdriver/remote/remote_connection.py:428: in _request
-    response = self._conn.request(method, url, body=body, headers=headers, timeout=self._client_config.timeout)
-../.venv/lib/python3.10/site-packages/urllib3/_request_methods.py:143: in request
-    return self.request_encode_body(
-../.venv/lib/python3.10/site-packages/urllib3/_request_methods.py:278: in request_encode_body
-    return self.urlopen(method, url, **extra_kw)
-../.venv/lib/python3.10/site-packages/urllib3/poolmanager.py:443: in urlopen
-    response = conn.urlopen(method, u.request_uri, **kw)
-../.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:841: in urlopen
-    retries = retries.increment(
-../.venv/lib/python3.10/site-packages/urllib3/util/retry.py:474: in increment
-    raise reraise(type(error), error, _stacktrace)
-../.venv/lib/python3.10/site-packages/urllib3/util/util.py:38: in reraise
-    raise value.with_traceback(tb)
-../.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:787: in urlopen
-    response = self._make_request(
-../.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:534: in _make_request
-    response = conn.getresponse()
-../.venv/lib/python3.10/site-packages/urllib3/connection.py:516: in getresponse
-    httplib_response = super().getresponse()
-/opt/hostedtoolcache/Python/3.10.4/x64/lib/python3.10/http/client.py:1374: in getresponse
-    response.begin()
-/opt/hostedtoolcache/Python/3.10.4/x64/lib/python3.10/http/client.py:318: in begin
-    version, status, reason = self._read_status()
-/opt/hostedtoolcache/Python/3.10.4/x64/lib/python3.10/http/client.py:279: in _read_status
-    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-
-self = <socket.SocketIO object at 0x7ff9908ecbb0>
-b = <memory at 0x7ff990bb7880>
-
-    def readinto(self, b):
-        """Read up to len(b) bytes into the writable buffer *b* and return
-        the number of bytes read.  If the socket is non-blocking and no bytes
-        are available, None is returned.
-    
-        If *b* is non-empty, a 0 return value indicates that the connection
-        was shutdown at the other end.
-        """
-        self._checkClosed()
-        self._checkReadable()
-        if self._timeout_occurred:
-            raise OSError("cannot read from timed out object")
-        while True:
-            try:
->               return self._sock.recv_into(b)
-E               urllib3.exceptions.ProtocolError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
-
-/opt/hostedtoolcache/Python/3.10.4/x64/lib/python3.10/socket.py:705: ProtocolError
+                                   selenium.common.exceptions.TimeoutException: Message: 
+   Stacktrace:
+   #0 0x5653edb05922 <unknown>
+   #1 0x5653ed61d7d3 <unknown>
+   #2 0x5653ed664cba <unknown>
+   #3 0x5653ed664d95 <unknown>
+   #4 0x5653ed6aa088 <unknown>
+   #5 0x5653ed68acc1 <unknown>
+   #6 0x5653ed6a803e <unknown>
+   #7 0x5653ed68a9f7 <unknown>
+   #8 0x5653ed65912b <unknown>
+   #9 0x5653ed659f16 <unknown>
+   #10 0x5653edad89de <unknown>
+   #11 0x5653edadbd1f <unknown>
+   #12 0x5653edadb79c <unknown>
+   #13 0x5653edadc1a9 <unknown>
+   #14 0x5653edac9212 <unknown>
+   #15 0x5653edadc527 <unknown>
+   #16 0x5653edab140d <unknown>
+   #17 0x5653edaf5889 <unknown>
+   #18 0x5653edaf5a6f <unknown>
+   #19 0x5653edb04a19 <unknown>
+   #20 0x7fbc5d298a94 <unknown>
+   #21 0x7fbc5d325a34 __clone
 
                             </p>
                         </div>
@@ -2516,7 +1284,7 @@ E               urllib3.exceptions.ProtocolError: ('Connection aborted.', Connec
                     <a class ="list-group-item list-group-item-action" href="#list-item-1" style="font-size: 1.1rem; color: dimgray; margin-bottom: -7%;">
                         <i class="fa fa-times" aria-hidden="true" style="color: #fc6766"></i>
                         <span>build #1</span></br>
-                        <span style="font-size: 0.81rem; color: gray; padding-left: 12%;">2025-01-11 | 5:47 pm</span>
+                        <span style="font-size: 0.81rem; color: gray; padding-left: 12%;">2025-01-11 | 5:51 pm</span>
                     </a>
                     
             </div>
@@ -2558,7 +1326,7 @@ E               urllib3.exceptions.ProtocolError: ('Connection aborted.', Connec
                                         </div>
                                         <div class="col-xs-12 col-md-3" style="max-width: 14.2%;">
                                             <div class="counter">
-                                                <h2 class="timer count-title count-number">0
+                                                <h2 class="timer count-title count-number">4
                                                 </h2>
                                                 <p class="stats-text">FAILED</p>
                                             </div>
@@ -2583,7 +1351,7 @@ E               urllib3.exceptions.ProtocolError: ('Connection aborted.', Connec
                                         </div>
                                         <div class="col-xs-12 col-md-3" style="max-width: 14.2%;">
                                             <div class="counter">
-                                                <h2 class="timer count-title count-number">4</h2>
+                                                <h2 class="timer count-title count-number">0</h2>
                                                 <p class="stats-text">ERROR</p>
                                             </div>
                                         </div>
@@ -2834,7 +1602,7 @@ E               urllib3.exceptions.ProtocolError: ('Connection aborted.', Connec
                     labels: ['PASS', 'FAIL', 'SKIP', 'XPASS', 'XFAIL', 'ERROR'],
                     datasets: [{
                         label: '# of Votes',
-                        data: [9, 0, 0, 0, 0, 4],
+                        data: [9, 4, 0, 0, 0, 0],
                         backgroundColor: [
                             '#98cc64',
                             '#fc6766',
@@ -2928,7 +1696,7 @@ E               urllib3.exceptions.ProtocolError: ('Connection aborted.', Connec
         <script>
             for(var i=0; i<=1; i++) {
                 var MeSeContext = document.getElementById("archive-chart-"+i).getContext("2d");
-                var archives = {'0': {'pass': '9', 'fail': '0', 'skip': '0', 'xpass': '0', 'xfail': '0', 'error': '4', 'rerun': '0', 'total': '13'}};
+                var archives = {'0': {'pass': '9', 'fail': '4', 'skip': '0', 'xpass': '0', 'xfail': '0', 'error': '0', 'rerun': '0', 'total': '13'}};
                 var pass = archives[i].pass;
                 var fail = archives[i].fail;
                 var skip = archives[i].skip;
@@ -3003,7 +1771,7 @@ E               urllib3.exceptions.ProtocolError: ('Connection aborted.', Connec
                         hoverBackgroundColor: '#e35857',
                         borderColor: '#fd8a89',
                         borderWidth: 1,
-                        data: [0, 0, 0]
+                        data: [0, 0, 4]
                     }, {
                         label: 'Skipped',
                         backgroundColor: '#ffd050',
@@ -3031,7 +1799,7 @@ E               urllib3.exceptions.ProtocolError: ('Connection aborted.', Connec
                         hoverBackgroundColor: '#8b2828',
                         borderColor: '#b13635',
                         borderWidth: 1,
-                        data: [0, 0, 4]
+                        data: [0, 0, 0]
                     }]
                 },
                 options: {
@@ -3080,7 +1848,7 @@ E               urllib3.exceptions.ProtocolError: ('Connection aborted.', Connec
             var trends = new Chart(lineCanvas, {
                 type: 'line',
                 data: {
-                  labels : ['5:47 PM | Jan 11'],
+                  labels : ['5:51 PM | Jan 11'],
                   datasets : [
                     {
                       label: 'Passed',
