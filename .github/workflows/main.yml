@@ -70,12 +70,12 @@ jobs:
           restore-keys: |
             venv-${{ runner.os }}-
 
-      # - name: Upload code
-      #   uses: actions/upload-artifact@v4
-      #   with:
-      #     name: code
-      #     path: .
-      #     retention-days: 1
+      - name: Upload code
+        uses: actions/upload-artifact@v4
+        with:
+          name: code
+          path: .
+          retention-days: 1
 
   test:
     needs: build
