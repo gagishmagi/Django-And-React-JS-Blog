@@ -112,7 +112,7 @@ jobs:
 
       - name: Run Selenium
         run: |
-          docker run -d -p 4444:4444 -p 7900:7900 --name selenium selenium/standalone-chromium:latest
+          docker run --rm -d --network=host --name selenium selenium/standalone-chromium:latest
 
       - name: Run tests
         run: |

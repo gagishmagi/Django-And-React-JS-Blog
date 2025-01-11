@@ -5,18 +5,19 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
+# Chrome service and options
+from selenium.webdriver.chrome.options import Options
 
 class TestCreateArticle:
     def setup_method(self):
-        options = webdriver.ChromeOptions()
-        options.add_argument('--headless')
-        options.add_argument('--no-sandbox')
-        options.add_argument('--disable-dev-shm-usage')
-        options.add_argument('--disable-gpu')
-        options.add_argument('--window-size=1920,1080')
+        chrome_options = Options()
+        chrome_options.add_argument("--headless")
+        chrome_options.add_argument("--no-sandbox")
+        chrome_options.add_argument("--disable-dev-shm-usage")
+        chrome_options.add_argument("--start-maximized")
         self.driver = webdriver.Remote(
             command_executor='http://localhost:4444/wd/hub',
-            options=options
+            options=chrome_options
         )
 
     def teardown_method(self):
