@@ -13,9 +13,11 @@ class TestCreateArticle:
         options.add_argument('--no-sandbox')
         options.add_argument('--disable-dev-shm-usage')
         options.add_argument('--disable-gpu')
-        # Add window size to ensure elements are visible
         options.add_argument('--window-size=1920,1080')
-        self.driver = webdriver.Chrome(options=options)
+        self.driver = webdriver.Remote(
+            command_executor='http://localhost:4444/wd/hub',
+            options=options
+        )
 
     def teardown_method(self):
         self.driver.quit()

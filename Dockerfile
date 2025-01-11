@@ -4,14 +4,6 @@ FROM python:3.9-slim
 # Set the working directory in the container
 WORKDIR /app
 
-# Install Chrome and ChromeDriver dependencies
-RUN apt-get update && apt-get install -y \
-    wget \
-    gnupg \
-    chromium \
-    chromium-driver \
-    && rm -rf /var/lib/apt/lists/*
-
 # Copy the requirements file into the container
 COPY backend/requirements.txt .
 
@@ -27,12 +19,9 @@ RUN python backend/manage.py collectstatic --noinput
 # Set the working directory to the Django project
 WORKDIR /app/backend
 
-# Set the environment variables for Django and Chrome
+# Set the environment variables for Django
 ENV DJANGO_SETTINGS_MODULE=backend.settings
 ENV PYTHONUNBUFFERED=1
-ENV DISPLAY=:99
-ENV CHROME_BIN=/usr/bin/chromium
-ENV CHROMEDRIVER_PATH=/usr/bin/chromedriver
 
 # Expose the application's port
 EXPOSE 8000

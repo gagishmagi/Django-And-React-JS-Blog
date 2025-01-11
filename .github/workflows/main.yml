@@ -110,6 +110,10 @@ jobs:
           docker build -t ${{ secrets.DOCKER_USERNAME }}/blog-and-react-js-blog-e2e:latest .
           docker run --name blog-and-react-js-blog-e2e --rm -d -p 8000:8000 -e PUBLIC_URL=http://localhost:8000 ${{ secrets.DOCKER_USERNAME }}/blog-and-react-js-blog-e2e:latest
 
+      - name: Run Selenium
+        run: |
+          docker run -d -p 4444:4444 -p 7900:7900 --name selenium -e SE_OPTS="-enablePassThrough false" selenium/standalone-chromium:latest
+
       - name: Run tests
         run: |
           source .venv/bin/activate
