@@ -211,7 +211,7 @@ jobs:
                 text: 'The test report is attached as a url to github pages.',
                 fields: [],
                 actions: [],
-                title_link: 'https://${{ github.repository_owner }}.github.io/Django-And-React-JS-Blog/report.html',
+                title_link: 'https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/report.html',
                 footer: '',
                 footer_icon: '',
                 image_url: '',
@@ -291,10 +291,12 @@ jobs:
       #     summary: 'CI/CD Pipeline Failed'
       #     description: |
       #       The CI/CD pipeline has failed. Please check the logs for more details.
-      #       [Test Report](${{ needs.test.outputs.artifact-url }})
+      #       [Test Report Zip](${{ needs.test.outputs.artifact-url }})
+      #       You can also view the test report on github pages
+      #       [Test Report Url](https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/report.html)
           
-      - name: Log created issue
-        run: echo "Issue ${{ steps.create.outputs.issue }} was created"
+      # - name: Log created issue
+      #   run: echo "Issue ${{ steps.create.outputs.issue }} was created"
 
       # - name: Open Jira issue
       #   uses: bryannice/gitactions-jira-issue-creation@master
