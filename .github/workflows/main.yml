@@ -107,7 +107,7 @@ jobs:
       
       - name: build docker image and run container
         run: |
-          docker build -t backend .
+          docker build -build-arg PUBLIC_URL="http://localhost:8000/" -t backend .
           docker run --rm -d -p 8000:8000 -e PUBLIC_URL="http://localhost:8000/" --name backend backend
 
       - name: Install test dependencies
