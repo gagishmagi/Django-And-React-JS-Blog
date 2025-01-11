@@ -173,14 +173,18 @@ jobs:
           status: custom
           custom_payload: |
             {
-              "text": "Build successfull, deployed to https://blog-and-react-js-blog-latest.onrender.com/",
+              "title": ":tada: Build successfull, deployed to Render.com",
+              "text": "You can view the live site at <https://blog-and-react-js-blog-latest.onrender.com/>",
+              "color": "#36a64f",
               "fields": [
                 {
                   "title": "Live Site",
                   "value": "<https://blog-and-react-js-blog-latest.onrender.com/>",
                   "short": false
                 }
-              ]
+              ],
+              "footer": "Render.com",
+              "footer_icon": "https://avatars.githubusercontent.com/u/41908446?s=200&v=4"
             }
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
