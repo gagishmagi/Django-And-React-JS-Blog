@@ -105,25 +105,26 @@ jobs:
           restore-keys: |
             venv-${{ runner.os }}-
       
-      - name: build docker image and run container
-        run: |
-          docker build --build-arg PUBLIC_URL="http://localhost:8000/" -t backend .
-          docker run --rm -d -p 8000:8000 -e PUBLIC_URL="http://localhost:8000/" --name backend backend
+      # - name: build docker image and run container
+      #   run: |
+      #     docker build --build-arg PUBLIC_URL="http://localhost:8000/" -t backend .
+      #     docker run --rm -d -p 8000:8000 -e PUBLIC_URL="http://localhost:8000/" --name backend backend
 
-      - name: Install test dependencies
-        run: |
-          source .venv/bin/activate
-          set -ex
-          wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-          sudo apt install ./google-chrome-stable_current_amd64.deb
-          python -m pip install --upgrade pip
-          cd ./backend
-          pip install -r requirements.txt
+      # - name: Install test dependencies
+      #   run: |
+      #     source .venv/bin/activate
+      #     set -ex
+      #     wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+      #     sudo apt install ./google-chrome-stable_current_amd64.deb
+      #     python -m pip install --upgrade pip
+      #     cd ./backend
+      #     pip install -r requirements.txt
       
       - name: Run tests
         run: |
           source .venv/bin/activate
           cd ./backend 
+          python manage.py runserver &
           pytest --html-report=./report/report.html --title='PYTEST REPORT'
       
       - name: Upload test report
