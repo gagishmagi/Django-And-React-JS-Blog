@@ -105,6 +105,11 @@ jobs:
           restore-keys: |
             venv-${{ runner.os }}-
       
+      - name: build docker image and run container
+        run: |
+          docker build -t backend .
+          docker run -d -p 8000:8000 backend
+
       - name: Install test dependencies
         run: |
           source .venv/bin/activate
