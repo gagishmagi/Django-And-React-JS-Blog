@@ -730,9 +730,9 @@
             </style>
             <style>
                 .progress-bar.downloading {
-                    background: -webkit-linear-gradient(left, #fc6665 0%,#50597b 0%); /* Chrome10+,Safari5.1+ */
-                    background: -ms-linear-gradient(left, #fc6665 0%,#50597b 0%); /* IE10+ */
-                    background: linear-gradient(to right, #fc6665 0%,#50597b 0%); /* W3C */
+                    background: -webkit-linear-gradient(left, #fc6665 100.0%,#50597b 100.0%); /* Chrome10+,Safari5.1+ */
+                    background: -ms-linear-gradient(left, #fc6665 100.0%,#50597b 100.0%); /* IE10+ */
+                    background: linear-gradient(to right, #fc6665 100.0%,#50597b 100.0%); /* W3C */
                 }
             </style>
         </head>
@@ -769,7 +769,7 @@
                           <div style="margin-bottom: -4%; margin-left: 30%;">
                             <span class="time__taken">
                                 <svg width="22px" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" style="margin: -1% 2% 0% 29%; -ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1536 1536"><path d="M896 416v448q0 14-9 23t-23 9H544q-14 0-23-9t-9-23v-64q0-14 9-23t23-9h224V416q0-14 9-23t23-9h64q14 0 23 9t9 23zm416 352q0-148-73-273t-198-198t-273-73t-273 73t-198 198t-73 273t73 273t198 198t273 73t273-73t198-198t73-273zm224 0q0 209-103 385.5T1153.5 1433T768 1536t-385.5-103T103 1153.5T0 768t103-385.5T382.5 103T768 0t385.5 103T1433 382.5T1536 768z" fill="#a9a9a9"/></svg>
-                                    Time taken 5.16 secs
+                                    Time taken 00:01:12 Hrs
                             </span>
                           </div>
                           <div>
@@ -801,7 +801,7 @@
                                       <div class="footer-section__label">passed</div>
                                     </div>
                                     <div class="card__footer-section">
-                                      <div class="footer-section__data" style="color:#fc6766">0</div>
+                                      <div class="footer-section__data" style="color:#fc6766">4</div>
                                       <div class="footer-section__label">failed</div>
                                     </div>
                                     <div class="card__footer-section">
@@ -817,7 +817,7 @@
                                       <div class="footer-section__label">xfailed</div>
                                     </div>
                                     <div class="card__footer-section">
-                                      <div class="footer-section__data" style="color:#b13635">4</div>
+                                      <div class="footer-section__data" style="color:#b13635">0</div>
                                       <div class="footer-section__label">error</div>
                                     </div>
                                     <div class="card__footer-section">
@@ -869,9 +869,9 @@
                                     <div style="display: flow-root;">
                                         <div class="tooltip bs-tooltip-top tooltip-dark" role="tooltip">
                                            <div class="arrow" style="left: 50%"></div>
-                                           <div class="tooltip-inner">No failures in History</div>
+                                           <div class="tooltip-inner">..2e/test_articles_e2e.py</div>
                                         </div>
-                                        <p class="percentage">0<sup> /0</sup> Times</p>
+                                        <p class="percentage">1<sup> /1</sup> Times</p>
                                     </div>
                                     <div class="progress-bar downloading"></div>
                                     <span class="suite-highlights-header">MOST FAILED SUITE</span>
@@ -938,11 +938,11 @@
             <tr>
                 <td style="word-wrap: break-word;max-width: 200px; white-space: normal; text-align:left">tests/e2e/test_articles_e2e.py</td>
                 <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
                 <td>4</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
                 <td>0</td>
             </tr>
         
@@ -1067,157 +1067,40 @@
             <tr>
                 <td style="word-wrap: break-word;max-width: 200px; white-space: normal; text-align:left">tests/e2e/test_articles_e2e.py</td>
                 <td style="word-wrap: break-word;max-width: 200px; white-space: normal; text-align:left">test_create_article</td>
-                <td>ERROR</td>
-                <td>4.01</td>
+                <td>FAIL</td>
+                <td>24.36</td>
                 <td style="word-wrap: break-word;max-width: 200px; white-space: normal; text-align:left"">
-                    self = <test_articles_e2e.TestCreateArticle object
+                       selenium.common.exceptions.TimeoutException: Me
                     
-            <a data-toggle="modal" href="#myModal-17366025331169438" class="">(...)</a>
-            <div class="modal fade in" id="myModal-17366025331169438" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <a data-toggle="modal" href="#myModal-17366039538285694" class="">(...)</a>
+            <div class="modal fade in" id="myModal-17366039538285694" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-body">
                             <p>
                                 <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" width="1.12em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1856 1664"><path d="M1056 1375v-190q0-14-9.5-23.5t-22.5-9.5H832q-13 0-22.5 9.5T800 1185v190q0 14 9.5 23.5t22.5 9.5h192q13 0 22.5-9.5t9.5-23.5zm-2-374l18-459q0-12-10-19q-13-11-24-11H818q-11 0-24 11q-10 7-10 21l17 457q0 10 10 16.5t24 6.5h185q14 0 23.5-6.5t10.5-16.5zm-14-934l768 1408q35 63-2 126q-17 29-46.5 46t-63.5 17H160q-34 0-63.5-17T50 1601q-37-63-2-126L816 67q17-31 47-49t65-18t65 18t47 49z" fill="#DC143C"/></svg>
-                                self = <test_articles_e2e.TestCreateArticle object at 0x7f80159467d0>
-
-    def setup_method(self):
-        options = webdriver.ChromeOptions()
-        # options.add_argument('headless')
-        # options.add_argument('disable-gpu')
->       self.driver = webdriver.Chrome(options=options)
-
-tests/e2e/test_articles_e2e.py:14: 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-../.venv/lib/python3.10/site-packages/selenium/webdriver/chrome/webdriver.py:45: in __init__
-    super().__init__(
-../.venv/lib/python3.10/site-packages/selenium/webdriver/chromium/webdriver.py:66: in __init__
-    super().__init__(command_executor=executor, options=options)
-../.venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py:241: in __init__
-    self.start_session(capabilities)
-../.venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py:329: in start_session
-    response = self.execute(Command.NEW_SESSION, caps)["value"]
-../.venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py:384: in execute
-    self.error_handler.check_response(response)
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-
-self = <selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x7f80155aa6e0>
-response = {'status': 500, 'value': '{"value":{"error":"session not created","message":"session not created: Chrome failed to sta...\\n#16 0x558f6d35d776 \\u003Cunknown>\\n#17 0x7f1ce429ca94 \\u003Cunknown>\\n#18 0x7f1ce4329c3c \\u003Cunknown>\\n"}}'}
-
-    def check_response(self, response: Dict[str, Any]) -> None:
-        """Checks that a JSON response from the WebDriver does not have an
-        error.
-    
-        :Args:
-         - response - The JSON response from the WebDriver server as a dictionary
-           object.
-    
-        :Raises: If the response contains an error message.
-        """
-        status = response.get("status", None)
-        if not status or status == ErrorCode.SUCCESS:
-            return
-        value = None
-        message = response.get("message", "")
-        screen: str = response.get("screen", "")
-        stacktrace = None
-        if isinstance(status, int):
-            value_json = response.get("value", None)
-            if value_json and isinstance(value_json, str):
-                import json
-    
-                try:
-                    value = json.loads(value_json)
-                    if len(value) == 1:
-                        value = value["value"]
-                    status = value.get("error", None)
-                    if not status:
-                        status = value.get("status", ErrorCode.UNKNOWN_ERROR)
-                        message = value.get("value") or value.get("message")
-                        if not isinstance(message, str):
-                            value = message
-                            message = message.get("message")
-                    else:
-                        message = value.get("message", None)
-                except ValueError:
-                    pass
-    
-        exception_class: Type[WebDriverException]
-        e = ErrorCode()
-        error_codes = [item for item in dir(e) if not item.startswith("__")]
-        for error_code in error_codes:
-            error_info = getattr(ErrorCode, error_code)
-            if isinstance(error_info, list) and status in error_info:
-                exception_class = getattr(ExceptionMapping, error_code, WebDriverException)
-                break
-        else:
-            exception_class = WebDriverException
-    
-        if not value:
-            value = response["value"]
-        if isinstance(value, str):
-            raise exception_class(value)
-        if message == "" and "message" in value:
-            message = value["message"]
-    
-        screen = None  # type: ignore[assignment]
-        if "screen" in value:
-            screen = value["screen"]
-    
-        stacktrace = None
-        st_value = value.get("stackTrace") or value.get("stacktrace")
-        if st_value:
-            if isinstance(st_value, str):
-                stacktrace = st_value.split("\n")
-            else:
-                stacktrace = []
-                try:
-                    for frame in st_value:
-                        line = frame.get("lineNumber", "")
-                        file = frame.get("fileName", "<anonymous>")
-                        if line:
-                            file = f"{file}:{line}"
-                        meth = frame.get("methodName", "<anonymous>")
-                        if "className" in frame:
-                            meth = f"{frame['className']}.{meth}"
-                        msg = "    at %s (%s)"
-                        msg = msg % (meth, file)
-                        stacktrace.append(msg)
-                except TypeError:
-                    pass
-        if exception_class == UnexpectedAlertPresentException:
-            alert_text = None
-            if "data" in value:
-                alert_text = value["data"].get("text")
-            elif "alert" in value:
-                alert_text = value["alert"].get("text")
-            raise exception_class(message, screen, stacktrace, alert_text)  # type: ignore[call-arg]  # mypy is not smart enough here
->       raise exception_class(message, screen, stacktrace)
-E       selenium.common.exceptions.SessionNotCreatedException: Message: session not created: Chrome failed to start: exited normally.
-E         (session not created: DevToolsActivePort file doesn't exist)
-E         (The process started from chrome location /usr/bin/google-chrome is no longer running, so ChromeDriver is assuming that Chrome has crashed.)
-E       Stacktrace:
-E       #0 0x558f6d35e8fa <unknown>
-E       #1 0x558f6ce6fd20 <unknown>
-E       #2 0x558f6cea7438 <unknown>
-E       #3 0x558f6cea2f96 <unknown>
-E       #4 0x558f6ceeed86 <unknown>
-E       #5 0x558f6ceee3d6 <unknown>
-E       #6 0x558f6cee2893 <unknown>
-E       #7 0x558f6ceb130d <unknown>
-E       #8 0x558f6ceb232e <unknown>
-E       #9 0x558f6d32b00b <unknown>
-E       #10 0x558f6d32ef97 <unknown>
-E       #11 0x558f6d31771c <unknown>
-E       #12 0x558f6d32fb17 <unknown>
-E       #13 0x558f6d2fc6cf <unknown>
-E       #14 0x558f6d34d6b8 <unknown>
-E       #15 0x558f6d34d880 <unknown>
-E       #16 0x558f6d35d776 <unknown>
-E       #17 0x7f1ce429ca94 <unknown>
-E       #18 0x7f1ce4329c3c <unknown>
-
-../.venv/lib/python3.10/site-packages/selenium/webdriver/remote/errorhandler.py:232: SessionNotCreatedException
+                                   selenium.common.exceptions.TimeoutException: Message: 
+   Stacktrace:
+   #0 0x5605e13888fa <unknown>
+   #1 0x5605e0e99d20 <unknown>
+   #2 0x5605e0ee8a66 <unknown>
+   #3 0x5605e0ee8d01 <unknown>
+   #4 0x5605e0f2e184 <unknown>
+   #5 0x5605e0f0cb1d <unknown>
+   #6 0x5605e0f2b560 <unknown>
+   #7 0x5605e0f0c893 <unknown>
+   #8 0x5605e0edb30d <unknown>
+   #9 0x5605e0edc32e <unknown>
+   #10 0x5605e135500b <unknown>
+   #11 0x5605e1358f97 <unknown>
+   #12 0x5605e134171c <unknown>
+   #13 0x5605e1359b17 <unknown>
+   #14 0x5605e13266cf <unknown>
+   #15 0x5605e13776b8 <unknown>
+   #16 0x5605e1377880 <unknown>
+   #17 0x5605e1387776 <unknown>
+   #18 0x7f857329ca94 <unknown>
+   #19 0x7f8573329c3c <unknown>
 
                             </p>
                         </div>
@@ -1234,157 +1117,40 @@ E       #18 0x7f1ce4329c3c <unknown>
             <tr>
                 <td style="word-wrap: break-word;max-width: 200px; white-space: normal; text-align:left">tests/e2e/test_articles_e2e.py</td>
                 <td style="word-wrap: break-word;max-width: 200px; white-space: normal; text-align:left">test_create_multiple_articles</td>
-                <td>ERROR</td>
-                <td>0.22</td>
+                <td>FAIL</td>
+                <td>15.7</td>
                 <td style="word-wrap: break-word;max-width: 200px; white-space: normal; text-align:left"">
-                    self = <test_articles_e2e.TestCreateArticle object
+                       selenium.common.exceptions.TimeoutException: Me
                     
-            <a data-toggle="modal" href="#myModal-17366025333385005" class="">(...)</a>
-            <div class="modal fade in" id="myModal-17366025333385005" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <a data-toggle="modal" href="#myModal-17366039696009276" class="">(...)</a>
+            <div class="modal fade in" id="myModal-17366039696009276" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-body">
                             <p>
                                 <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" width="1.12em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1856 1664"><path d="M1056 1375v-190q0-14-9.5-23.5t-22.5-9.5H832q-13 0-22.5 9.5T800 1185v190q0 14 9.5 23.5t22.5 9.5h192q13 0 22.5-9.5t9.5-23.5zm-2-374l18-459q0-12-10-19q-13-11-24-11H818q-11 0-24 11q-10 7-10 21l17 457q0 10 10 16.5t24 6.5h185q14 0 23.5-6.5t10.5-16.5zm-14-934l768 1408q35 63-2 126q-17 29-46.5 46t-63.5 17H160q-34 0-63.5-17T50 1601q-37-63-2-126L816 67q17-31 47-49t65-18t65 18t47 49z" fill="#DC143C"/></svg>
-                                self = <test_articles_e2e.TestCreateArticle object at 0x7f8015844d60>
-
-    def setup_method(self):
-        options = webdriver.ChromeOptions()
-        # options.add_argument('headless')
-        # options.add_argument('disable-gpu')
->       self.driver = webdriver.Chrome(options=options)
-
-tests/e2e/test_articles_e2e.py:14: 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-../.venv/lib/python3.10/site-packages/selenium/webdriver/chrome/webdriver.py:45: in __init__
-    super().__init__(
-../.venv/lib/python3.10/site-packages/selenium/webdriver/chromium/webdriver.py:66: in __init__
-    super().__init__(command_executor=executor, options=options)
-../.venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py:241: in __init__
-    self.start_session(capabilities)
-../.venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py:329: in start_session
-    response = self.execute(Command.NEW_SESSION, caps)["value"]
-../.venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py:384: in execute
-    self.error_handler.check_response(response)
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-
-self = <selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x7f80156b28c0>
-response = {'status': 500, 'value': '{"value":{"error":"session not created","message":"session not created: Chrome failed to sta...\\n#16 0x55d420cb6776 \\u003Cunknown>\\n#17 0x7f29c3a9ca94 \\u003Cunknown>\\n#18 0x7f29c3b29c3c \\u003Cunknown>\\n"}}'}
-
-    def check_response(self, response: Dict[str, Any]) -> None:
-        """Checks that a JSON response from the WebDriver does not have an
-        error.
-    
-        :Args:
-         - response - The JSON response from the WebDriver server as a dictionary
-           object.
-    
-        :Raises: If the response contains an error message.
-        """
-        status = response.get("status", None)
-        if not status or status == ErrorCode.SUCCESS:
-            return
-        value = None
-        message = response.get("message", "")
-        screen: str = response.get("screen", "")
-        stacktrace = None
-        if isinstance(status, int):
-            value_json = response.get("value", None)
-            if value_json and isinstance(value_json, str):
-                import json
-    
-                try:
-                    value = json.loads(value_json)
-                    if len(value) == 1:
-                        value = value["value"]
-                    status = value.get("error", None)
-                    if not status:
-                        status = value.get("status", ErrorCode.UNKNOWN_ERROR)
-                        message = value.get("value") or value.get("message")
-                        if not isinstance(message, str):
-                            value = message
-                            message = message.get("message")
-                    else:
-                        message = value.get("message", None)
-                except ValueError:
-                    pass
-    
-        exception_class: Type[WebDriverException]
-        e = ErrorCode()
-        error_codes = [item for item in dir(e) if not item.startswith("__")]
-        for error_code in error_codes:
-            error_info = getattr(ErrorCode, error_code)
-            if isinstance(error_info, list) and status in error_info:
-                exception_class = getattr(ExceptionMapping, error_code, WebDriverException)
-                break
-        else:
-            exception_class = WebDriverException
-    
-        if not value:
-            value = response["value"]
-        if isinstance(value, str):
-            raise exception_class(value)
-        if message == "" and "message" in value:
-            message = value["message"]
-    
-        screen = None  # type: ignore[assignment]
-        if "screen" in value:
-            screen = value["screen"]
-    
-        stacktrace = None
-        st_value = value.get("stackTrace") or value.get("stacktrace")
-        if st_value:
-            if isinstance(st_value, str):
-                stacktrace = st_value.split("\n")
-            else:
-                stacktrace = []
-                try:
-                    for frame in st_value:
-                        line = frame.get("lineNumber", "")
-                        file = frame.get("fileName", "<anonymous>")
-                        if line:
-                            file = f"{file}:{line}"
-                        meth = frame.get("methodName", "<anonymous>")
-                        if "className" in frame:
-                            meth = f"{frame['className']}.{meth}"
-                        msg = "    at %s (%s)"
-                        msg = msg % (meth, file)
-                        stacktrace.append(msg)
-                except TypeError:
-                    pass
-        if exception_class == UnexpectedAlertPresentException:
-            alert_text = None
-            if "data" in value:
-                alert_text = value["data"].get("text")
-            elif "alert" in value:
-                alert_text = value["alert"].get("text")
-            raise exception_class(message, screen, stacktrace, alert_text)  # type: ignore[call-arg]  # mypy is not smart enough here
->       raise exception_class(message, screen, stacktrace)
-E       selenium.common.exceptions.SessionNotCreatedException: Message: session not created: Chrome failed to start: exited normally.
-E         (session not created: DevToolsActivePort file doesn't exist)
-E         (The process started from chrome location /usr/bin/google-chrome is no longer running, so ChromeDriver is assuming that Chrome has crashed.)
-E       Stacktrace:
-E       #0 0x55d420cb78fa <unknown>
-E       #1 0x55d4207c8d20 <unknown>
-E       #2 0x55d420800438 <unknown>
-E       #3 0x55d4207fbf96 <unknown>
-E       #4 0x55d420847d86 <unknown>
-E       #5 0x55d4208473d6 <unknown>
-E       #6 0x55d42083b893 <unknown>
-E       #7 0x55d42080a30d <unknown>
-E       #8 0x55d42080b32e <unknown>
-E       #9 0x55d420c8400b <unknown>
-E       #10 0x55d420c87f97 <unknown>
-E       #11 0x55d420c7071c <unknown>
-E       #12 0x55d420c88b17 <unknown>
-E       #13 0x55d420c556cf <unknown>
-E       #14 0x55d420ca66b8 <unknown>
-E       #15 0x55d420ca6880 <unknown>
-E       #16 0x55d420cb6776 <unknown>
-E       #17 0x7f29c3a9ca94 <unknown>
-E       #18 0x7f29c3b29c3c <unknown>
-
-../.venv/lib/python3.10/site-packages/selenium/webdriver/remote/errorhandler.py:232: SessionNotCreatedException
+                                   selenium.common.exceptions.TimeoutException: Message: 
+   Stacktrace:
+   #0 0x55ef434488fa <unknown>
+   #1 0x55ef42f59d20 <unknown>
+   #2 0x55ef42fa8a66 <unknown>
+   #3 0x55ef42fa8d01 <unknown>
+   #4 0x55ef42fee184 <unknown>
+   #5 0x55ef42fccb1d <unknown>
+   #6 0x55ef42feb560 <unknown>
+   #7 0x55ef42fcc893 <unknown>
+   #8 0x55ef42f9b30d <unknown>
+   #9 0x55ef42f9c32e <unknown>
+   #10 0x55ef4341500b <unknown>
+   #11 0x55ef43418f97 <unknown>
+   #12 0x55ef4340171c <unknown>
+   #13 0x55ef43419b17 <unknown>
+   #14 0x55ef433e66cf <unknown>
+   #15 0x55ef434376b8 <unknown>
+   #16 0x55ef43437880 <unknown>
+   #17 0x55ef43447776 <unknown>
+   #18 0x7eff1d29ca94 <unknown>
+   #19 0x7eff1d329c3c <unknown>
 
                             </p>
                         </div>
@@ -1401,157 +1167,40 @@ E       #18 0x7f29c3b29c3c <unknown>
             <tr>
                 <td style="word-wrap: break-word;max-width: 200px; white-space: normal; text-align:left">tests/e2e/test_articles_e2e.py</td>
                 <td style="word-wrap: break-word;max-width: 200px; white-space: normal; text-align:left">test_edit_post</td>
-                <td>ERROR</td>
-                <td>0.22</td>
+                <td>FAIL</td>
+                <td>15.69</td>
                 <td style="word-wrap: break-word;max-width: 200px; white-space: normal; text-align:left"">
-                    self = <test_articles_e2e.TestCreateArticle object
+                       selenium.common.exceptions.TimeoutException: Me
                     
-            <a data-toggle="modal" href="#myModal-17366025335585518" class="">(...)</a>
-            <div class="modal fade in" id="myModal-17366025335585518" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <a data-toggle="modal" href="#myModal-17366039853598797" class="">(...)</a>
+            <div class="modal fade in" id="myModal-17366039853598797" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-body">
                             <p>
                                 <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" width="1.12em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1856 1664"><path d="M1056 1375v-190q0-14-9.5-23.5t-22.5-9.5H832q-13 0-22.5 9.5T800 1185v190q0 14 9.5 23.5t22.5 9.5h192q13 0 22.5-9.5t9.5-23.5zm-2-374l18-459q0-12-10-19q-13-11-24-11H818q-11 0-24 11q-10 7-10 21l17 457q0 10 10 16.5t24 6.5h185q14 0 23.5-6.5t10.5-16.5zm-14-934l768 1408q35 63-2 126q-17 29-46.5 46t-63.5 17H160q-34 0-63.5-17T50 1601q-37-63-2-126L816 67q17-31 47-49t65-18t65 18t47 49z" fill="#DC143C"/></svg>
-                                self = <test_articles_e2e.TestCreateArticle object at 0x7f80158468f0>
-
-    def setup_method(self):
-        options = webdriver.ChromeOptions()
-        # options.add_argument('headless')
-        # options.add_argument('disable-gpu')
->       self.driver = webdriver.Chrome(options=options)
-
-tests/e2e/test_articles_e2e.py:14: 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-../.venv/lib/python3.10/site-packages/selenium/webdriver/chrome/webdriver.py:45: in __init__
-    super().__init__(
-../.venv/lib/python3.10/site-packages/selenium/webdriver/chromium/webdriver.py:66: in __init__
-    super().__init__(command_executor=executor, options=options)
-../.venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py:241: in __init__
-    self.start_session(capabilities)
-../.venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py:329: in start_session
-    response = self.execute(Command.NEW_SESSION, caps)["value"]
-../.venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py:384: in execute
-    self.error_handler.check_response(response)
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-
-self = <selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x7f8015202c20>
-response = {'status': 500, 'value': '{"value":{"error":"session not created","message":"session not created: Chrome failed to sta...\\n#16 0x557a49012776 \\u003Cunknown>\\n#17 0x7fd88429ca94 \\u003Cunknown>\\n#18 0x7fd884329c3c \\u003Cunknown>\\n"}}'}
-
-    def check_response(self, response: Dict[str, Any]) -> None:
-        """Checks that a JSON response from the WebDriver does not have an
-        error.
-    
-        :Args:
-         - response - The JSON response from the WebDriver server as a dictionary
-           object.
-    
-        :Raises: If the response contains an error message.
-        """
-        status = response.get("status", None)
-        if not status or status == ErrorCode.SUCCESS:
-            return
-        value = None
-        message = response.get("message", "")
-        screen: str = response.get("screen", "")
-        stacktrace = None
-        if isinstance(status, int):
-            value_json = response.get("value", None)
-            if value_json and isinstance(value_json, str):
-                import json
-    
-                try:
-                    value = json.loads(value_json)
-                    if len(value) == 1:
-                        value = value["value"]
-                    status = value.get("error", None)
-                    if not status:
-                        status = value.get("status", ErrorCode.UNKNOWN_ERROR)
-                        message = value.get("value") or value.get("message")
-                        if not isinstance(message, str):
-                            value = message
-                            message = message.get("message")
-                    else:
-                        message = value.get("message", None)
-                except ValueError:
-                    pass
-    
-        exception_class: Type[WebDriverException]
-        e = ErrorCode()
-        error_codes = [item for item in dir(e) if not item.startswith("__")]
-        for error_code in error_codes:
-            error_info = getattr(ErrorCode, error_code)
-            if isinstance(error_info, list) and status in error_info:
-                exception_class = getattr(ExceptionMapping, error_code, WebDriverException)
-                break
-        else:
-            exception_class = WebDriverException
-    
-        if not value:
-            value = response["value"]
-        if isinstance(value, str):
-            raise exception_class(value)
-        if message == "" and "message" in value:
-            message = value["message"]
-    
-        screen = None  # type: ignore[assignment]
-        if "screen" in value:
-            screen = value["screen"]
-    
-        stacktrace = None
-        st_value = value.get("stackTrace") or value.get("stacktrace")
-        if st_value:
-            if isinstance(st_value, str):
-                stacktrace = st_value.split("\n")
-            else:
-                stacktrace = []
-                try:
-                    for frame in st_value:
-                        line = frame.get("lineNumber", "")
-                        file = frame.get("fileName", "<anonymous>")
-                        if line:
-                            file = f"{file}:{line}"
-                        meth = frame.get("methodName", "<anonymous>")
-                        if "className" in frame:
-                            meth = f"{frame['className']}.{meth}"
-                        msg = "    at %s (%s)"
-                        msg = msg % (meth, file)
-                        stacktrace.append(msg)
-                except TypeError:
-                    pass
-        if exception_class == UnexpectedAlertPresentException:
-            alert_text = None
-            if "data" in value:
-                alert_text = value["data"].get("text")
-            elif "alert" in value:
-                alert_text = value["alert"].get("text")
-            raise exception_class(message, screen, stacktrace, alert_text)  # type: ignore[call-arg]  # mypy is not smart enough here
->       raise exception_class(message, screen, stacktrace)
-E       selenium.common.exceptions.SessionNotCreatedException: Message: session not created: Chrome failed to start: exited normally.
-E         (session not created: DevToolsActivePort file doesn't exist)
-E         (The process started from chrome location /usr/bin/google-chrome is no longer running, so ChromeDriver is assuming that Chrome has crashed.)
-E       Stacktrace:
-E       #0 0x557a490138fa <unknown>
-E       #1 0x557a48b24d20 <unknown>
-E       #2 0x557a48b5c438 <unknown>
-E       #3 0x557a48b57f96 <unknown>
-E       #4 0x557a48ba3d86 <unknown>
-E       #5 0x557a48ba33d6 <unknown>
-E       #6 0x557a48b97893 <unknown>
-E       #7 0x557a48b6630d <unknown>
-E       #8 0x557a48b6732e <unknown>
-E       #9 0x557a48fe000b <unknown>
-E       #10 0x557a48fe3f97 <unknown>
-E       #11 0x557a48fcc71c <unknown>
-E       #12 0x557a48fe4b17 <unknown>
-E       #13 0x557a48fb16cf <unknown>
-E       #14 0x557a490026b8 <unknown>
-E       #15 0x557a49002880 <unknown>
-E       #16 0x557a49012776 <unknown>
-E       #17 0x7fd88429ca94 <unknown>
-E       #18 0x7fd884329c3c <unknown>
-
-../.venv/lib/python3.10/site-packages/selenium/webdriver/remote/errorhandler.py:232: SessionNotCreatedException
+                                   selenium.common.exceptions.TimeoutException: Message: 
+   Stacktrace:
+   #0 0x560ef86028fa <unknown>
+   #1 0x560ef8113d20 <unknown>
+   #2 0x560ef8162a66 <unknown>
+   #3 0x560ef8162d01 <unknown>
+   #4 0x560ef81a8184 <unknown>
+   #5 0x560ef8186b1d <unknown>
+   #6 0x560ef81a5560 <unknown>
+   #7 0x560ef8186893 <unknown>
+   #8 0x560ef815530d <unknown>
+   #9 0x560ef815632e <unknown>
+   #10 0x560ef85cf00b <unknown>
+   #11 0x560ef85d2f97 <unknown>
+   #12 0x560ef85bb71c <unknown>
+   #13 0x560ef85d3b17 <unknown>
+   #14 0x560ef85a06cf <unknown>
+   #15 0x560ef85f16b8 <unknown>
+   #16 0x560ef85f1880 <unknown>
+   #17 0x560ef8601776 <unknown>
+   #18 0x7f416789ca94 <unknown>
+   #19 0x7f4167929c3c <unknown>
 
                             </p>
                         </div>
@@ -1568,157 +1217,40 @@ E       #18 0x7fd884329c3c <unknown>
             <tr>
                 <td style="word-wrap: break-word;max-width: 200px; white-space: normal; text-align:left">tests/e2e/test_articles_e2e.py</td>
                 <td style="word-wrap: break-word;max-width: 200px; white-space: normal; text-align:left">test_delete_added_article</td>
-                <td>ERROR</td>
-                <td>0.22</td>
+                <td>FAIL</td>
+                <td>15.7</td>
                 <td style="word-wrap: break-word;max-width: 200px; white-space: normal; text-align:left"">
-                    self = <test_articles_e2e.TestCreateArticle object
+                       selenium.common.exceptions.TimeoutException: Me
                     
-            <a data-toggle="modal" href="#myModal-17366025337801418" class="">(...)</a>
-            <div class="modal fade in" id="myModal-17366025337801418" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <a data-toggle="modal" href="#myModal-17366040011244185" class="">(...)</a>
+            <div class="modal fade in" id="myModal-17366040011244185" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-body">
                             <p>
                                 <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" width="1.12em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1856 1664"><path d="M1056 1375v-190q0-14-9.5-23.5t-22.5-9.5H832q-13 0-22.5 9.5T800 1185v190q0 14 9.5 23.5t22.5 9.5h192q13 0 22.5-9.5t9.5-23.5zm-2-374l18-459q0-12-10-19q-13-11-24-11H818q-11 0-24 11q-10 7-10 21l17 457q0 10 10 16.5t24 6.5h185q14 0 23.5-6.5t10.5-16.5zm-14-934l768 1408q35 63-2 126q-17 29-46.5 46t-63.5 17H160q-34 0-63.5-17T50 1601q-37-63-2-126L816 67q17-31 47-49t65-18t65 18t47 49z" fill="#DC143C"/></svg>
-                                self = <test_articles_e2e.TestCreateArticle object at 0x7f8015846530>
-
-    def setup_method(self):
-        options = webdriver.ChromeOptions()
-        # options.add_argument('headless')
-        # options.add_argument('disable-gpu')
->       self.driver = webdriver.Chrome(options=options)
-
-tests/e2e/test_articles_e2e.py:14: 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-../.venv/lib/python3.10/site-packages/selenium/webdriver/chrome/webdriver.py:45: in __init__
-    super().__init__(
-../.venv/lib/python3.10/site-packages/selenium/webdriver/chromium/webdriver.py:66: in __init__
-    super().__init__(command_executor=executor, options=options)
-../.venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py:241: in __init__
-    self.start_session(capabilities)
-../.venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py:329: in start_session
-    response = self.execute(Command.NEW_SESSION, caps)["value"]
-../.venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py:384: in execute
-    self.error_handler.check_response(response)
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-
-self = <selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x7f801537b910>
-response = {'status': 500, 'value': '{"value":{"error":"session not created","message":"session not created: Chrome failed to sta...\\n#16 0x55c856fc2776 \\u003Cunknown>\\n#17 0x7fc94409ca94 \\u003Cunknown>\\n#18 0x7fc944129c3c \\u003Cunknown>\\n"}}'}
-
-    def check_response(self, response: Dict[str, Any]) -> None:
-        """Checks that a JSON response from the WebDriver does not have an
-        error.
-    
-        :Args:
-         - response - The JSON response from the WebDriver server as a dictionary
-           object.
-    
-        :Raises: If the response contains an error message.
-        """
-        status = response.get("status", None)
-        if not status or status == ErrorCode.SUCCESS:
-            return
-        value = None
-        message = response.get("message", "")
-        screen: str = response.get("screen", "")
-        stacktrace = None
-        if isinstance(status, int):
-            value_json = response.get("value", None)
-            if value_json and isinstance(value_json, str):
-                import json
-    
-                try:
-                    value = json.loads(value_json)
-                    if len(value) == 1:
-                        value = value["value"]
-                    status = value.get("error", None)
-                    if not status:
-                        status = value.get("status", ErrorCode.UNKNOWN_ERROR)
-                        message = value.get("value") or value.get("message")
-                        if not isinstance(message, str):
-                            value = message
-                            message = message.get("message")
-                    else:
-                        message = value.get("message", None)
-                except ValueError:
-                    pass
-    
-        exception_class: Type[WebDriverException]
-        e = ErrorCode()
-        error_codes = [item for item in dir(e) if not item.startswith("__")]
-        for error_code in error_codes:
-            error_info = getattr(ErrorCode, error_code)
-            if isinstance(error_info, list) and status in error_info:
-                exception_class = getattr(ExceptionMapping, error_code, WebDriverException)
-                break
-        else:
-            exception_class = WebDriverException
-    
-        if not value:
-            value = response["value"]
-        if isinstance(value, str):
-            raise exception_class(value)
-        if message == "" and "message" in value:
-            message = value["message"]
-    
-        screen = None  # type: ignore[assignment]
-        if "screen" in value:
-            screen = value["screen"]
-    
-        stacktrace = None
-        st_value = value.get("stackTrace") or value.get("stacktrace")
-        if st_value:
-            if isinstance(st_value, str):
-                stacktrace = st_value.split("\n")
-            else:
-                stacktrace = []
-                try:
-                    for frame in st_value:
-                        line = frame.get("lineNumber", "")
-                        file = frame.get("fileName", "<anonymous>")
-                        if line:
-                            file = f"{file}:{line}"
-                        meth = frame.get("methodName", "<anonymous>")
-                        if "className" in frame:
-                            meth = f"{frame['className']}.{meth}"
-                        msg = "    at %s (%s)"
-                        msg = msg % (meth, file)
-                        stacktrace.append(msg)
-                except TypeError:
-                    pass
-        if exception_class == UnexpectedAlertPresentException:
-            alert_text = None
-            if "data" in value:
-                alert_text = value["data"].get("text")
-            elif "alert" in value:
-                alert_text = value["alert"].get("text")
-            raise exception_class(message, screen, stacktrace, alert_text)  # type: ignore[call-arg]  # mypy is not smart enough here
->       raise exception_class(message, screen, stacktrace)
-E       selenium.common.exceptions.SessionNotCreatedException: Message: session not created: Chrome failed to start: exited normally.
-E         (session not created: DevToolsActivePort file doesn't exist)
-E         (The process started from chrome location /usr/bin/google-chrome is no longer running, so ChromeDriver is assuming that Chrome has crashed.)
-E       Stacktrace:
-E       #0 0x55c856fc38fa <unknown>
-E       #1 0x55c856ad4d20 <unknown>
-E       #2 0x55c856b0c438 <unknown>
-E       #3 0x55c856b07f96 <unknown>
-E       #4 0x55c856b53d86 <unknown>
-E       #5 0x55c856b533d6 <unknown>
-E       #6 0x55c856b47893 <unknown>
-E       #7 0x55c856b1630d <unknown>
-E       #8 0x55c856b1732e <unknown>
-E       #9 0x55c856f9000b <unknown>
-E       #10 0x55c856f93f97 <unknown>
-E       #11 0x55c856f7c71c <unknown>
-E       #12 0x55c856f94b17 <unknown>
-E       #13 0x55c856f616cf <unknown>
-E       #14 0x55c856fb26b8 <unknown>
-E       #15 0x55c856fb2880 <unknown>
-E       #16 0x55c856fc2776 <unknown>
-E       #17 0x7fc94409ca94 <unknown>
-E       #18 0x7fc944129c3c <unknown>
-
-../.venv/lib/python3.10/site-packages/selenium/webdriver/remote/errorhandler.py:232: SessionNotCreatedException
+                                   selenium.common.exceptions.TimeoutException: Message: 
+   Stacktrace:
+   #0 0x564c43a918fa <unknown>
+   #1 0x564c435a2d20 <unknown>
+   #2 0x564c435f1a66 <unknown>
+   #3 0x564c435f1d01 <unknown>
+   #4 0x564c43637184 <unknown>
+   #5 0x564c43615b1d <unknown>
+   #6 0x564c43634560 <unknown>
+   #7 0x564c43615893 <unknown>
+   #8 0x564c435e430d <unknown>
+   #9 0x564c435e532e <unknown>
+   #10 0x564c43a5e00b <unknown>
+   #11 0x564c43a61f97 <unknown>
+   #12 0x564c43a4a71c <unknown>
+   #13 0x564c43a62b17 <unknown>
+   #14 0x564c43a2f6cf <unknown>
+   #15 0x564c43a806b8 <unknown>
+   #16 0x564c43a80880 <unknown>
+   #17 0x564c43a90776 <unknown>
+   #18 0x7f8e39a9ca94 <unknown>
+   #19 0x7f8e39b29c3c <unknown>
 
                             </p>
                         </div>
@@ -1744,7 +1276,7 @@ E       #18 0x7fc944129c3c <unknown>
                     <a class ="list-group-item list-group-item-action" href="#list-item-1" style="font-size: 1.1rem; color: dimgray; margin-bottom: -7%;">
                         <i class="fa fa-times" aria-hidden="true" style="color: #fc6766"></i>
                         <span>build #1</span></br>
-                        <span style="font-size: 0.81rem; color: gray; padding-left: 12%;">2025-01-11 | 1:35 pm</span>
+                        <span style="font-size: 0.81rem; color: gray; padding-left: 12%;">2025-01-11 | 1:59 pm</span>
                     </a>
                     
             </div>
@@ -1786,7 +1318,7 @@ E       #18 0x7fc944129c3c <unknown>
                                         </div>
                                         <div class="col-xs-12 col-md-3" style="max-width: 14.2%;">
                                             <div class="counter">
-                                                <h2 class="timer count-title count-number">0
+                                                <h2 class="timer count-title count-number">4
                                                 </h2>
                                                 <p class="stats-text">FAILED</p>
                                             </div>
@@ -1811,7 +1343,7 @@ E       #18 0x7fc944129c3c <unknown>
                                         </div>
                                         <div class="col-xs-12 col-md-3" style="max-width: 14.2%;">
                                             <div class="counter">
-                                                <h2 class="timer count-title count-number">4</h2>
+                                                <h2 class="timer count-title count-number">0</h2>
                                                 <p class="stats-text">ERROR</p>
                                             </div>
                                         </div>
@@ -2062,7 +1594,7 @@ E       #18 0x7fc944129c3c <unknown>
                     labels: ['PASS', 'FAIL', 'SKIP', 'XPASS', 'XFAIL', 'ERROR'],
                     datasets: [{
                         label: '# of Votes',
-                        data: [9, 0, 0, 0, 0, 4],
+                        data: [9, 4, 0, 0, 0, 0],
                         backgroundColor: [
                             '#98cc64',
                             '#fc6766',
@@ -2156,7 +1688,7 @@ E       #18 0x7fc944129c3c <unknown>
         <script>
             for(var i=0; i<=1; i++) {
                 var MeSeContext = document.getElementById("archive-chart-"+i).getContext("2d");
-                var archives = {'0': {'pass': '9', 'fail': '0', 'skip': '0', 'xpass': '0', 'xfail': '0', 'error': '4', 'rerun': '0', 'total': '13'}};
+                var archives = {'0': {'pass': '9', 'fail': '4', 'skip': '0', 'xpass': '0', 'xfail': '0', 'error': '0', 'rerun': '0', 'total': '13'}};
                 var pass = archives[i].pass;
                 var fail = archives[i].fail;
                 var skip = archives[i].skip;
@@ -2231,7 +1763,7 @@ E       #18 0x7fc944129c3c <unknown>
                         hoverBackgroundColor: '#e35857',
                         borderColor: '#fd8a89',
                         borderWidth: 1,
-                        data: [0, 0, 0]
+                        data: [0, 0, 4]
                     }, {
                         label: 'Skipped',
                         backgroundColor: '#ffd050',
@@ -2259,7 +1791,7 @@ E       #18 0x7fc944129c3c <unknown>
                         hoverBackgroundColor: '#8b2828',
                         borderColor: '#b13635',
                         borderWidth: 1,
-                        data: [0, 0, 4]
+                        data: [0, 0, 0]
                     }]
                 },
                 options: {
@@ -2308,7 +1840,7 @@ E       #18 0x7fc944129c3c <unknown>
             var trends = new Chart(lineCanvas, {
                 type: 'line',
                 data: {
-                  labels : ['1:35 PM | Jan 11'],
+                  labels : ['1:59 PM | Jan 11'],
                   datasets : [
                     {
                       label: 'Passed',
