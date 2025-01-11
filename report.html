@@ -769,7 +769,7 @@
                           <div style="margin-bottom: -4%; margin-left: 30%;">
                             <span class="time__taken">
                                 <svg width="22px" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" style="margin: -1% 2% 0% 29%; -ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1536 1536"><path d="M896 416v448q0 14-9 23t-23 9H544q-14 0-23-9t-9-23v-64q0-14 9-23t23-9h224V416q0-14 9-23t23-9h64q14 0 23 9t9 23zm416 352q0-148-73-273t-198-198t-273-73t-273 73t-198 198t-73 273t73 273t198 198t273 73t273-73t198-198t73-273zm224 0q0 209-103 385.5T1153.5 1433T768 1536t-385.5-103T103 1153.5T0 768t103-385.5T382.5 103T768 0t385.5 103T1433 382.5T1536 768z" fill="#a9a9a9"/></svg>
-                                    Time taken 4.83 secs
+                                    Time taken 1.24 secs
                             </span>
                           </div>
                           <div>
@@ -1068,18 +1068,18 @@
                 <td style="word-wrap: break-word;max-width: 200px; white-space: normal; text-align:left">tests/e2e/test_articles_e2e.py</td>
                 <td style="word-wrap: break-word;max-width: 200px; white-space: normal; text-align:left">test_create_article</td>
                 <td>ERROR</td>
-                <td>1.14</td>
+                <td>0.43</td>
                 <td style="word-wrap: break-word;max-width: 200px; white-space: normal; text-align:left"">
                     self = <test_articles_e2e.TestCreateArticle object
                     
-            <a data-toggle="modal" href="#myModal-17366250983292775" class="">(...)</a>
-            <div class="modal fade in" id="myModal-17366250983292775" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <a data-toggle="modal" href="#myModal-17366258951046042" class="">(...)</a>
+            <div class="modal fade in" id="myModal-17366258951046042" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-body">
                             <p>
                                 <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" width="1.12em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1856 1664"><path d="M1056 1375v-190q0-14-9.5-23.5t-22.5-9.5H832q-13 0-22.5 9.5T800 1185v190q0 14 9.5 23.5t22.5 9.5h192q13 0 22.5-9.5t9.5-23.5zm-2-374l18-459q0-12-10-19q-13-11-24-11H818q-11 0-24 11q-10 7-10 21l17 457q0 10 10 16.5t24 6.5h185q14 0 23.5-6.5t10.5-16.5zm-14-934l768 1408q35 63-2 126q-17 29-46.5 46t-63.5 17H160q-34 0-63.5-17T50 1601q-37-63-2-126L816 67q17-31 47-49t65-18t65 18t47 49z" fill="#DC143C"/></svg>
-                                self = <test_articles_e2e.TestCreateArticle object at 0x7f162014bf40>
+                                self = <test_articles_e2e.TestCreateArticle object at 0x7f809e1b9a50>
 
     def setup_method(self):
         chrome_options = Options()
@@ -1087,76 +1087,10 @@
         chrome_options.add_argument("--no-sandbox")
         chrome_options.add_argument("--disable-dev-shm-usage")
         chrome_options.add_argument("--start-maximized")
->       self.driver = webdriver.Chrome(options=chrome_options)
+>       self.driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
+E       TypeError: WebDriver.__init__() got an unexpected keyword argument 'service'
 
-tests/e2e/test_articles_e2e.py:16: 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-../.venv/lib/python3.10/site-packages/selenium/webdriver/chrome/webdriver.py:76: in __init__
-    RemoteWebDriver.__init__(
-../.venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py:157: in __init__
-    self.start_session(capabilities, browser_profile)
-../.venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py:252: in start_session
-    response = self.execute(Command.NEW_SESSION, parameters)
-../.venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py:319: in execute
-    response = self.command_executor.execute(driver_command, params)
-../.venv/lib/python3.10/site-packages/selenium/webdriver/remote/remote_connection.py:374: in execute
-    return self._request(command_info[0], url, body=data)
-../.venv/lib/python3.10/site-packages/selenium/webdriver/remote/remote_connection.py:397: in _request
-    resp = self._conn.request(method, url, body=body, headers=headers)
-../.venv/lib/python3.10/site-packages/urllib3/_request_methods.py:143: in request
-    return self.request_encode_body(
-../.venv/lib/python3.10/site-packages/urllib3/_request_methods.py:278: in request_encode_body
-    return self.urlopen(method, url, **extra_kw)
-../.venv/lib/python3.10/site-packages/urllib3/poolmanager.py:432: in urlopen
-    conn = self.connection_from_host(u.host, port=u.port, scheme=u.scheme)
-../.venv/lib/python3.10/site-packages/urllib3/poolmanager.py:303: in connection_from_host
-    return self.connection_from_context(request_context)
-../.venv/lib/python3.10/site-packages/urllib3/poolmanager.py:328: in connection_from_context
-    return self.connection_from_pool_key(pool_key, request_context=request_context)
-../.venv/lib/python3.10/site-packages/urllib3/poolmanager.py:351: in connection_from_pool_key
-    pool = self._new_pool(scheme, host, port, request_context=request_context)
-../.venv/lib/python3.10/site-packages/urllib3/poolmanager.py:265: in _new_pool
-    return pool_cls(host, port, **request_context)
-../.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:193: in __init__
-    timeout = Timeout.from_float(timeout)
-../.venv/lib/python3.10/site-packages/urllib3/util/timeout.py:186: in from_float
-    return Timeout(read=timeout, connect=timeout)
-../.venv/lib/python3.10/site-packages/urllib3/util/timeout.py:115: in __init__
-    self._connect = self._validate_timeout(connect, "connect")
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-
-cls = <class 'urllib3.util.timeout.Timeout'>
-value = <object object at 0x7f162309cee0>, name = 'connect'
-
-    @classmethod
-    def _validate_timeout(cls, value: _TYPE_TIMEOUT, name: str) -> _TYPE_TIMEOUT:
-        """Check that a timeout attribute is valid.
-    
-        :param value: The timeout value to validate
-        :param name: The name of the timeout attribute to validate. This is
-            used to specify in error messages.
-        :return: The validated and casted version of the given value.
-        :raises ValueError: If it is a numeric value less than or equal to
-            zero, or the type is not an integer, float, or None.
-        """
-        if value is None or value is _DEFAULT_TIMEOUT:
-            return value
-    
-        if isinstance(value, bool):
-            raise ValueError(
-                "Timeout cannot be a boolean value. It must "
-                "be an int, float or None."
-            )
-        try:
-            float(value)
-        except (TypeError, ValueError):
->           raise ValueError(
-                "Timeout value %s was %s, but it must be an "
-                "int, float or None." % (name, value)
-            ) from None
-E           ValueError: Timeout value connect was <object object at 0x7f162309cee0>, but it must be an int, float or None.
-
-../.venv/lib/python3.10/site-packages/urllib3/util/timeout.py:152: ValueError
+tests/e2e/test_articles_e2e.py:19: TypeError
 
                             </p>
                         </div>
@@ -1174,18 +1108,18 @@ E           ValueError: Timeout value connect was <object object at 0x7f162309ce
                 <td style="word-wrap: break-word;max-width: 200px; white-space: normal; text-align:left">tests/e2e/test_articles_e2e.py</td>
                 <td style="word-wrap: break-word;max-width: 200px; white-space: normal; text-align:left">test_create_multiple_articles</td>
                 <td>ERROR</td>
-                <td>1.07</td>
+                <td>0.1</td>
                 <td style="word-wrap: break-word;max-width: 200px; white-space: normal; text-align:left"">
                     self = <test_articles_e2e.TestCreateArticle object
                     
-            <a data-toggle="modal" href="#myModal-17366250993973808" class="">(...)</a>
-            <div class="modal fade in" id="myModal-17366250993973808" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <a data-toggle="modal" href="#myModal-17366258952050033" class="">(...)</a>
+            <div class="modal fade in" id="myModal-17366258952050033" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-body">
                             <p>
                                 <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" width="1.12em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1856 1664"><path d="M1056 1375v-190q0-14-9.5-23.5t-22.5-9.5H832q-13 0-22.5 9.5T800 1185v190q0 14 9.5 23.5t22.5 9.5h192q13 0 22.5-9.5t9.5-23.5zm-2-374l18-459q0-12-10-19q-13-11-24-11H818q-11 0-24 11q-10 7-10 21l17 457q0 10 10 16.5t24 6.5h185q14 0 23.5-6.5t10.5-16.5zm-14-934l768 1408q35 63-2 126q-17 29-46.5 46t-63.5 17H160q-34 0-63.5-17T50 1601q-37-63-2-126L816 67q17-31 47-49t65-18t65 18t47 49z" fill="#DC143C"/></svg>
-                                self = <test_articles_e2e.TestCreateArticle object at 0x7f162014b8b0>
+                                self = <test_articles_e2e.TestCreateArticle object at 0x7f809e1b9690>
 
     def setup_method(self):
         chrome_options = Options()
@@ -1193,76 +1127,10 @@ E           ValueError: Timeout value connect was <object object at 0x7f162309ce
         chrome_options.add_argument("--no-sandbox")
         chrome_options.add_argument("--disable-dev-shm-usage")
         chrome_options.add_argument("--start-maximized")
->       self.driver = webdriver.Chrome(options=chrome_options)
+>       self.driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
+E       TypeError: WebDriver.__init__() got an unexpected keyword argument 'service'
 
-tests/e2e/test_articles_e2e.py:16: 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-../.venv/lib/python3.10/site-packages/selenium/webdriver/chrome/webdriver.py:76: in __init__
-    RemoteWebDriver.__init__(
-../.venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py:157: in __init__
-    self.start_session(capabilities, browser_profile)
-../.venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py:252: in start_session
-    response = self.execute(Command.NEW_SESSION, parameters)
-../.venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py:319: in execute
-    response = self.command_executor.execute(driver_command, params)
-../.venv/lib/python3.10/site-packages/selenium/webdriver/remote/remote_connection.py:374: in execute
-    return self._request(command_info[0], url, body=data)
-../.venv/lib/python3.10/site-packages/selenium/webdriver/remote/remote_connection.py:397: in _request
-    resp = self._conn.request(method, url, body=body, headers=headers)
-../.venv/lib/python3.10/site-packages/urllib3/_request_methods.py:143: in request
-    return self.request_encode_body(
-../.venv/lib/python3.10/site-packages/urllib3/_request_methods.py:278: in request_encode_body
-    return self.urlopen(method, url, **extra_kw)
-../.venv/lib/python3.10/site-packages/urllib3/poolmanager.py:432: in urlopen
-    conn = self.connection_from_host(u.host, port=u.port, scheme=u.scheme)
-../.venv/lib/python3.10/site-packages/urllib3/poolmanager.py:303: in connection_from_host
-    return self.connection_from_context(request_context)
-../.venv/lib/python3.10/site-packages/urllib3/poolmanager.py:328: in connection_from_context
-    return self.connection_from_pool_key(pool_key, request_context=request_context)
-../.venv/lib/python3.10/site-packages/urllib3/poolmanager.py:351: in connection_from_pool_key
-    pool = self._new_pool(scheme, host, port, request_context=request_context)
-../.venv/lib/python3.10/site-packages/urllib3/poolmanager.py:265: in _new_pool
-    return pool_cls(host, port, **request_context)
-../.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:193: in __init__
-    timeout = Timeout.from_float(timeout)
-../.venv/lib/python3.10/site-packages/urllib3/util/timeout.py:186: in from_float
-    return Timeout(read=timeout, connect=timeout)
-../.venv/lib/python3.10/site-packages/urllib3/util/timeout.py:115: in __init__
-    self._connect = self._validate_timeout(connect, "connect")
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-
-cls = <class 'urllib3.util.timeout.Timeout'>
-value = <object object at 0x7f162309cee0>, name = 'connect'
-
-    @classmethod
-    def _validate_timeout(cls, value: _TYPE_TIMEOUT, name: str) -> _TYPE_TIMEOUT:
-        """Check that a timeout attribute is valid.
-    
-        :param value: The timeout value to validate
-        :param name: The name of the timeout attribute to validate. This is
-            used to specify in error messages.
-        :return: The validated and casted version of the given value.
-        :raises ValueError: If it is a numeric value less than or equal to
-            zero, or the type is not an integer, float, or None.
-        """
-        if value is None or value is _DEFAULT_TIMEOUT:
-            return value
-    
-        if isinstance(value, bool):
-            raise ValueError(
-                "Timeout cannot be a boolean value. It must "
-                "be an int, float or None."
-            )
-        try:
-            float(value)
-        except (TypeError, ValueError):
->           raise ValueError(
-                "Timeout value %s was %s, but it must be an "
-                "int, float or None." % (name, value)
-            ) from None
-E           ValueError: Timeout value connect was <object object at 0x7f162309cee0>, but it must be an int, float or None.
-
-../.venv/lib/python3.10/site-packages/urllib3/util/timeout.py:152: ValueError
+tests/e2e/test_articles_e2e.py:19: TypeError
 
                             </p>
                         </div>
@@ -1280,18 +1148,18 @@ E           ValueError: Timeout value connect was <object object at 0x7f162309ce
                 <td style="word-wrap: break-word;max-width: 200px; white-space: normal; text-align:left">tests/e2e/test_articles_e2e.py</td>
                 <td style="word-wrap: break-word;max-width: 200px; white-space: normal; text-align:left">test_edit_post</td>
                 <td>ERROR</td>
-                <td>1.07</td>
+                <td>0.1</td>
                 <td style="word-wrap: break-word;max-width: 200px; white-space: normal; text-align:left"">
                     self = <test_articles_e2e.TestCreateArticle object
                     
-            <a data-toggle="modal" href="#myModal-17366251004633124" class="">(...)</a>
-            <div class="modal fade in" id="myModal-17366251004633124" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <a data-toggle="modal" href="#myModal-1736625895301946" class="">(...)</a>
+            <div class="modal fade in" id="myModal-1736625895301946" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-body">
                             <p>
                                 <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" width="1.12em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1856 1664"><path d="M1056 1375v-190q0-14-9.5-23.5t-22.5-9.5H832q-13 0-22.5 9.5T800 1185v190q0 14 9.5 23.5t22.5 9.5h192q13 0 22.5-9.5t9.5-23.5zm-2-374l18-459q0-12-10-19q-13-11-24-11H818q-11 0-24 11q-10 7-10 21l17 457q0 10 10 16.5t24 6.5h185q14 0 23.5-6.5t10.5-16.5zm-14-934l768 1408q35 63-2 126q-17 29-46.5 46t-63.5 17H160q-34 0-63.5-17T50 1601q-37-63-2-126L816 67q17-31 47-49t65-18t65 18t47 49z" fill="#DC143C"/></svg>
-                                self = <test_articles_e2e.TestCreateArticle object at 0x7f162014b4f0>
+                                self = <test_articles_e2e.TestCreateArticle object at 0x7f809e1b9d20>
 
     def setup_method(self):
         chrome_options = Options()
@@ -1299,76 +1167,10 @@ E           ValueError: Timeout value connect was <object object at 0x7f162309ce
         chrome_options.add_argument("--no-sandbox")
         chrome_options.add_argument("--disable-dev-shm-usage")
         chrome_options.add_argument("--start-maximized")
->       self.driver = webdriver.Chrome(options=chrome_options)
+>       self.driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
+E       TypeError: WebDriver.__init__() got an unexpected keyword argument 'service'
 
-tests/e2e/test_articles_e2e.py:16: 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-../.venv/lib/python3.10/site-packages/selenium/webdriver/chrome/webdriver.py:76: in __init__
-    RemoteWebDriver.__init__(
-../.venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py:157: in __init__
-    self.start_session(capabilities, browser_profile)
-../.venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py:252: in start_session
-    response = self.execute(Command.NEW_SESSION, parameters)
-../.venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py:319: in execute
-    response = self.command_executor.execute(driver_command, params)
-../.venv/lib/python3.10/site-packages/selenium/webdriver/remote/remote_connection.py:374: in execute
-    return self._request(command_info[0], url, body=data)
-../.venv/lib/python3.10/site-packages/selenium/webdriver/remote/remote_connection.py:397: in _request
-    resp = self._conn.request(method, url, body=body, headers=headers)
-../.venv/lib/python3.10/site-packages/urllib3/_request_methods.py:143: in request
-    return self.request_encode_body(
-../.venv/lib/python3.10/site-packages/urllib3/_request_methods.py:278: in request_encode_body
-    return self.urlopen(method, url, **extra_kw)
-../.venv/lib/python3.10/site-packages/urllib3/poolmanager.py:432: in urlopen
-    conn = self.connection_from_host(u.host, port=u.port, scheme=u.scheme)
-../.venv/lib/python3.10/site-packages/urllib3/poolmanager.py:303: in connection_from_host
-    return self.connection_from_context(request_context)
-../.venv/lib/python3.10/site-packages/urllib3/poolmanager.py:328: in connection_from_context
-    return self.connection_from_pool_key(pool_key, request_context=request_context)
-../.venv/lib/python3.10/site-packages/urllib3/poolmanager.py:351: in connection_from_pool_key
-    pool = self._new_pool(scheme, host, port, request_context=request_context)
-../.venv/lib/python3.10/site-packages/urllib3/poolmanager.py:265: in _new_pool
-    return pool_cls(host, port, **request_context)
-../.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:193: in __init__
-    timeout = Timeout.from_float(timeout)
-../.venv/lib/python3.10/site-packages/urllib3/util/timeout.py:186: in from_float
-    return Timeout(read=timeout, connect=timeout)
-../.venv/lib/python3.10/site-packages/urllib3/util/timeout.py:115: in __init__
-    self._connect = self._validate_timeout(connect, "connect")
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-
-cls = <class 'urllib3.util.timeout.Timeout'>
-value = <object object at 0x7f162309cee0>, name = 'connect'
-
-    @classmethod
-    def _validate_timeout(cls, value: _TYPE_TIMEOUT, name: str) -> _TYPE_TIMEOUT:
-        """Check that a timeout attribute is valid.
-    
-        :param value: The timeout value to validate
-        :param name: The name of the timeout attribute to validate. This is
-            used to specify in error messages.
-        :return: The validated and casted version of the given value.
-        :raises ValueError: If it is a numeric value less than or equal to
-            zero, or the type is not an integer, float, or None.
-        """
-        if value is None or value is _DEFAULT_TIMEOUT:
-            return value
-    
-        if isinstance(value, bool):
-            raise ValueError(
-                "Timeout cannot be a boolean value. It must "
-                "be an int, float or None."
-            )
-        try:
-            float(value)
-        except (TypeError, ValueError):
->           raise ValueError(
-                "Timeout value %s was %s, but it must be an "
-                "int, float or None." % (name, value)
-            ) from None
-E           ValueError: Timeout value connect was <object object at 0x7f162309cee0>, but it must be an int, float or None.
-
-../.venv/lib/python3.10/site-packages/urllib3/util/timeout.py:152: ValueError
+tests/e2e/test_articles_e2e.py:19: TypeError
 
                             </p>
                         </div>
@@ -1386,18 +1188,18 @@ E           ValueError: Timeout value connect was <object object at 0x7f162309ce
                 <td style="word-wrap: break-word;max-width: 200px; white-space: normal; text-align:left">tests/e2e/test_articles_e2e.py</td>
                 <td style="word-wrap: break-word;max-width: 200px; white-space: normal; text-align:left">test_delete_added_article</td>
                 <td>ERROR</td>
-                <td>1.09</td>
+                <td>0.09</td>
                 <td style="word-wrap: break-word;max-width: 200px; white-space: normal; text-align:left"">
                     self = <test_articles_e2e.TestCreateArticle object
                     
-            <a data-toggle="modal" href="#myModal-17366251015513089" class="">(...)</a>
-            <div class="modal fade in" id="myModal-17366251015513089" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <a data-toggle="modal" href="#myModal-17366258953932986" class="">(...)</a>
+            <div class="modal fade in" id="myModal-17366258953932986" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-body">
                             <p>
                                 <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" width="1.12em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1856 1664"><path d="M1056 1375v-190q0-14-9.5-23.5t-22.5-9.5H832q-13 0-22.5 9.5T800 1185v190q0 14 9.5 23.5t22.5 9.5h192q13 0 22.5-9.5t9.5-23.5zm-2-374l18-459q0-12-10-19q-13-11-24-11H818q-11 0-24 11q-10 7-10 21l17 457q0 10 10 16.5t24 6.5h185q14 0 23.5-6.5t10.5-16.5zm-14-934l768 1408q35 63-2 126q-17 29-46.5 46t-63.5 17H160q-34 0-63.5-17T50 1601q-37-63-2-126L816 67q17-31 47-49t65-18t65 18t47 49z" fill="#DC143C"/></svg>
-                                self = <test_articles_e2e.TestCreateArticle object at 0x7f162014af50>
+                                self = <test_articles_e2e.TestCreateArticle object at 0x7f809e1ba140>
 
     def setup_method(self):
         chrome_options = Options()
@@ -1405,76 +1207,10 @@ E           ValueError: Timeout value connect was <object object at 0x7f162309ce
         chrome_options.add_argument("--no-sandbox")
         chrome_options.add_argument("--disable-dev-shm-usage")
         chrome_options.add_argument("--start-maximized")
->       self.driver = webdriver.Chrome(options=chrome_options)
+>       self.driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
+E       TypeError: WebDriver.__init__() got an unexpected keyword argument 'service'
 
-tests/e2e/test_articles_e2e.py:16: 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-../.venv/lib/python3.10/site-packages/selenium/webdriver/chrome/webdriver.py:76: in __init__
-    RemoteWebDriver.__init__(
-../.venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py:157: in __init__
-    self.start_session(capabilities, browser_profile)
-../.venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py:252: in start_session
-    response = self.execute(Command.NEW_SESSION, parameters)
-../.venv/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py:319: in execute
-    response = self.command_executor.execute(driver_command, params)
-../.venv/lib/python3.10/site-packages/selenium/webdriver/remote/remote_connection.py:374: in execute
-    return self._request(command_info[0], url, body=data)
-../.venv/lib/python3.10/site-packages/selenium/webdriver/remote/remote_connection.py:397: in _request
-    resp = self._conn.request(method, url, body=body, headers=headers)
-../.venv/lib/python3.10/site-packages/urllib3/_request_methods.py:143: in request
-    return self.request_encode_body(
-../.venv/lib/python3.10/site-packages/urllib3/_request_methods.py:278: in request_encode_body
-    return self.urlopen(method, url, **extra_kw)
-../.venv/lib/python3.10/site-packages/urllib3/poolmanager.py:432: in urlopen
-    conn = self.connection_from_host(u.host, port=u.port, scheme=u.scheme)
-../.venv/lib/python3.10/site-packages/urllib3/poolmanager.py:303: in connection_from_host
-    return self.connection_from_context(request_context)
-../.venv/lib/python3.10/site-packages/urllib3/poolmanager.py:328: in connection_from_context
-    return self.connection_from_pool_key(pool_key, request_context=request_context)
-../.venv/lib/python3.10/site-packages/urllib3/poolmanager.py:351: in connection_from_pool_key
-    pool = self._new_pool(scheme, host, port, request_context=request_context)
-../.venv/lib/python3.10/site-packages/urllib3/poolmanager.py:265: in _new_pool
-    return pool_cls(host, port, **request_context)
-../.venv/lib/python3.10/site-packages/urllib3/connectionpool.py:193: in __init__
-    timeout = Timeout.from_float(timeout)
-../.venv/lib/python3.10/site-packages/urllib3/util/timeout.py:186: in from_float
-    return Timeout(read=timeout, connect=timeout)
-../.venv/lib/python3.10/site-packages/urllib3/util/timeout.py:115: in __init__
-    self._connect = self._validate_timeout(connect, "connect")
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-
-cls = <class 'urllib3.util.timeout.Timeout'>
-value = <object object at 0x7f162309cee0>, name = 'connect'
-
-    @classmethod
-    def _validate_timeout(cls, value: _TYPE_TIMEOUT, name: str) -> _TYPE_TIMEOUT:
-        """Check that a timeout attribute is valid.
-    
-        :param value: The timeout value to validate
-        :param name: The name of the timeout attribute to validate. This is
-            used to specify in error messages.
-        :return: The validated and casted version of the given value.
-        :raises ValueError: If it is a numeric value less than or equal to
-            zero, or the type is not an integer, float, or None.
-        """
-        if value is None or value is _DEFAULT_TIMEOUT:
-            return value
-    
-        if isinstance(value, bool):
-            raise ValueError(
-                "Timeout cannot be a boolean value. It must "
-                "be an int, float or None."
-            )
-        try:
-            float(value)
-        except (TypeError, ValueError):
->           raise ValueError(
-                "Timeout value %s was %s, but it must be an "
-                "int, float or None." % (name, value)
-            ) from None
-E           ValueError: Timeout value connect was <object object at 0x7f162309cee0>, but it must be an int, float or None.
-
-../.venv/lib/python3.10/site-packages/urllib3/util/timeout.py:152: ValueError
+tests/e2e/test_articles_e2e.py:19: TypeError
 
                             </p>
                         </div>
@@ -1500,7 +1236,7 @@ E           ValueError: Timeout value connect was <object object at 0x7f162309ce
                     <a class ="list-group-item list-group-item-action" href="#list-item-1" style="font-size: 1.1rem; color: dimgray; margin-bottom: -7%;">
                         <i class="fa fa-times" aria-hidden="true" style="color: #fc6766"></i>
                         <span>build #1</span></br>
-                        <span style="font-size: 0.81rem; color: gray; padding-left: 12%;">2025-01-11 | 7:51 pm</span>
+                        <span style="font-size: 0.81rem; color: gray; padding-left: 12%;">2025-01-11 | 8:4 pm</span>
                     </a>
                     
             </div>
@@ -2064,7 +1800,7 @@ E           ValueError: Timeout value connect was <object object at 0x7f162309ce
             var trends = new Chart(lineCanvas, {
                 type: 'line',
                 data: {
-                  labels : ['7:51 PM | Jan 11'],
+                  labels : ['8:4 PM | Jan 11'],
                   datasets : [
                     {
                       label: 'Passed',
