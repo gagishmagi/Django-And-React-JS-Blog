@@ -221,7 +221,7 @@ jobs:
         id: create
         uses: atlassian/gajira-create@v3
         with:
-          project: '${{ secrets.JIRA_PROJECT_KEY }}'
+          project: '${{ vars.JIRA_PROJECT_KEY }}'
           issuetype: 'Bug'
           summary: 'CI/CD Pipeline Failed'
           description: |
