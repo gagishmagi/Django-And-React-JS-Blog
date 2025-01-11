@@ -730,9 +730,9 @@
             </style>
             <style>
                 .progress-bar.downloading {
-                    background: -webkit-linear-gradient(left, #fc6665 0%,#50597b 0%); /* Chrome10+,Safari5.1+ */
-                    background: -ms-linear-gradient(left, #fc6665 0%,#50597b 0%); /* IE10+ */
-                    background: linear-gradient(to right, #fc6665 0%,#50597b 0%); /* W3C */
+                    background: -webkit-linear-gradient(left, #fc6665 100.0%,#50597b 100.0%); /* Chrome10+,Safari5.1+ */
+                    background: -ms-linear-gradient(left, #fc6665 100.0%,#50597b 100.0%); /* IE10+ */
+                    background: linear-gradient(to right, #fc6665 100.0%,#50597b 100.0%); /* W3C */
                 }
             </style>
         </head>
@@ -769,7 +769,7 @@
                           <div style="margin-bottom: -4%; margin-left: 30%;">
                             <span class="time__taken">
                                 <svg width="22px" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" style="margin: -1% 2% 0% 29%; -ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1536 1536"><path d="M896 416v448q0 14-9 23t-23 9H544q-14 0-23-9t-9-23v-64q0-14 9-23t23-9h224V416q0-14 9-23t23-9h64q14 0 23 9t9 23zm416 352q0-148-73-273t-198-198t-273-73t-273 73t-198 198t-73 273t73 273t198 198t273 73t273-73t198-198t73-273zm224 0q0 209-103 385.5T1153.5 1433T768 1536t-385.5-103T103 1153.5T0 768t103-385.5T382.5 103T768 0t385.5 103T1433 382.5T1536 768z" fill="#a9a9a9"/></svg>
-                                    Time taken 1.25 secs
+                                    Time taken 2.91 secs
                             </span>
                           </div>
                           <div>
@@ -801,7 +801,7 @@
                                       <div class="footer-section__label">passed</div>
                                     </div>
                                     <div class="card__footer-section">
-                                      <div class="footer-section__data" style="color:#fc6766">0</div>
+                                      <div class="footer-section__data" style="color:#fc6766">4</div>
                                       <div class="footer-section__label">failed</div>
                                     </div>
                                     <div class="card__footer-section">
@@ -817,7 +817,7 @@
                                       <div class="footer-section__label">xfailed</div>
                                     </div>
                                     <div class="card__footer-section">
-                                      <div class="footer-section__data" style="color:#b13635">4</div>
+                                      <div class="footer-section__data" style="color:#b13635">0</div>
                                       <div class="footer-section__label">error</div>
                                     </div>
                                     <div class="card__footer-section">
@@ -869,9 +869,9 @@
                                     <div style="display: flow-root;">
                                         <div class="tooltip bs-tooltip-top tooltip-dark" role="tooltip">
                                            <div class="arrow" style="left: 50%"></div>
-                                           <div class="tooltip-inner">No failures in History</div>
+                                           <div class="tooltip-inner">..2e/test_articles_e2e.py</div>
                                         </div>
-                                        <p class="percentage">0<sup> /0</sup> Times</p>
+                                        <p class="percentage">1<sup> /1</sup> Times</p>
                                     </div>
                                     <div class="progress-bar downloading"></div>
                                     <span class="suite-highlights-header">MOST FAILED SUITE</span>
@@ -938,11 +938,11 @@
             <tr>
                 <td style="word-wrap: break-word;max-width: 200px; white-space: normal; text-align:left">tests/e2e/test_articles_e2e.py</td>
                 <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
-                <td>0</td>
                 <td>4</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
                 <td>0</td>
             </tr>
         
@@ -969,7 +969,7 @@
                 <td style="word-wrap: break-word;max-width: 200px; white-space: normal; text-align:left">tests/integration/test_articles_api.py</td>
                 <td style="word-wrap: break-word;max-width: 200px; white-space: normal; text-align:left">test_create_article</td>
                 <td>PASS</td>
-                <td>0.25</td>
+                <td>0.24</td>
                 <td style="word-wrap: break-word;max-width: 200px; white-space: normal; text-align:left"">
                     
                     
@@ -1067,30 +1067,48 @@
             <tr>
                 <td style="word-wrap: break-word;max-width: 200px; white-space: normal; text-align:left">tests/e2e/test_articles_e2e.py</td>
                 <td style="word-wrap: break-word;max-width: 200px; white-space: normal; text-align:left">test_create_article</td>
-                <td>ERROR</td>
-                <td>0.43</td>
+                <td>FAIL</td>
+                <td>0.84</td>
                 <td style="word-wrap: break-word;max-width: 200px; white-space: normal; text-align:left"">
-                    self = <test_articles_e2e.TestCreateArticle object
+                       selenium.common.exceptions.WebDriverException: 
                     
-            <a data-toggle="modal" href="#myModal-17366272540048249" class="">(...)</a>
-            <div class="modal fade in" id="myModal-17366272540048249" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <a data-toggle="modal" href="#myModal-1736627449656442" class="">(...)</a>
+            <div class="modal fade in" id="myModal-1736627449656442" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-body">
                             <p>
                                 <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" width="1.12em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1856 1664"><path d="M1056 1375v-190q0-14-9.5-23.5t-22.5-9.5H832q-13 0-22.5 9.5T800 1185v190q0 14 9.5 23.5t22.5 9.5h192q13 0 22.5-9.5t9.5-23.5zm-2-374l18-459q0-12-10-19q-13-11-24-11H818q-11 0-24 11q-10 7-10 21l17 457q0 10 10 16.5t24 6.5h185q14 0 23.5-6.5t10.5-16.5zm-14-934l768 1408q35 63-2 126q-17 29-46.5 46t-63.5 17H160q-34 0-63.5-17T50 1601q-37-63-2-126L816 67q17-31 47-49t65-18t65 18t47 49z" fill="#DC143C"/></svg>
-                                self = <test_articles_e2e.TestCreateArticle object at 0x7f8beeac5a20>
-
-    def setup_method(self):
-        chrome_options = Options()
-        chrome_options.add_argument("--headless")
-        chrome_options.add_argument("--no-sandbox")
-        chrome_options.add_argument("--disable-dev-shm-usage")
-        chrome_options.add_argument("--start-maximized")
->       self.driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()), options=chrome_options)
-E       TypeError: WebDriver.__init__() got an unexpected keyword argument 'service'
-
-tests/e2e/test_articles_e2e.py:19: TypeError
+                                   selenium.common.exceptions.WebDriverException: Message: unknown error: net::ERR_CONNECTION_REFUSED
+     (Session info: chrome=131.0.6778.264)
+   Stacktrace:
+   #0 0x55c25a6321fa <unknown>
+   #1 0x55c25a142810 <unknown>
+   #2 0x55c25a13aa24 <unknown>
+   #3 0x55c25a12adb9 <unknown>
+   #4 0x55c25a12cac4 <unknown>
+   #5 0x55c25a12b06d <unknown>
+   #6 0x55c25a12a8cf <unknown>
+   #7 0x55c25a12a7c2 <unknown>
+   #8 0x55c25a1287e6 <unknown>
+   #9 0x55c25a128e5a <unknown>
+   #10 0x55c25a145139 <unknown>
+   #11 0x55c25a1d4c55 <unknown>
+   #12 0x55c25a1b5582 <unknown>
+   #13 0x55c25a1d4007 <unknown>
+   #14 0x55c25a1b5323 <unknown>
+   #15 0x55c25a183de0 <unknown>
+   #16 0x55c25a184dbe <unknown>
+   #17 0x55c25a5fe12b <unknown>
+   #18 0x55c25a6020c7 <unknown>
+   #19 0x55c25a5eb6cc <unknown>
+   #20 0x55c25a602c47 <unknown>
+   #21 0x55c25a5d067f <unknown>
+   #22 0x55c25a621288 <unknown>
+   #23 0x55c25a621450 <unknown>
+   #24 0x55c25a631076 <unknown>
+   #25 0x7f695949ca94 <unknown>
+   #26 0x7f6959529c3c <unknown>
 
                             </p>
                         </div>
@@ -1107,30 +1125,48 @@ tests/e2e/test_articles_e2e.py:19: TypeError
             <tr>
                 <td style="word-wrap: break-word;max-width: 200px; white-space: normal; text-align:left">tests/e2e/test_articles_e2e.py</td>
                 <td style="word-wrap: break-word;max-width: 200px; white-space: normal; text-align:left">test_create_multiple_articles</td>
-                <td>ERROR</td>
-                <td>0.1</td>
+                <td>FAIL</td>
+                <td>0.4</td>
                 <td style="word-wrap: break-word;max-width: 200px; white-space: normal; text-align:left"">
-                    self = <test_articles_e2e.TestCreateArticle object
+                       selenium.common.exceptions.WebDriverException: 
                     
-            <a data-toggle="modal" href="#myModal-17366272541053233" class="">(...)</a>
-            <div class="modal fade in" id="myModal-17366272541053233" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <a data-toggle="modal" href="#myModal-17366274501216645" class="">(...)</a>
+            <div class="modal fade in" id="myModal-17366274501216645" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-body">
                             <p>
                                 <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" width="1.12em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1856 1664"><path d="M1056 1375v-190q0-14-9.5-23.5t-22.5-9.5H832q-13 0-22.5 9.5T800 1185v190q0 14 9.5 23.5t22.5 9.5h192q13 0 22.5-9.5t9.5-23.5zm-2-374l18-459q0-12-10-19q-13-11-24-11H818q-11 0-24 11q-10 7-10 21l17 457q0 10 10 16.5t24 6.5h185q14 0 23.5-6.5t10.5-16.5zm-14-934l768 1408q35 63-2 126q-17 29-46.5 46t-63.5 17H160q-34 0-63.5-17T50 1601q-37-63-2-126L816 67q17-31 47-49t65-18t65 18t47 49z" fill="#DC143C"/></svg>
-                                self = <test_articles_e2e.TestCreateArticle object at 0x7f8beeac5660>
-
-    def setup_method(self):
-        chrome_options = Options()
-        chrome_options.add_argument("--headless")
-        chrome_options.add_argument("--no-sandbox")
-        chrome_options.add_argument("--disable-dev-shm-usage")
-        chrome_options.add_argument("--start-maximized")
->       self.driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()), options=chrome_options)
-E       TypeError: WebDriver.__init__() got an unexpected keyword argument 'service'
-
-tests/e2e/test_articles_e2e.py:19: TypeError
+                                   selenium.common.exceptions.WebDriverException: Message: unknown error: net::ERR_CONNECTION_REFUSED
+     (Session info: chrome=131.0.6778.264)
+   Stacktrace:
+   #0 0x559e7d0151fa <unknown>
+   #1 0x559e7cb25810 <unknown>
+   #2 0x559e7cb1da24 <unknown>
+   #3 0x559e7cb0ddb9 <unknown>
+   #4 0x559e7cb0fac4 <unknown>
+   #5 0x559e7cb0e06d <unknown>
+   #6 0x559e7cb0d8cf <unknown>
+   #7 0x559e7cb0d7c2 <unknown>
+   #8 0x559e7cb0b7e6 <unknown>
+   #9 0x559e7cb0be5a <unknown>
+   #10 0x559e7cb28139 <unknown>
+   #11 0x559e7cbb7c55 <unknown>
+   #12 0x559e7cb98582 <unknown>
+   #13 0x559e7cbb7007 <unknown>
+   #14 0x559e7cb98323 <unknown>
+   #15 0x559e7cb66de0 <unknown>
+   #16 0x559e7cb67dbe <unknown>
+   #17 0x559e7cfe112b <unknown>
+   #18 0x559e7cfe50c7 <unknown>
+   #19 0x559e7cfce6cc <unknown>
+   #20 0x559e7cfe5c47 <unknown>
+   #21 0x559e7cfb367f <unknown>
+   #22 0x559e7d004288 <unknown>
+   #23 0x559e7d004450 <unknown>
+   #24 0x559e7d014076 <unknown>
+   #25 0x7fba5049ca94 <unknown>
+   #26 0x7fba50529c3c <unknown>
 
                             </p>
                         </div>
@@ -1147,30 +1183,48 @@ tests/e2e/test_articles_e2e.py:19: TypeError
             <tr>
                 <td style="word-wrap: break-word;max-width: 200px; white-space: normal; text-align:left">tests/e2e/test_articles_e2e.py</td>
                 <td style="word-wrap: break-word;max-width: 200px; white-space: normal; text-align:left">test_edit_post</td>
-                <td>ERROR</td>
-                <td>0.09</td>
+                <td>FAIL</td>
+                <td>0.41</td>
                 <td style="word-wrap: break-word;max-width: 200px; white-space: normal; text-align:left"">
-                    self = <test_articles_e2e.TestCreateArticle object
+                       selenium.common.exceptions.WebDriverException: 
                     
-            <a data-toggle="modal" href="#myModal-17366272541998677" class="">(...)</a>
-            <div class="modal fade in" id="myModal-17366272541998677" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <a data-toggle="modal" href="#myModal-17366274506007373" class="">(...)</a>
+            <div class="modal fade in" id="myModal-17366274506007373" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-body">
                             <p>
                                 <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" width="1.12em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1856 1664"><path d="M1056 1375v-190q0-14-9.5-23.5t-22.5-9.5H832q-13 0-22.5 9.5T800 1185v190q0 14 9.5 23.5t22.5 9.5h192q13 0 22.5-9.5t9.5-23.5zm-2-374l18-459q0-12-10-19q-13-11-24-11H818q-11 0-24 11q-10 7-10 21l17 457q0 10 10 16.5t24 6.5h185q14 0 23.5-6.5t10.5-16.5zm-14-934l768 1408q35 63-2 126q-17 29-46.5 46t-63.5 17H160q-34 0-63.5-17T50 1601q-37-63-2-126L816 67q17-31 47-49t65-18t65 18t47 49z" fill="#DC143C"/></svg>
-                                self = <test_articles_e2e.TestCreateArticle object at 0x7f8beeac5cf0>
-
-    def setup_method(self):
-        chrome_options = Options()
-        chrome_options.add_argument("--headless")
-        chrome_options.add_argument("--no-sandbox")
-        chrome_options.add_argument("--disable-dev-shm-usage")
-        chrome_options.add_argument("--start-maximized")
->       self.driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()), options=chrome_options)
-E       TypeError: WebDriver.__init__() got an unexpected keyword argument 'service'
-
-tests/e2e/test_articles_e2e.py:19: TypeError
+                                   selenium.common.exceptions.WebDriverException: Message: unknown error: net::ERR_CONNECTION_REFUSED
+     (Session info: chrome=131.0.6778.264)
+   Stacktrace:
+   #0 0x555a7a1e31fa <unknown>
+   #1 0x555a79cf3810 <unknown>
+   #2 0x555a79ceba24 <unknown>
+   #3 0x555a79cdbdb9 <unknown>
+   #4 0x555a79cddac4 <unknown>
+   #5 0x555a79cdc06d <unknown>
+   #6 0x555a79cdb8cf <unknown>
+   #7 0x555a79cdb7c2 <unknown>
+   #8 0x555a79cd97e6 <unknown>
+   #9 0x555a79cd9e5a <unknown>
+   #10 0x555a79cf6139 <unknown>
+   #11 0x555a79d85c55 <unknown>
+   #12 0x555a79d66582 <unknown>
+   #13 0x555a79d85007 <unknown>
+   #14 0x555a79d66323 <unknown>
+   #15 0x555a79d34de0 <unknown>
+   #16 0x555a79d35dbe <unknown>
+   #17 0x555a7a1af12b <unknown>
+   #18 0x555a7a1b30c7 <unknown>
+   #19 0x555a7a19c6cc <unknown>
+   #20 0x555a7a1b3c47 <unknown>
+   #21 0x555a7a18167f <unknown>
+   #22 0x555a7a1d2288 <unknown>
+   #23 0x555a7a1d2450 <unknown>
+   #24 0x555a7a1e2076 <unknown>
+   #25 0x7f0f7049ca94 <unknown>
+   #26 0x7f0f70529c3c <unknown>
 
                             </p>
                         </div>
@@ -1187,30 +1241,48 @@ tests/e2e/test_articles_e2e.py:19: TypeError
             <tr>
                 <td style="word-wrap: break-word;max-width: 200px; white-space: normal; text-align:left">tests/e2e/test_articles_e2e.py</td>
                 <td style="word-wrap: break-word;max-width: 200px; white-space: normal; text-align:left">test_delete_added_article</td>
-                <td>ERROR</td>
-                <td>0.09</td>
+                <td>FAIL</td>
+                <td>0.45</td>
                 <td style="word-wrap: break-word;max-width: 200px; white-space: normal; text-align:left"">
-                    self = <test_articles_e2e.TestCreateArticle object
+                       selenium.common.exceptions.WebDriverException: 
                     
-            <a data-toggle="modal" href="#myModal-17366272542942717" class="">(...)</a>
-            <div class="modal fade in" id="myModal-17366272542942717" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <a data-toggle="modal" href="#myModal-1736627451117975" class="">(...)</a>
+            <div class="modal fade in" id="myModal-1736627451117975" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-body">
                             <p>
                                 <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" width="1.12em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1856 1664"><path d="M1056 1375v-190q0-14-9.5-23.5t-22.5-9.5H832q-13 0-22.5 9.5T800 1185v190q0 14 9.5 23.5t22.5 9.5h192q13 0 22.5-9.5t9.5-23.5zm-2-374l18-459q0-12-10-19q-13-11-24-11H818q-11 0-24 11q-10 7-10 21l17 457q0 10 10 16.5t24 6.5h185q14 0 23.5-6.5t10.5-16.5zm-14-934l768 1408q35 63-2 126q-17 29-46.5 46t-63.5 17H160q-34 0-63.5-17T50 1601q-37-63-2-126L816 67q17-31 47-49t65-18t65 18t47 49z" fill="#DC143C"/></svg>
-                                self = <test_articles_e2e.TestCreateArticle object at 0x7f8beeac6110>
-
-    def setup_method(self):
-        chrome_options = Options()
-        chrome_options.add_argument("--headless")
-        chrome_options.add_argument("--no-sandbox")
-        chrome_options.add_argument("--disable-dev-shm-usage")
-        chrome_options.add_argument("--start-maximized")
->       self.driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()), options=chrome_options)
-E       TypeError: WebDriver.__init__() got an unexpected keyword argument 'service'
-
-tests/e2e/test_articles_e2e.py:19: TypeError
+                                   selenium.common.exceptions.WebDriverException: Message: unknown error: net::ERR_CONNECTION_REFUSED
+     (Session info: chrome=131.0.6778.264)
+   Stacktrace:
+   #0 0x55d86420c1fa <unknown>
+   #1 0x55d863d1c810 <unknown>
+   #2 0x55d863d14a24 <unknown>
+   #3 0x55d863d04db9 <unknown>
+   #4 0x55d863d06ac4 <unknown>
+   #5 0x55d863d0506d <unknown>
+   #6 0x55d863d048cf <unknown>
+   #7 0x55d863d047c2 <unknown>
+   #8 0x55d863d027e6 <unknown>
+   #9 0x55d863d02e5a <unknown>
+   #10 0x55d863d1f139 <unknown>
+   #11 0x55d863daec55 <unknown>
+   #12 0x55d863d8f582 <unknown>
+   #13 0x55d863dae007 <unknown>
+   #14 0x55d863d8f323 <unknown>
+   #15 0x55d863d5dde0 <unknown>
+   #16 0x55d863d5edbe <unknown>
+   #17 0x55d8641d812b <unknown>
+   #18 0x55d8641dc0c7 <unknown>
+   #19 0x55d8641c56cc <unknown>
+   #20 0x55d8641dcc47 <unknown>
+   #21 0x55d8641aa67f <unknown>
+   #22 0x55d8641fb288 <unknown>
+   #23 0x55d8641fb450 <unknown>
+   #24 0x55d86420b076 <unknown>
+   #25 0x7f2874c9ca94 <unknown>
+   #26 0x7f2874d29c3c <unknown>
 
                             </p>
                         </div>
@@ -1236,7 +1308,7 @@ tests/e2e/test_articles_e2e.py:19: TypeError
                     <a class ="list-group-item list-group-item-action" href="#list-item-1" style="font-size: 1.1rem; color: dimgray; margin-bottom: -7%;">
                         <i class="fa fa-times" aria-hidden="true" style="color: #fc6766"></i>
                         <span>build #1</span></br>
-                        <span style="font-size: 0.81rem; color: gray; padding-left: 12%;">2025-01-11 | 8:27 pm</span>
+                        <span style="font-size: 0.81rem; color: gray; padding-left: 12%;">2025-01-11 | 8:30 pm</span>
                     </a>
                     
             </div>
@@ -1278,7 +1350,7 @@ tests/e2e/test_articles_e2e.py:19: TypeError
                                         </div>
                                         <div class="col-xs-12 col-md-3" style="max-width: 14.2%;">
                                             <div class="counter">
-                                                <h2 class="timer count-title count-number">0
+                                                <h2 class="timer count-title count-number">4
                                                 </h2>
                                                 <p class="stats-text">FAILED</p>
                                             </div>
@@ -1303,7 +1375,7 @@ tests/e2e/test_articles_e2e.py:19: TypeError
                                         </div>
                                         <div class="col-xs-12 col-md-3" style="max-width: 14.2%;">
                                             <div class="counter">
-                                                <h2 class="timer count-title count-number">4</h2>
+                                                <h2 class="timer count-title count-number">0</h2>
                                                 <p class="stats-text">ERROR</p>
                                             </div>
                                         </div>
@@ -1554,7 +1626,7 @@ tests/e2e/test_articles_e2e.py:19: TypeError
                     labels: ['PASS', 'FAIL', 'SKIP', 'XPASS', 'XFAIL', 'ERROR'],
                     datasets: [{
                         label: '# of Votes',
-                        data: [9, 0, 0, 0, 0, 4],
+                        data: [9, 4, 0, 0, 0, 0],
                         backgroundColor: [
                             '#98cc64',
                             '#fc6766',
@@ -1648,7 +1720,7 @@ tests/e2e/test_articles_e2e.py:19: TypeError
         <script>
             for(var i=0; i<=1; i++) {
                 var MeSeContext = document.getElementById("archive-chart-"+i).getContext("2d");
-                var archives = {'0': {'pass': '9', 'fail': '0', 'skip': '0', 'xpass': '0', 'xfail': '0', 'error': '4', 'rerun': '0', 'total': '13'}};
+                var archives = {'0': {'pass': '9', 'fail': '4', 'skip': '0', 'xpass': '0', 'xfail': '0', 'error': '0', 'rerun': '0', 'total': '13'}};
                 var pass = archives[i].pass;
                 var fail = archives[i].fail;
                 var skip = archives[i].skip;
@@ -1723,7 +1795,7 @@ tests/e2e/test_articles_e2e.py:19: TypeError
                         hoverBackgroundColor: '#e35857',
                         borderColor: '#fd8a89',
                         borderWidth: 1,
-                        data: [0, 0, 0]
+                        data: [0, 0, 4]
                     }, {
                         label: 'Skipped',
                         backgroundColor: '#ffd050',
@@ -1751,7 +1823,7 @@ tests/e2e/test_articles_e2e.py:19: TypeError
                         hoverBackgroundColor: '#8b2828',
                         borderColor: '#b13635',
                         borderWidth: 1,
-                        data: [0, 0, 4]
+                        data: [0, 0, 0]
                     }]
                 },
                 options: {
@@ -1800,7 +1872,7 @@ tests/e2e/test_articles_e2e.py:19: TypeError
             var trends = new Chart(lineCanvas, {
                 type: 'line',
                 data: {
-                  labels : ['8:27 PM | Jan 11'],
+                  labels : ['8:30 PM | Jan 11'],
                   datasets : [
                     {
                       label: 'Passed',
