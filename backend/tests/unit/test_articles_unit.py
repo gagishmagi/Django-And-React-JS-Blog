@@ -13,8 +13,8 @@ class TestArticleSerializerUnit(TestCase):
         serializer = ArticleSerializer(self.article)
         data = serializer.data
 
-        self.assertEqual(data['title'], 'Wrong Title')
-        # self.assertEqual(data['title'], self.article.title)
+        # self.assertEqual(data['title'], 'Wrong Title')
+        self.assertEqual(data['title'], self.article.title)
         self.assertEqual(data['description'], self.article.description)
 
     def test_deserialize_article(self):
