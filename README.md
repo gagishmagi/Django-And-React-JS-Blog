@@ -14,3 +14,4 @@ Watch full playlist : https://www.youtube.com/watch?v=A1YoUpKzbwM&list=PLjDarHRb
 6 python manage.py runserver
 
 ```
+
